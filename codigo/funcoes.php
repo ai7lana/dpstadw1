@@ -56,4 +56,22 @@ function salvarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
     mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
 }
+
+function editarReceita (){
+
+}
+
+function editarPerfil (){
+
+}
+
+function deletarReceita (){
+
+}
+
+function deletarPerfil (){
+
+}
+
+
 ?>
