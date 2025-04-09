@@ -3,8 +3,8 @@
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
-$comentario = "Receita incrível! ";
-$nota = "cinco";
+$comentario = "Receita ruim!";
+$nota = "1.2" ;
 $receita_idreceita = 1;
 $perfil_idperfil = 1; 
 

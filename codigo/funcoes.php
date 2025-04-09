@@ -46,4 +46,14 @@ function salvarAvaliacao ($conexao, $comentario, $nota, $receita_idreceita, $per
     mysqli_stmt_close($comando);
 
 }
+
+function salvarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
+    $sql = "INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES (?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
+   
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+}
 ?>
