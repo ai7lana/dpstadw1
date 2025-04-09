@@ -34,4 +34,16 @@ function salvarReceita($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_pr
     mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
 }
+
+function salvarAvaliacao ($conexao, $comentario, $nota, $receita_idreceita, $perfil_idperfil){
+    $sql = "INSERT INTO avaliacao (comentario, nota, receita_idreceita, perfil_idperfil)
+    VALUES (?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'ssii', $comentario, $nota, $receita_idreceita, $perfil_idperfil);
+    
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+
+}
 ?>
