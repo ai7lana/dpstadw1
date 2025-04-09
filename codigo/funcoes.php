@@ -13,5 +13,25 @@ function salvarUsuario($conexao, $email, $senha) {
     return $funcionou;
 };
 
+function salvarPerfil ($conexao, $nome, $nome_perfil, $usuario_idusario) {
+    $sql = "INSERT INTO perfil (nome, nome_perfil, usuario_idusuario) VALUES (?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_bind_param($comando, 'sss', $nome, $nome_perfil, $usuario_idusario);
+    
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
 
+}
+
+function salvarReceita($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $foto, $regiao, $usuario_idusuario) {
+    $sql = "INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, rendimento, foto, regiao, usuario_idusuario) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'sssssssss', $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $foto, $regiao, $usuario_idusuario);
+
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+}
 ?>
