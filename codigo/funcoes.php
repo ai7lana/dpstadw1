@@ -1,23 +1,10 @@
 <?php
-function salvarUsuario($conexao, $email, $senha) {
-    $sql = "INSERT INTO usuario (email, senha) VALUES (?, ?)";
+
+function salvarPerfil ($conexao, $nome, $nome_perfil, $usuario_idusario,  $email, $senha) {
+    $sql = "INSERT INTO perfil (nome, nome_perfil, usuario_idusuario, email, senha) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
     
-    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-
-    mysqli_stmt_bind_param($comando, 'ss', $email, $senha_hash);
-    
-    $funcionou = mysqli_stmt_execute($comando);
-    mysqli_stmt_close($comando);
-    
-    return $funcionou;
-};
-
-function salvarPerfil ($conexao, $nome, $nome_perfil, $usuario_idusario) {
-    $sql = "INSERT INTO perfil (nome, nome_perfil, usuario_idusuario) VALUES (?, ?, ?)";
-    $comando = mysqli_prepare($conexao, $sql);
-    
-    mysqli_stmt_bind_param($comando, 'sss', $nome, $nome_perfil, $usuario_idusario);
+    mysqli_stmt_bind_param($comando, 'sssss', $nome, $nome_perfil, $usuario_idusario, $email, $senha);
     
     mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
