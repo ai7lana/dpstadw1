@@ -44,7 +44,17 @@ function salvarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
     mysqli_stmt_close($comando);
 }
 
-function editarReceita (){
+function editarReceita ($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, 
+    $foto, $regiao, $usuario_idusuario){
+    $sql = "UPDATE tb_receita SET nome_comida=?, tipo=?, indredientes=?
+    modo_de_preparo=?, tempo=?, rendimento=?, foto=?, regiao=?, perfil_idperfil WHERE idcliente=?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'sssssssss', $nome_comida, $tipo, $ingredientes, $modo_de_preparo, 
+    $tempo, $rendimento, $foto, $regiao, $usuario_idusuario);
+    
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+
 
 }
 
