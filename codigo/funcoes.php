@@ -58,7 +58,7 @@ function editarReceita ($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_p
 
 }
 
-function editarPerfil (){
+function editarPerfil ($conexao, $nome, $nome_perfil, $usuario_idusario,  $email, $senha){
 
 }
 
