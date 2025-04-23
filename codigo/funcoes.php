@@ -92,13 +92,13 @@ function deletarPerfil ($conexao, $idperfil){
 
 function listarReceita($conexao) {
     $sql = "SELECT * FROM receita";
-    $comando = mysqli_query($conexao, $sql);
+    $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
     $resultados = mysqli_stmt_get_result($comando);
 
     $lista_receitas = [];
-    while ($receita = mysqli_fetch_assoc($resultado)) {
+    while ($receita = mysqli_fetch_assoc($resultados)) {
         $lista_receitas[] = $receita;
     }
     mysqli_stmt_close($comando);
@@ -108,13 +108,13 @@ function listarReceita($conexao) {
 
 function listarPerfil ($conexao){
     $sql = "SELECT * FROM perfil";
-    $comando = mysqli_query($conexao, $sql);
+    $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
     $resultados = mysqli_stmt_get_result($comando);
 
     $lista_perfil = [];
-    while ($perfil = mysqli_fetch_assoc($resultado)) {
+    while ($perfil = mysqli_fetch_assoc($resultados)) {
         $lista_perfil[] = $perfil;
     }
     mysqli_stmt_close($comando);
@@ -125,13 +125,13 @@ function listarPerfil ($conexao){
 
 function listarFavorito ($conexao){
     $sql = "SELECT * FROM favoritos";
-    $comando = mysqli_query($conexao, $sql);
+    $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
     $resultados = mysqli_stmt_get_result($comando);
 
     $lista_favorito = [];
-    while ($favorito = mysqli_fetch_assoc($resultado)) {
+    while ($favorito = mysqli_fetch_assoc($resultados)) {
         $lista_favorito[] = $favorito;
     }
     mysqli_stmt_close($comando);
@@ -140,15 +140,15 @@ function listarFavorito ($conexao){
 
 }
  
-function listarAvaliacao (){
+function listarAvaliacao ($conexao){
     $sql = "SELECT * FROM avaliacao";
-    $comando = mysqli_query($conexao, $sql);
+    $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
     $resultados = mysqli_stmt_get_result($comando);
 
     $lista_avaliacao = [];
-    while ($avaliacao = mysqli_fetch_assoc($resultado)) {
+    while ($avaliacao = mysqli_fetch_assoc($resultados)) {
         $lista_avaliacao[] = $avaliacao;
     }
     mysqli_stmt_close($comando);
