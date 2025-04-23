@@ -13,7 +13,7 @@ $rendimento = "5 pessoas";
 $foto = "diahshd.jpeg";
 $regiao = "nordeste";
 $perfil_idperfil = 1 ;
-editarPerfil($conexao, $nome_comida; $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $foto, $regiao, $perfil_idperfil);
+editarPerfil($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $foto, $regiao, $perfil_idperfil);
 
 echo "<pre>";
 print_r(listarReceita($conexao));
