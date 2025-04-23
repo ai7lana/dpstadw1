@@ -89,5 +89,20 @@ function deletarPerfil ($conexao, $idperfil){
 
 }
 
+function listarReceita (){
+
+}
+
+function listarPerfil (){
+
+}
+
+function listarFavorito (){
+
+}
+ 
+function listarAvaliacao (){
+
+}
 
 ?>
