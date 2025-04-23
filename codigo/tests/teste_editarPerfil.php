@@ -4,10 +4,9 @@ require_once "../conexao.php";
 require_once "../funcoes.php";
 
 
-
-editarCliente($conexao, $nome, $cpf, $endereco, $id);
+editarPerfil($conexao, $nome, $nome_perfil, $usuario_idusario,  $email, $senha);
 
 echo "<pre>";
-print_r(listarClientes($conexao));
+print_r(listarPerfil($conexao));
 echo "</pre>";
 ?>
