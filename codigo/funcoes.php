@@ -69,11 +69,23 @@ function editarPerfil ($conexao, $nome, $nome_perfil, $usuario_idusario,  $email
 
 }
 
-function deletarReceita (){
+function deletarReceita ($conexao, $idreceita){
+    $sql = "DELETE FROM receita WHERE idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'i', $idreceita);
+    
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
 
 }
 
-function deletarPerfil (){
+function deletarPerfil ($conexao, $idperfil){
+    $sql = "DELETE FROM usuario WHERE idperfil = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'i', $idusuario);
+    
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
 
 }
 
