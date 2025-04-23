@@ -16,6 +16,6 @@ $perfil_idperfil = 1 ;
 editarPerfil($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $foto, $regiao, $perfil_idperfil);
 
 echo "<pre>";
-print_r(listarReceita($conexao));
+print_r(listarReceitas($conexao));
 echo "</pre>";
 ?>
