@@ -3,13 +3,13 @@
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
-$idperfil = 1;
-$nome = "nama";
-$nome_perfil = "namasama";
+$nome = "nari";
+$nome_perfil = "nama";
 $senha = "123";
-$email = "namasama@gmail.com";
+$email = "namasfffama@gmail.com";
+$id = 6;
 
-editarPerfil($conexao, $nome, $nome_perfil, $email, $senha);
+editarPerfil($conexao, $nome, $nome_perfil, $email, $senha, $id);
 
 echo "<pre>";
 print_r(listarPerfil($conexao));
