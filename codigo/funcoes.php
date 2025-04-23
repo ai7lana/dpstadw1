@@ -92,17 +92,34 @@ function deletarPerfil ($conexao, $idperfil){
 
 function listarReceita($conexao) {
     $sql = "SELECT * FROM receita";
-    $resultado = mysqli_query($conexao, $sql);
+    $comando = mysqli_query($conexao, $sql);
 
-    $receitas = [];
-    while ($linha = mysqli_fetch_assoc($resultado)) {
-        $receitas[] = $linha;
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+
+    $lista_receitas = [];
+    while ($receita = mysqli_fetch_assoc($resultado)) {
+        $lista_receitas[] = $receita;
     }
+    mysqli_stmt_close($comando);
 
-    return $receitas;
+    return $lista_receitas;
 }
 
-function listarPerfil (){
+function listarPerfil ($conexao){
+    $sql = "SELECT * FROM perfil";
+    $comando = mysqli_query($conexao, $sql);
+
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+
+    $lista_perfil = [];
+    while ($perfil = mysqli_fetch_assoc($resultado)) {
+        $lista_perfil[] = $perfil;
+    }
+    mysqli_stmt_close($comando);
+
+    return $lista_perfil;
 
 }
 
