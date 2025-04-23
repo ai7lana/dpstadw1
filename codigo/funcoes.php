@@ -123,12 +123,37 @@ function listarPerfil ($conexao){
 
 }
 
-function listarFavorito (){
+function listarFavorito ($conexao){
+    $sql = "SELECT * FROM favoritos";
+    $comando = mysqli_query($conexao, $sql);
+
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+
+    $lista_favorito = [];
+    while ($favorito = mysqli_fetch_assoc($resultado)) {
+        $lista_favorito[] = $favorito;
+    }
+    mysqli_stmt_close($comando);
+
+    return $lista_favorito;
 
 }
  
 function listarAvaliacao (){
+    $sql = "SELECT * FROM avaliacao";
+    $comando = mysqli_query($conexao, $sql);
 
+    mysqli_stmt_execute($comando);
+    $resultados = mysqli_stmt_get_result($comando);
+
+    $lista_avaliacao = [];
+    while ($avaliacao = mysqli_fetch_assoc($resultado)) {
+        $lista_avaliacao[] = $avaliacao;
+    }
+    mysqli_stmt_close($comando);
+
+    return $lista_avaliacao;
 }
 
 ?>
