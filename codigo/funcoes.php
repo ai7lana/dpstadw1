@@ -49,6 +49,7 @@ function editarReceita ($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_p
     $sql = "UPDATE tb_receita SET nome_comida=?, tipo=?, indredientes=?
     modo_de_preparo=?, tempo=?, rendimento=?, foto=?, regiao=?, perfil_idperfil WHERE idcliente=?";
     $comando = mysqli_prepare($conexao, $sql);
+    
     mysqli_stmt_bind_param($comando, 'sssssssss', $nome_comida, $tipo, $ingredientes, $modo_de_preparo, 
     $tempo, $rendimento, $foto, $regiao, $usuario_idusuario);
     
@@ -69,13 +70,48 @@ function editarPerfil ($conexao, $nome, $nome_perfil,  $email, $senha){
 
 }
 
-function deletarReceita (){
+function deletarReceita ($conexao, $idreceita){
+    $sql = "DELETE FROM receita WHERE idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'i', $idreceita);
+    
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
 
 }
 
-function deletarPerfil (){
+function deletarPerfil ($conexao, $idperfil){
+    $sql = "DELETE FROM usuario WHERE idperfil = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'i', $idusuario);
+    
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
 
 }
 
+function listarReceita($conexao) {
+    $sql = "SELECT * FROM receita";
+    $resultado = mysqli_query($conexao, $sql);
+
+    $receitas = [];
+    while ($linha = mysqli_fetch_assoc($resultado)) {
+        $receitas[] = $linha;
+    }
+
+    return $receitas;
+}
+
+function listarPerfil (){
+
+}
+
+function listarFavorito (){
+
+}
+ 
+function listarAvaliacao (){
+
+}
 
 ?>
