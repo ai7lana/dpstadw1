@@ -156,6 +156,62 @@ function listarAvaliacao ($conexao){
     return $lista_avaliacao;
 }
 
+function deletarFavoritos ($conexao, $perfil_idperfil, $receita_idreceita) {
+    $sql = "DELETE FROM favoritos WHERE perfil_idperfil = ? AND receita_idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
+    
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+}
+
+function deletarAvaliacao($conexao, $perfil_idperfil, $receita_idreceita) {
+    $sql = "DELETE FROM avaliacao WHERE perfil_idperfil = ? AND receita_idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
+    
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+}
+
+function pesquisarReceitaId($conexao, $idreceita) {
+    $sql = "SELECT * FROM receita WHERE idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'i', $idreceita);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $receita = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $receita;
+}
+
+function pesquisarPerfilId($conexao, $idperfil) {
+    $sql = "SELECT * FROM perfil WHERE idperfil = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'i', $idperfil);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $perfil = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $perfil;
+}
+
+function editarAvaliacao($conexao, $comentario, $nota, $perfil_idperfil, $receita_idreceita) {
+    $sql = "UPDATE avaliacao SET comentario = ?, nota = ? WHERE perfil_idperfil = ? AND receita_idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'ssii', $comentario, $nota, $perfil_idperfil, $receita_idreceita);
+
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+}
+
+
+
+
 
 
 ?>
