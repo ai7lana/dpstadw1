@@ -56,7 +56,7 @@ function editarReceita ($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_p
     mysqli_stmt_close($comando);
 }
 
-function editarPerfil ($conexao, $nome, $nome_perfil, $usuario_idusario,  $email, $senha){
+function editarPerfil ($conexao, $nome, $nome_perfil,  $email, $senha){
     $sql = "UPDATE perfil SET nome = ?, nome_perfil = ?, email = ?, senha = ? WHERE idusuario = ?";
     $comando = mysqli_prepare($conexao, $sql);
 

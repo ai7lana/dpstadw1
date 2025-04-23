@@ -9,7 +9,7 @@ $nome_perfil = "namasama";
 $senha = "123";
 $email = "namasama@gmail.com";
 
-editarPerfil($conexao, $nome, $nome_perfil,  $email, $senha);
+editarPerfil($conexao, $nome, $nome_perfil, $email, $senha);
 
 echo "<pre>";
 print_r(listarPerfil($conexao));
