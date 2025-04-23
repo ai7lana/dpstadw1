@@ -4,6 +4,6 @@ require_once "../conexao.php";
 require_once "../funcoes.php";
 
 echo "<pre>";
-print_r(listarReceita($conexao));
+print_r(listarReceitas($conexao));
 echo "</pre>";
 ?>
