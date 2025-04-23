@@ -90,7 +90,7 @@ function deletarPerfil ($conexao, $idperfil){
 
 }
 
-function listarReceita($conexao) {
+function listarReceitas($conexao) {
     $sql = "SELECT * FROM receita";
     $comando = mysqli_query($conexao, $sql);
 
