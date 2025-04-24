@@ -7,9 +7,9 @@ $nome = "alana";
 $nome_perfil = "ai7lana";
 $senha = "123";
 $email = "alana@gmail.com";
-$idperfil = 2;
+$id = 2;
 
-editarPerfil($conexao, $nome, $nome_perfil, $email, $senha, $idperfil);
+editarPerfil($conexao, $nome, $nome_perfil, $email, $senha, $id);
 
 echo "<pre>";
 print_r(listarPerfil($conexao));

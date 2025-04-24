@@ -44,25 +44,23 @@ function salvarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
 }
 
 function editarReceita ($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, 
-    $foto, $regiao, $usuario_idusuario){
-    $sql = "UPDATE tb_receita SET nome_comida=?, tipo=?, indredientes=?
-    modo_de_preparo=?, tempo=?, rendimento=?, foto=?, regiao=?, perfil_idperfil WHERE idcliente=?";
+    $foto, $regiao, $perfil_idperfil, $id){
+    $sql = "UPDATE receita SET nome_comida=?, tipo=?, ingredientes=?, modo_de_preparo=?, tempo=?, rendimento=?, foto=?, regiao=?, perfil_idperfil=? WHERE idreceita = ? ";
     $comando = mysqli_prepare($conexao, $sql);
     
-    mysqli_stmt_bind_param($comando, 'sssssssss', $nome_comida, $tipo, $ingredientes, $modo_de_preparo, 
-    $tempo, $rendimento, $foto, $regiao, $usuario_idusuario);
+    mysqli_stmt_bind_param($comando, 'ssssssssii', $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $foto, $regiao, $perfil_idperfil, $id);
     
     mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
 }
 
-function editarPerfil ($conexao, $nome, $nome_perfil,  $email, $senha){
+function editarPerfil ($conexao, $nome, $nome_perfil,  $email, $senha, $id){
     $sql = "UPDATE perfil SET nome = ?, nome_perfil = ?, email = ?, senha = ? WHERE idperfil = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($comando, 'ssssi', $nome, $nome_perfil, $email, $senha_hash, $idperfil);
+    mysqli_stmt_bind_param($comando, 'ssssi', $nome, $nome_perfil, $email, $senha_hash, $idperfil, $id);
 
     mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
