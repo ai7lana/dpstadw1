@@ -170,8 +170,9 @@ function deletarAvaliacao($conexao, $perfil_idperfil, $receita_idreceita) {
     $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
     
-    mysqli_stmt_execute($comando);
+    $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
+    return $funcionou;
 }
 
 function pesquisarReceitaId($conexao, $idreceita) {
