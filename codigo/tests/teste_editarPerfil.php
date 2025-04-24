@@ -3,10 +3,10 @@
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
-$nome = "nari";
-$nome_perfil = "nama";
+$nome = "alana";
+$nome_perfil = "ai7lana";
 $senha = "123";
-$email = "namasfffama@gmail.com";
+$email = "alana@gmail.com";
 $idperfil = 2;
 
 editarPerfil($conexao, $nome, $nome_perfil, $email, $senha, $idperfil);
