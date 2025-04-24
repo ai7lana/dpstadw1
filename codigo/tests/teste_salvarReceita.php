@@ -13,4 +13,5 @@ $regiao = "Sudeste";
 $perfil_idperfil = 1;
 
 salvarReceita($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $foto, $regiao, $perfil_idperfil); 
+
 ?>
