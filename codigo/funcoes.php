@@ -16,9 +16,9 @@ function salvarReceita($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_pr
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_bind_param($comando, 'ssssssssi', $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $foto, $regiao, $perfil_idperfil);
-
-    mysqli_stmt_execute($comando);
+    $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
+    return $funcionou;
 }
 
 function salvarAvaliacao ($conexao, $comentario, $nota, $receita_idreceita, $perfil_idperfil){
@@ -28,8 +28,9 @@ function salvarAvaliacao ($conexao, $comentario, $nota, $receita_idreceita, $per
 
     mysqli_stmt_bind_param($comando, 'ssii', $comentario, $nota, $receita_idreceita, $perfil_idperfil);
     
-    mysqli_stmt_execute($comando);
+    $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
+    return $funcionou;
 
 }
 
@@ -136,7 +137,6 @@ function listarFavorito ($conexao){
     return $lista_favorito;
 
 }
- 
 function listarAvaliacao ($conexao){
     $sql = "SELECT * FROM avaliacao";
     $comando = mysqli_prepare($conexao, $sql);
@@ -149,14 +149,13 @@ function listarAvaliacao ($conexao){
         $lista_avaliacao[] = $avaliacao;
     }
     mysqli_stmt_close($comando);
-
     return $lista_avaliacao;
 }
-
-function deletarFavoritos ($conexao, $perfil_idperfil, $receita_idreceita) {
+function deletarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
     $sql = "DELETE FROM favoritos WHERE perfil_idperfil = ? AND receita_idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
+
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
     return $funcionou;
@@ -167,8 +166,9 @@ function deletarAvaliacao($conexao, $perfil_idperfil, $receita_idreceita) {
     $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
     
-    mysqli_stmt_execute($comando);
+    $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
+    return $funcionou;
 }
 
 function pesquisarReceitaId($conexao, $idreceita) {
