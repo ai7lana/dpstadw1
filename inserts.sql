@@ -4,10 +4,10 @@ INSERT INTO perfil (nome, nome_perfil, senha, email) VALUES
 ('João Silva', 'chefjoao', 'senha456', 'joao@gmail.com'),
 ('Ana Costa', 'aninha', 'senha789', 'ana@gmail.com');
 
-INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, rendimento, foto, regiao, usuario_idusuario, perfil_idperfil) VALUES
-('Feijoada', 'Almoço', 'Feijão preto, carne seca, linguiça, alho, cebola', 'Cozinhe o feijão e adicione as carnes...', '2h', '8 porções', 'feijoada.jpg', 'Sudeste', 1, 1),
-('Tapioca', 'Café da manhã', 'Goma de tapioca, queijo coalho', 'Coloque a goma na frigideira, recheie com queijo...', '10min', '1 porção', 'tapioca.jpg', 'Nordeste', 2, 2),
-('Brigadeiro', 'Sobremesa', 'Leite condensado, chocolate, manteiga', 'Cozinhe os ingredientes até desgrudar da panela...', '15min', '15 unidades', 'brigadeiro.jpg', 'Sudeste', 3, 3);
+INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, rendimento, foto, regiao, perfil_idperfil) VALUES
+('Feijoada', 'Almoço', 'Feijão preto, carne seca, linguiça, alho, cebola', 'Cozinhe o feijão e adicione as carnes...', '2h', '8 porções', 'feijoada.jpg', 'Sudeste', 1),
+('Tapioca', 'Café da manhã', 'Goma de tapioca, queijo coalho', 'Coloque a goma na frigideira, recheie com queijo...', '10min', '1 porção', 'tapioca.jpg', 'Nordeste', 2),
+('Brigadeiro', 'Sobremesa', 'Leite condensado, chocolate, manteiga', 'Cozinhe os ingredientes até desgrudar da panela...', '15min', '15 unidades', 'brigadeiro.jpg', 'Sudeste', 3);
 
 INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES
 (1, 2),  
