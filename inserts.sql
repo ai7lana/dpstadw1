@@ -6,8 +6,13 @@ INSERT INTO perfil (nome, nome_perfil, senha, email) VALUES
 
 INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, rendimento, foto, regiao, perfil_idperfil) VALUES
 ('Feijoada', 'Almoço', 'Feijão preto, carne seca, linguiça, alho, cebola', 'Cozinhe o feijão e adicione as carnes...', '2h', '8 porções', 'feijoada.jpg', 'Sudeste', 1),
+<<<<<<< HEAD
 ('Tapioca', 'Café da manhã', 'Goma de tapioca, queijo coalho', 'Coloque a goma na frigideira, recheie com queijo...', '10min', '1 porção', 'tapioca.jpg', 'Nordeste',2),
 ('Brigadeiro', 'Sobremesa', 'Leite condensado, chocolate, manteiga', 'Cozinhe os ingredientes até desgrudar da panela...', '15min', '15 unidades', 'brigadeiro.jpg', 'Sudeste', 3, 3);
+=======
+('Tapioca', 'Café da manhã', 'Goma de tapioca, queijo coalho', 'Coloque a goma na frigideira, recheie com queijo...', '10min', '1 porção', 'tapioca.jpg', 'Nordeste', 2),
+('Brigadeiro', 'Sobremesa', 'Leite condensado, chocolate, manteiga', 'Cozinhe os ingredientes até desgrudar da panela...', '15min', '15 unidades', 'brigadeiro.jpg', 'Sudeste', 3);
+>>>>>>> 1953805d4778ad8fa4febc1092e62b89e19b9740
 
 INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES
 (1, 2),  

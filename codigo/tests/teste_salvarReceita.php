@@ -8,7 +8,7 @@ $ingredientes = "Massa, queijo, molho de tomate";
 $modo_de_preparo = "Refogue cebola e alho no azeite. Adicione carne moída e cozinhe até dourar.....";
 $tempo = "1h";
 $rendimento = "6 porções";
-$foto = "lasanha.jpg";
+$foto = "./imagens/lasanha.jpg";
 $regiao = "Sudeste";
 $perfil_idperfil = 1;
 
