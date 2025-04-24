@@ -28,8 +28,9 @@ function salvarAvaliacao ($conexao, $comentario, $nota, $receita_idreceita, $per
 
     mysqli_stmt_bind_param($comando, 'ssii', $comentario, $nota, $receita_idreceita, $perfil_idperfil);
     
-    mysqli_stmt_execute($comando);
+    $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
+    return $funcionou;
 
 }
 
