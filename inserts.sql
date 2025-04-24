@@ -1,3 +1,4 @@
+USE cozinha;
 INSERT INTO perfil (nome, nome_perfil, senha, email) VALUES
 ('Maria Oliveira', 'maria123', 'senha123', 'maria@gmail.com'),
 ('João Silva', 'chefjoao', 'senha456', 'joao@gmail.com'),
