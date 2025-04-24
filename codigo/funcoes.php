@@ -152,7 +152,6 @@ function listarAvaliacao ($conexao){
         $lista_avaliacao[] = $avaliacao;
     }
     mysqli_stmt_close($comando);
-
     return $lista_avaliacao;
 }
 
@@ -160,6 +159,7 @@ function deletarFavoritos ($conexao, $perfil_idperfil, $receita_idreceita) {
     $sql = "DELETE FROM favoritos WHERE perfil_idperfil = ? AND receita_idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
+
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
     return $funcionou;
