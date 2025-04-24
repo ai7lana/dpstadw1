@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `cozinha`.`avaliacao` (
   `perfil_idperfil` INT NOT NULL,
   `receita_idreceita` INT NOT NULL,
   `comentario` VARCHAR(45) NULL,
-  `nota` DECIMAL(1,2) NULL,
+  `nota` DECIMAL(2,1) NULL,
   PRIMARY KEY (`perfil_idperfil`, `receita_idreceita`),
   INDEX `fk_perfil_has_receita_receita2_idx` (`receita_idreceita` ASC) VISIBLE,
   INDEX `fk_perfil_has_receita_perfil2_idx` (`perfil_idperfil` ASC) VISIBLE,
