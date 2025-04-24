@@ -40,8 +40,10 @@ function salvarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
     
     mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
    
-    mysqli_stmt_execute($comando);
+    $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
+    return $funcionou;
+
 }
 
 function editarReceita ($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, 
@@ -55,7 +57,7 @@ function editarReceita ($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_p
     mysqli_stmt_close($comando);
 }
 
-function editarPerfil ($conexao, $nome, $nome_perfil,  $email, $senha, $id){
+function editarPerfil ($conexao, $nome, $nome_perfil, $email, $senha, $id){
     $sql = "UPDATE perfil SET nome = ?, nome_perfil = ?, email = ?, senha = ? WHERE idperfil = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -73,18 +75,21 @@ function deletarReceita ($conexao, $idreceita){
     $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_bind_param($comando, 'i', $idreceita);
     
-    mysqli_stmt_execute($comando);
+    $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
+    return $funcionou;
+
 
 }
 
 function deletarPerfil ($conexao, $idperfil){
     $sql = "DELETE FROM usuario WHERE idperfil = ?";
     $comando = mysqli_prepare($conexao, $sql);
-    mysqli_stmt_bind_param($comando, 'i', $idusuario);
+    mysqli_stmt_bind_param($comando, 'i', $idperfil);
     
-    mysqli_stmt_execute($comando);
+    $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
+    return $funcionou;
 
 }
 
@@ -137,6 +142,7 @@ function listarFavorito ($conexao){
     return $lista_favorito;
 
 }
+
 function listarAvaliacao ($conexao){
     $sql = "SELECT * FROM avaliacao";
     $comando = mysqli_prepare($conexao, $sql);
@@ -151,6 +157,7 @@ function listarAvaliacao ($conexao){
     mysqli_stmt_close($comando);
     return $lista_avaliacao;
 }
+
 function deletarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
     $sql = "DELETE FROM favoritos WHERE perfil_idperfil = ? AND receita_idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
