@@ -218,4 +218,5 @@ function editarAvaliacao($conexao, $comentario, $nota, $perfil_idperfil, $receit
 
 
 
+
 ?>
