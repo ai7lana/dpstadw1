@@ -213,10 +213,32 @@ function editarAvaliacao($conexao, $comentario, $nota, $perfil_idperfil, $receit
     mysqli_stmt_close($comando);
 }
 
+function pesquisarReceitaNome($conexao, $nome_comida) {}
 
+function pesquisarPerfilNome($conexao. $nome) {}
 
+function pesquisarFavoritosId($conexao, $perfil_idperfil, $receita_idreceita) {}
 
+function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){}
 
+function editarFavoritos($conexao, $perfil_idperfil, $receita_idreceita){}
 
+function pesquisarPerfil($conexao, $idperfil, $nome, $nome_perfil, $senha, $email){}
+
+function verificarLogin($conexao, $senha, $email){}
+
+function verificarLogado($conexao, $idperfil){}
+
+function pesquisarReceitaPerfil($conexao, $perfil_idperfil){}
+
+function pesquisarReceitaRegiao($conexao, $regiao){}
+
+function pesquisarReceitaTipo($conexao, $tipo){}
+
+function pesquisarComentario($conexao, $cometario{}
+
+function pesquiarReceitaIngredientes($conexao, $ingredientes){}
+
+function pesquisarPerfilNomePerfil($conexao, $nome_perfil{}
 
 ?>
