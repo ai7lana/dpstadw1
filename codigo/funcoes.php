@@ -78,8 +78,7 @@ function deletarReceita ($conexao, $idreceita){
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
     return $funcionou;
-
-
+    
 }
 
 function deletarPerfil ($conexao, $idperfil){
