@@ -215,7 +215,7 @@ function editarAvaliacao($conexao, $comentario, $nota, $perfil_idperfil, $receit
 
 function pesquisarReceitaNome($conexao, $nome_comida) {}
 
-function pesquisarPerfilNome($conexao. $nome) {}
+function pesquisarPerfilNome($conexao, $nome) {}
 
 function pesquisarFavoritosId($conexao, $perfil_idperfil, $receita_idreceita) {}
 
@@ -235,10 +235,10 @@ function pesquisarReceitaRegiao($conexao, $regiao){}
 
 function pesquisarReceitaTipo($conexao, $tipo){}
 
-function pesquisarComentario($conexao, $cometario{}
+function pesquisarComentario($conexao, $cometario){}
 
 function pesquiarReceitaIngredientes($conexao, $ingredientes){}
 
-function pesquisarPerfilNomePerfil($conexao, $nome_perfil{}
+function pesquisarPerfilNomePerfil($conexao, $nome_perfil){}
 
 ?>
