@@ -57,13 +57,13 @@ function editarReceita ($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_p
     mysqli_stmt_close($comando);
 }
 
-function editarPerfil ($conexao, $nome, $nome_perfil, $email, $senha, $id){
+function editarPerfil ($conexao, $nome, $nome_perfil, $email, $senha, $idperfil){
     $sql = "UPDATE perfil SET nome = ?, nome_perfil = ?, email = ?, senha = ? WHERE idperfil = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($comando, 'ssssi', $nome, $nome_perfil, $email, $senha_hash, $idperfil, $id);
+    mysqli_stmt_bind_param($comando, 'ssssi', $nome, $nome_perfil, $email, $senha_hash, $idperfil);
 
     mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
