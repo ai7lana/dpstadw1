@@ -3,5 +3,5 @@
     require_once "../conexao.php";
 
 
-    deletarFavoritos($conexao, 1, 2);
+    deletarFavoritos($conexao, 1, 1);
 ?>
