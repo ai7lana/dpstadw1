@@ -6,7 +6,7 @@ require_once "../funcoes.php";
 $id = 1;
 $nome_comida = "bolo";
 $tipo = "bolo";
-$ingredientes = "sdfghjkgtfdsfghjdf ghjkfdsfghjk dfghjkjfghjkl dgfghjhgfdfjklkjhgfdsfghjkllkjh";
+$ingredientes = "sem nda jh";
 $modo_de_preparo = "cozzinhe bastantes";
 $tempo = "30m";
 $rendimento = "5 pessoas";
