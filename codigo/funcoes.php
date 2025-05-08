@@ -70,6 +70,17 @@ function editarPerfil ($conexao, $nome, $nome_perfil, $email, $senha, $idperfil)
 
 }
 
+function editarAvaliacao($conexao, $comentario, $nota, $perfil_idperfil, $receita_idreceita) {
+    $sql = "UPDATE avaliacao SET comentario = ?, nota = ? WHERE perfil_idperfil = ? AND receita_idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'ssii', $comentario, $nota, $perfil_idperfil, $receita_idreceita);
+
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+}
+
+function editarFavoritos($conexao, $perfil_idperfil, $receita_idreceita){}
+
 function deletarReceita ($conexao, $idreceita){
     $sql = "DELETE FROM receita WHERE idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -90,6 +101,26 @@ function deletarPerfil ($conexao, $idperfil){
     mysqli_stmt_close($comando);
     return $funcionou;
 
+}
+
+function deletarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
+    $sql = "DELETE FROM favoritos WHERE perfil_idperfil = ? AND receita_idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
+
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    return $funcionou;
+}
+
+function deletarAvaliacao($conexao, $perfil_idperfil, $receita_idreceita) {
+    $sql = "DELETE FROM avaliacao WHERE perfil_idperfil = ? AND receita_idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
+    
+    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+    return $funcionou;
 }
 
 function listarReceitas($conexao) {
@@ -157,26 +188,6 @@ function listarAvaliacao ($conexao){
     return $lista_avaliacao;
 }
 
-function deletarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
-    $sql = "DELETE FROM favoritos WHERE perfil_idperfil = ? AND receita_idreceita = ?";
-    $comando = mysqli_prepare($conexao, $sql);
-    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
-
-    $funcionou = mysqli_stmt_execute($comando);
-    mysqli_stmt_close($comando);
-    return $funcionou;
-}
-
-function deletarAvaliacao($conexao, $perfil_idperfil, $receita_idreceita) {
-    $sql = "DELETE FROM avaliacao WHERE perfil_idperfil = ? AND receita_idreceita = ?";
-    $comando = mysqli_prepare($conexao, $sql);
-    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
-    
-    $funcionou = mysqli_stmt_execute($comando);
-    mysqli_stmt_close($comando);
-    return $funcionou;
-}
-
 function pesquisarReceitaId($conexao, $idreceita) {
     $sql = "SELECT * FROM receita WHERE idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -203,14 +214,7 @@ function pesquisarPerfilId($conexao, $idperfil) {
     return $perfil;
 }
 
-function editarAvaliacao($conexao, $comentario, $nota, $perfil_idperfil, $receita_idreceita) {
-    $sql = "UPDATE avaliacao SET comentario = ?, nota = ? WHERE perfil_idperfil = ? AND receita_idreceita = ?";
-    $comando = mysqli_prepare($conexao, $sql);
-    mysqli_stmt_bind_param($comando, 'ssii', $comentario, $nota, $perfil_idperfil, $receita_idreceita);
-
-    mysqli_stmt_execute($comando);
-    mysqli_stmt_close($comando);
-}
+function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){}
 
 function pesquisarReceitaNome($conexao, $nome_comida) {}
 
@@ -218,15 +222,7 @@ function pesquisarPerfilNome($conexao, $nome) {}
 
 function pesquisarFavoritosId($conexao, $perfil_idperfil, $receita_idreceita) {}
 
-function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){}
-
-function editarFavoritos($conexao, $perfil_idperfil, $receita_idreceita){}
-
 function pesquisarPerfil($conexao, $idperfil, $nome, $nome_perfil, $senha, $email){}
-
-function verificarLogin($conexao, $senha, $email){}
-
-function verificarLogado($conexao, $idperfil){}
 
 function pesquisarReceitaPerfil($conexao, $perfil_idperfil){}
 
@@ -239,5 +235,9 @@ function pesquisarComentario($conexao, $cometario){}
 function pesquiarReceitaIngredientes($conexao, $ingredientes){}
 
 function pesquisarPerfilNomePerfil($conexao, $nome_perfil){}
+
+function verificarLogin($conexao, $senha, $email){}
+
+function verificarLogado($conexao, $idperfil){}
 
 ?>
