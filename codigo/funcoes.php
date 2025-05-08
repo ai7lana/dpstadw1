@@ -79,7 +79,14 @@ function editarAvaliacao($conexao, $comentario, $nota, $perfil_idperfil, $receit
     mysqli_stmt_close($comando);
 }
 
-function editarFavoritos($conexao, $perfil_idperfil, $receita_idreceita){}
+function editarFavoritos($conexao, $perfil_idperfil, $receita_idreceita){
+    $sql = "UPDATE favoritos SET perfil_idperfil = ?, receita_idreceita = ? WHERE perfil_idperfil = ? AND receita_idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
+
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+}
 
 function deletarReceita ($conexao, $idreceita){
     $sql = "DELETE FROM receita WHERE idreceita = ?";
