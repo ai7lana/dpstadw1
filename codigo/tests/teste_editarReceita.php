@@ -3,7 +3,7 @@
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
-$id = 1;
+$id = 2;
 $nome_comida = "bolo";
 $tipo = "bolo";
 $ingredientes = "sem nda jh";
