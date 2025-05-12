@@ -3,5 +3,5 @@
     require_once "../conexao.php";
 
 
-    deletarReceita($conexao, 5);
+    deletarReceita($conexao, 1);
 ?>

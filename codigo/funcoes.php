@@ -221,7 +221,19 @@ function pesquisarPerfilId($conexao, $idperfil) {
     return $perfil;
 }
 
-function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){}
+function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){
+    $sql = "SELECT * FROM avaliacao WHERE perdil_idperfil = ? and receita_idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'i, i', $perfil_idperfil, $receita_idreceita);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $perfil = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $perfil;
+}
+
 
 function pesquisarReceitaNome($conexao, $nome_comida) {}
 
