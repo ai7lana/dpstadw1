@@ -100,7 +100,7 @@ function deletarReceita ($conexao, $idreceita){
 }
 
 function deletarPerfil ($conexao, $idperfil){
-    $sql = "DELETE FROM usuario WHERE idperfil = ?";
+    $sql = "DELETE FROM perfil WHERE idperfil = ?";
     $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_bind_param($comando, 'i', $idperfil);
     
