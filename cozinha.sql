@@ -107,3 +107,37 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+USE cozinha;
+INSERT INTO perfil (nome, nome_perfil, senha, email) VALUES
+('João da Silva', 'joaosilva', 'senha123', 'joao@email.com'),
+('Maria Oliveira', 'mariaoliveira', 'senha456', 'maria@email.com'),
+('Carlos Souza', 'carlossouza', 'senha789', 'carlos@email.com'),
+('Ana Pereira', 'anapereira', 'senhaabc', 'ana@email.com'),
+('Lucas Lima', 'lucaslima', 'senhalucas', 'lucas@email.com');
+
+INSERT INTO receita (
+    nome_comida, tipo, ingredientes, modo_de_preparo,
+    tempo, rendimento, foto, regiao, perfil_idperfil
+) VALUES
+('Bolo de Cenoura', 'Doce', 'cenoura, farinha, ovos, açúcar', 'Misture tudo e asse por 40 minutos.', '40 minutos', '8 porções', 'bolo.jpg', 'Sudeste', 1),
+('Feijoada', 'Prato Principal', 'feijão preto, carne seca, linguiça', 'Cozinhe os ingredientes por 2 horas.', '2 horas', '6 porções', 'feijoada.jpg', 'Centro-Oeste', 2),
+('Moqueca', 'Peixe', 'peixe, cebola, pimentão, leite de coco', 'Cozinhe os ingredientes no leite de coco.', '45 minutos', '4 porções', 'moqueca.jpg', 'Nordeste', 3),
+('Pudim de Leite', 'Sobremesa', 'leite condensado, ovos, leite', 'Asse em banho-maria por 1 hora.', '1 hora', '10 porções', 'pudim.jpg', 'Sudeste', 4),
+('Arroz Carreteiro', 'Prato Principal', 'arroz, carne seca, cebola', 'Frite os ingredientes e adicione arroz cozido.', '30 minutos', '5 porções', 'carreteiro.jpg', 'Sul', 5);
+
+INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES
+(1, 2),
+(2, 1),
+(3, 4),
+(4, 3),
+(5, 5);
+
+INSERT INTO avaliacao (perfil_idperfil, receita_idreceita, comentario, nota) VALUES
+(1, 2, 'Muito saborosa!', 5.0),
+(2, 1, 'Delicioso bolo!', 4.5),
+(3, 4, 'Gostei do pudim!', 4.0),
+(4, 3, 'Excelente moqueca!', 4.8),
+(5, 5, 'Muito bom e rápido de fazer.', 4.3);
+
