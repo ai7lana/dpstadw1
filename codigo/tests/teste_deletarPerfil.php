@@ -3,5 +3,5 @@
     require_once "../conexao.php";
 
 
-    deletarPerfil($conexao, 2);
+    deletarPerfil($conexao, 1);
 ?>

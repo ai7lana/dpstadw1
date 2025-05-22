@@ -3,5 +3,5 @@
     require_once "../conexao.php";
 
 
-    deletarAvaliacao($conexao, 2, 1);
+    deletarAvaliacao($conexao, 1, 2);
 ?>

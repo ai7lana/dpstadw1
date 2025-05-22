@@ -228,14 +228,28 @@ function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){
 
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
-    $perfil = mysqli_fetch_assoc($resultado);
+    $avaliacao = mysqli_fetch_assoc($resultado);
     
     mysqli_stmt_close($comando);
-    return $perfil;
+    return $avaliacao;
 }
 
 
-function pesquisarReceitaNome($conexao, $nome_comida) {}
+function pesquisarReceitaNome($conexao, $nome_comida) {
+    $sql = "SELECT * FROM receita WHERE nome_comida LIKE ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 's', $nome_comida);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $receita = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $receita;
+
+    
+}
 
 function pesquisarPerfilNome($conexao, $nome) {}
 
