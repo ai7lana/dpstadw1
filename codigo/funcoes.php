@@ -253,7 +253,20 @@ function pesquisarReceitaNome($conexao, $nome_comida) {
 
 function pesquisarPerfilNome($conexao, $nome) {}
 
-function pesquisarFavoritosId($conexao, $perfil_idperfil, $receita_idreceita) {}
+function pesquisarFavoritosId($conexao, $perfil_idperfil, $receita_idreceita) {
+    $sql = "SELECT * FROM favoritos WHERE perfl_idperfil = ? AND receita_idreceita = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i, i', $perfil_idperfil, $receita_idreceita);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $favoritos = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $favoritos;
+
+}
 
 function pesquisarPerfil($conexao, $idperfil, $nome, $nome_perfil, $senha, $email){}
 
