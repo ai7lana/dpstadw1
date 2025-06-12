@@ -324,7 +324,19 @@ function pesquisarReceitaTipo($conexao, $tipo){
     return $receita;
 }
 
-function pesquisarComentario($conexao, $cometario){}
+function pesquisarReceitaComentario($conexao, $cometario){
+    $sql = "SELECT * FROM comentario LIKE ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 's', $comentario);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $receita = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $receita;
+}
 
 function pesquiarReceitaIngredientes($conexao, $ingredientes){
     $sql = "SELECT * FROM receita WHERE ingredientes LIKE ?";
