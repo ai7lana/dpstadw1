@@ -296,10 +296,33 @@ function pesquisarReceitaPerfil($conexao, $perfil_idperfil){
 
 }
 
+function pesquisarReceitaRegiao($conexao, $regiao){
+    $sql = "SELECT * FROM receita WHERE regiao LIKE ?";
+    $comando = mysqli_prepare($conexao, $sql);
 
-function pesquisarReceitaRegiao($conexao, $regiao){}
+    mysqli_stmt_bind_param($comando, 's', $regiao);
 
-function pesquisarReceitaTipo($conexao, $tipo){}
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $regiao = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $regiao;
+}
+
+function pesquisarReceitaTipo($conexao, $tipo){
+    $sql = "SELECT * FROM receita WHERE tipo LIKE ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 's', $tipo);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $tipo = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $tipo;
+}
 
 function pesquisarComentario($conexao, $cometario){}
 
