@@ -304,10 +304,10 @@ function pesquisarReceitaRegiao($conexao, $regiao){
 
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
-    $regiao = mysqli_fetch_assoc($resultado);
+    $receita = mysqli_fetch_assoc($resultado);
     
     mysqli_stmt_close($comando);
-    return $regiao;
+    return $receita;
 }
 
 function pesquisarReceitaTipo($conexao, $tipo){
@@ -318,17 +318,41 @@ function pesquisarReceitaTipo($conexao, $tipo){
 
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
-    $tipo = mysqli_fetch_assoc($resultado);
+    $receita = mysqli_fetch_assoc($resultado);
     
     mysqli_stmt_close($comando);
-    return $tipo;
+    return $receita;
 }
 
 function pesquisarComentario($conexao, $cometario){}
 
-function pesquiarReceitaIngredientes($conexao, $ingredientes){}
+function pesquiarReceitaIngredientes($conexao, $ingredientes){
+    $sql = "SELECT * FROM receita WHERE ingredientes LIKE ?";
+    $comando = mysqli_prepare($conexao, $sql);
 
-function pesquisarPerfilNomePerfil($conexao, $nome_perfil){}
+    mysqli_stmt_bind_param($comando, 's', $ingredientes);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $receita = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $receita;
+}
+
+function pesquisarPerfilNomePerfil($conexao, $nome_perfil){
+    $sql = "SELECT * FROM perfil WHERE nome_perfil LIKE ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 's', $nome_perfil);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $perfil = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $perfil;
+}
 
 function verificarLogin($conexao, $senha, $email){}
 
