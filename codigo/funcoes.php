@@ -281,9 +281,21 @@ function pesquisarFavoritosId($conexao, $perfil_idperfil, $receita_idreceita) {
 
 }
 
-function pesquisarPerfil($conexao, $idperfil, $nome, $nome_perfil, $senha, $email){}
+function pesquisarReceitaPerfil($conexao, $perfil_idperfil){
+    $sql = "SELECT * FROM receita WHERE perfil_idperfil = ?";
+    $comando = mysqli_prepare($conexao, $sql);
 
-function pesquisarReceitaPerfil($conexao, $perfil_idperfil){}
+    mysqli_stmt_bind_param($comando, 'i', $perfil_idperfil);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $perfil = mysqli_fetch_assoc($resultado);
+    
+    mysqli_stmt_close($comando);
+    return $perfil;
+
+}
+
 
 function pesquisarReceitaRegiao($conexao, $regiao){}
 
