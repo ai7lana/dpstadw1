@@ -13,7 +13,6 @@ INSERT INTO perfil (nome, nome_perfil, senha, email) VALUES
 ('Camila Farias', 'camif', 'camila2024', 'camila@gmail.com');
 
 INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, rendimento, foto, regiao, perfil_idperfil) VALUES
-INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, rendimento, foto, regiao, perfil_idperfil) VALUES
 ('Moqueca Baiana', 'Almoço', 'Peixe, pimentão, cebola, coentro, leite de coco', 'Cozinhe todos os ingredientes em panela de barro...', '1h', '4 porções', 'moqueca.jpg', 'Nordeste', 4),
 ('Pão de Queijo', 'Lanche', 'Polvilho, queijo, leite, óleo, ovos', 'Misture tudo e asse em forno médio...', '45min', '20 unidades', 'paodequeijo.jpg', 'Sudeste', 5),
 ('Cuscuz Nordestino', 'Café da manhã', 'Flocão de milho, água, sal', 'Hidrate o flocão e cozinhe em cuscuzeira...', '20min', '3 porções', 'cuscuz.jpg', 'Nordeste', 6),
