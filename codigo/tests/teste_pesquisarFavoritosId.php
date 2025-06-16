@@ -3,7 +3,7 @@
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
-$receita_idreceira = 2;
+$receita_idreceira = 1;
 $perfil_idperfil = 1;
 
 echo "<pre>";

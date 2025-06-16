@@ -222,9 +222,9 @@ function pesquisarPerfilId($conexao, $idperfil) {
 }
 
 function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){
-    $sql = "SELECT * FROM avaliacao WHERE perdil_idperfil = ? and receita_idreceita = ?";
+    $sql = "SELECT * FROM avaliacao WHERE perfil_idperfil = ? and receita_idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
-    mysqli_stmt_bind_param($comando, 'i, i', $perfil_idperfil, $receita_idreceita);
+    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
 
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
@@ -267,10 +267,10 @@ function pesquisarPerfilNome($conexao, $nome) {
 }
 
 function pesquisarFavoritosId($conexao, $perfil_idperfil, $receita_idreceita) {
-    $sql = "SELECT * FROM favoritos WHERE perfl_idperfil = ? AND receita_idreceita = ?";
+    $sql = "SELECT * FROM favoritos WHERE perfil_idperfil = ? AND receita_idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'i, i', $perfil_idperfil, $receita_idreceita);
+    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
 
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);

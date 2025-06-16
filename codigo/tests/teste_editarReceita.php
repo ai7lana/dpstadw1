@@ -4,8 +4,8 @@ require_once "../conexao.php";
 require_once "../funcoes.php";
 
 $id = 2;
-$nome_comida = "bolo";
-$tipo = "bolo";
+$nome_comida = "bolo de merda";
+$tipo = "merda";
 $ingredientes = "sem nda jh";
 $modo_de_preparo = "cozzinhe bastantes";
 $tempo = "30m";
