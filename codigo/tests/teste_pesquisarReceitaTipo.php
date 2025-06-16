@@ -3,7 +3,7 @@
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
-$tipo = "mole";
+$tipo = "Jantar";
 
 echo "<pre>";
 print_r(pesquisarReceitaTipo($conexao, $tipo));

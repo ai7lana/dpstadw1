@@ -3,7 +3,7 @@
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
-$regiao = "norte";
+$regiao = "sudeste";
 
 echo "<pre>";
 print_r(pesquisarReceitaRegiao($conexao, $regiao));
