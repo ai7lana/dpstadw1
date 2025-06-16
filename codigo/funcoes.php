@@ -366,8 +366,4 @@ function pesquisarPerfilNomePerfil($conexao, $nome_perfil){
     return $perfil;
 }
 
-function verificarLogin($conexao, $senha, $email){}
-
-function verificarLogado($conexao, $idperfil){}
-
 ?>
