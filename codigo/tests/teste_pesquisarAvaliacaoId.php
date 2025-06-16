@@ -7,6 +7,6 @@ $perfil_idperfil = 1;
 $receita_idreceita = 2;
 
 echo "<pre>";
-print_r(pesquisarReceitaNome($conexao, $perfil_idperfil, $receita_idreceita));
+print_r(pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita));
 echo "</pre>";
 ?>

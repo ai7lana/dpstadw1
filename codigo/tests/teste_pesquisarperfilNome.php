@@ -6,6 +6,6 @@ require_once "../funcoes.php";
 $nome = "pessoa";
 
 echo "<pre>";
-print_r(pesquisarReceitaNome($conexao, $nome));
+print_r(pesquisarPerfilNome($conexao, $nome));
 echo "</pre>";
 ?>
