@@ -198,6 +198,7 @@ function listarAvaliacao ($conexao){
 function pesquisarReceitaId($conexao, $idreceita) {
     $sql = "SELECT * FROM receita WHERE idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
+    $idreceita = "%" . $idreceita . "%";
     mysqli_stmt_bind_param($comando, 'i', $idreceita);
 
     mysqli_stmt_execute($comando);
@@ -211,6 +212,7 @@ function pesquisarReceitaId($conexao, $idreceita) {
 function pesquisarPerfilId($conexao, $idperfil) {
     $sql = "SELECT * FROM perfil WHERE idperfil = ?";
     $comando = mysqli_prepare($conexao, $sql);
+    $idperfil = "%" . $idperfil . "%";
     mysqli_stmt_bind_param($comando, 'i', $idperfil);
 
     mysqli_stmt_execute($comando);
@@ -224,6 +226,8 @@ function pesquisarPerfilId($conexao, $idperfil) {
 function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){
     $sql = "SELECT * FROM avaliacao WHERE perfil_idperfil = ? and receita_idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
+    $perfil_idperfil = "%" . $perfil_idperfil . "%";
+    $receita_idreceita = "%" . $receita_idreceita . "%";
     mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
 
     mysqli_stmt_execute($comando);
@@ -238,7 +242,7 @@ function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){
 function pesquisarReceitaNome($conexao, $nome_comida) {
     $sql = "SELECT * FROM receita WHERE nome_comida LIKE ?";
     $comando = mysqli_prepare($conexao, $sql);
-
+    $nome_comida = "%" . $nome_comida . "%";
     mysqli_stmt_bind_param($comando, 's', $nome_comida);
 
     mysqli_stmt_execute($comando);
@@ -254,7 +258,7 @@ function pesquisarReceitaNome($conexao, $nome_comida) {
 function pesquisarPerfilNome($conexao, $nome) {
     $sql = "SELECT * FROM perfil WHERE nome LIKE ?";
     $comando = mysqli_prepare($conexao, $sql);
-
+    $nome = "%" . $nome . "%";
     mysqli_stmt_bind_param($comando, 's', $nome);
 
     mysqli_stmt_execute($comando);
@@ -269,7 +273,8 @@ function pesquisarPerfilNome($conexao, $nome) {
 function pesquisarFavoritosId($conexao, $perfil_idperfil, $receita_idreceita) {
     $sql = "SELECT * FROM favoritos WHERE perfil_idperfil = ? AND receita_idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
-
+    $perfil_idperfil = "%" . $perfil_idperfil . "%";
+    $receita_idreceita = "%" . $receita_idreceita . "%";
     mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
 
     mysqli_stmt_execute($comando);
@@ -284,6 +289,7 @@ function pesquisarFavoritosId($conexao, $perfil_idperfil, $receita_idreceita) {
 function pesquisarReceitaPerfil($conexao, $perfil_idperfil){
     $sql = "SELECT * FROM receita WHERE perfil_idperfil = ?";
     $comando = mysqli_prepare($conexao, $sql);
+    $nomperfil_idperfile = "%" . $perfil_idperfil . "%";
 
     mysqli_stmt_bind_param($comando, 'i', $perfil_idperfil);
 
@@ -299,6 +305,7 @@ function pesquisarReceitaPerfil($conexao, $perfil_idperfil){
 function pesquisarReceitaRegiao($conexao, $regiao){
     $sql = "SELECT * FROM receita WHERE regiao LIKE ?";
     $comando = mysqli_prepare($conexao, $sql);
+    $regiao = "%" . $regiao . "%";
 
     mysqli_stmt_bind_param($comando, 's', $regiao);
 
@@ -313,6 +320,7 @@ function pesquisarReceitaRegiao($conexao, $regiao){
 function pesquisarReceitaTipo($conexao, $tipo){
     $sql = "SELECT * FROM receita WHERE tipo LIKE ?";
     $comando = mysqli_prepare($conexao, $sql);
+    $tipo = "%" . $tipo . "%";
 
     mysqli_stmt_bind_param($comando, 's', $tipo);
 
@@ -327,6 +335,7 @@ function pesquisarReceitaTipo($conexao, $tipo){
 function pesquisarReceitaComentario($conexao, $cometario){
     $sql = "SELECT * FROM comentario LIKE ?";
     $comando = mysqli_prepare($conexao, $sql);
+    $comentario = "%" . $comentario . "%";
 
     mysqli_stmt_bind_param($comando, 's', $comentario);
 
@@ -341,6 +350,7 @@ function pesquisarReceitaComentario($conexao, $cometario){
 function pesquiarReceitaIngredientes($conexao, $ingredientes){
     $sql = "SELECT * FROM receita WHERE ingredientes LIKE ?";
     $comando = mysqli_prepare($conexao, $sql);
+    $ingredientes = "%" . $ingredientes . "%";
 
     mysqli_stmt_bind_param($comando, 's', $ingredientes);
 
@@ -355,6 +365,7 @@ function pesquiarReceitaIngredientes($conexao, $ingredientes){
 function pesquisarPerfilNomePerfil($conexao, $nome_perfil){
     $sql = "SELECT * FROM perfil WHERE nome_perfil LIKE ?";
     $comando = mysqli_prepare($conexao, $sql);
+    $nome_perfil = "%" . $nome_perfil . "%";
 
     mysqli_stmt_bind_param($comando, 's', $nome_perfil);
 
