@@ -19,16 +19,19 @@ truetype -ttf
 .bodyindex{
     background-color: #deb489;
 }
+#fundo{
+    background-color: #3d2f2b;
+}
 #cabeca{
     background-color: #3d2f2b;
     display: flex;
-    /* justify-content:center; */
+    flex-direction:row-reverse;
+    justify-content:center;
     align-items: center;
 }
 #cabeca2{
     background-color: #3d2f2b;
     display: flex;
-    flex-direction: row-reverse;
     justify-content: end;
     align-items: center;
 }
@@ -41,15 +44,15 @@ truetype -ttf
 }
 .titu{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     gap: 100px;
     align-items: flex-end;
     width: 3px;
-    height: 30px;
+    height: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 3px;
+    margin-right: 3px;
 
 }
 .link{
@@ -62,6 +65,8 @@ truetype -ttf
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column-reverse;
+
 }
 
 a{
