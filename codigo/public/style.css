@@ -4,11 +4,13 @@
 #cabeca{
     background-color: #3d2f2b;
 }
+
+.tit{
+    font-size: 300%;
+    color: #f6f3ee;
+}
 .link{
     font-size:x-large;
     color: #f6f3ee;
 }
-.titulo{
-    color: #f6f3ee;
-    font-family: ;
-}
+

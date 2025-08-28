@@ -9,7 +9,10 @@
 </head>
 <body class="bodyindex">
     <div id="cabeca">
-        <h1 class = "titulo">Brasil na Cozinha</h1>
+        <div>
+            <p class="tit" id="titulo">Brasil</p>
+            <p class="tit" id="titulo2"> na Cozinha</p>
+        </div>
         <p class="link" id="inicio">início</p>
         <p class="link" id="perfil">perfil</p>
         <p class="link" id="receitas">receitas</p>
