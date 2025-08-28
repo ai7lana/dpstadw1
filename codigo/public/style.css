@@ -1,7 +1,5 @@
-@font-face {
-    font-family: 'the seasons';
-    src: url();
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
 .bodyindex{
     background-color: #deb489;
 }
@@ -10,9 +8,10 @@
 }
 
 .tit{
-    /*;font-size: 300%;*/
+    font-size: 300%;
     color: #f6f3ee;
     text-align: center;
+    font-family: "bondoni moda";
 }
 .link{
     font-size:x-large;
