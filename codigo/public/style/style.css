@@ -40,4 +40,8 @@ truetype -ttf
     align-items: center;
 }
 
+a{
+    text-decoration: none;
+}
+
 

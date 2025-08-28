@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="bodyindex">
-    <div id="cabeca">
+    <div id="cabeca"> <br> <br><br>
         <div class="titu" id="titulogeral">
             <a href="" class="tit" id="titulo"> Brasil <br> na Cozinha</a>
         </div>
@@ -28,7 +28,7 @@
             <a href="" class="link" id="sobre">SOBRE NÓS</a>
         </div>
         <div class="divlinks" id="divcadastrar">
-            <a href="" class="link" id="cadastrar"> CADASTRAR</a>
+            <a href="formPerfil.p" class="link" id="cadastrar"> CADASTRAR</a>
         </div>
         <div class="divlinks" id="divlogin">
             <a href="" class="link" id="login"> LOGIN</a>
