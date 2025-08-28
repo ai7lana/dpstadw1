@@ -2,6 +2,7 @@
 opentype - otf
 truetype -ttf
 */
+
 @font-face {
     font-family: 'qarinthen';
     src: url(Qarinthen.otf) format('opentype');
@@ -21,13 +22,13 @@ truetype -ttf
 #cabeca{
     background-color: #3d2f2b;
     display: flex;
-    justify-content: first baseline;
+    justify-content:flex-start;
     align-items: center;
 }
 #cabeca2{
     background-color: #3d2f2b;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
