@@ -7,12 +7,14 @@
     <script src="../jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <h2>Cadastro de Receita</h2>
+    <h2>Adicionar favoritos</h2>
     <form action="../salvarFavoritos.php" method="post">
 
     
-    Perfil: <br><input type="text" name="perfil" required><br>
-    Receita: <br> <input type="text" name="Receita" required><br>
+    Perfil: <br><input type="text" name="perfil_idperfil" required><br>
+    Receita: <br> <input type="text" name="receita_idreceita" required><br>
+
+    <button type="submit">Salvar</button>
 
 
 
