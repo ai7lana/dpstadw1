@@ -27,8 +27,10 @@
         <div class="divlinks" id="divsobre">
             <a href="" class="link" id="sobre">SOBRE NÓS</a>
         </div>
+    </div>
+    <div id="cabeca2">
         <div class="divlinks" id="divcadastrar">
-            <a href="formPerfil.p" class="link" id="cadastrar"> CADASTRAR</a>
+            <a href="formPerfil.php" class="link" id="cadastrar"> CADASTRAR</a>
         </div>
         <div class="divlinks" id="divlogin">
             <a href="" class="link" id="login"> LOGIN</a>
