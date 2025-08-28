@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
     <script src="../jquery-3.7.1.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="bodyindex">
     <div id="cabeca">
         <div class="titu" id="titulogeral">
-            <p class="tit" id="titulo">Brasil <br> na Cozinha</p>
+            <a href="" class="tit" id="titulo"> Brasil <br> na Cozinha</a>
         </div>
         <div class="divlinks" id="divinicio">
-            <p class="link" id="inicio">início</p>
+            <a href="" class="link" id="inicio"> ÍNICIO</a>
         </div>
         <div class="divlinks" id="divperfil">
-            <p class="link" id="perfil">perfil</p>
+            <a href="" class="link" id="perfil"> PERFIL</a>
         </div>
         <div class="divlinks" id="divreceitas">
-            <p class="link" id="receitas">receitas</p>
+            <a href="" class="link" id="receitas">RECEITAS</a>
         </div>
         <div class="divlinks" id="divbuscar">
-            <p class="link" id="buscat">buscar</p>
+            <a href="" class="link" id="buscar">BUSCAR</a>
         </div>
         <div class="divlinks" id="divsobre">
-            <p class="link" id="sobre">sobre nós </p>
+            <a href="" class="link" id="sobre">SOBRE NÓS</a>
         </div>
         <div class="divlinks" id="divcadastrar">
-            <p class="link" id="cadastrar">cadastrar</p>
+            <a href="" class="link" id="cadastrar"> CADASTRAR</a>
         </div>
         <div class="divlinks" id="divlogin">
-            <p class="link" id="login">login</p>
+            <a href="" class="link" id="login"> LOGIN</a>
         </div>
     </div>
 </body>
