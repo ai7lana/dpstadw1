@@ -13,7 +13,7 @@
             <a href="" class="tit" id="titulo"> Brasil <br> na Cozinha</a>
         </div>
         <div class="divlinks" id="divinicio">
-            <a href="" class="link" id="inicio"> ÍNICIO</a>
+            <a href="" class="link" id="inicio"> ÍNICIO </a>
         </div>
         <div class="divlinks" id="divperfil">
             <a href="" class="link" id="perfil"> PERFIL</a>
@@ -27,8 +27,10 @@
         <div class="divlinks" id="divsobre">
             <a href="" class="link" id="sobre">SOBRE NÓS</a>
         </div>
+    </div>
+    <div id="cabeca2">
         <div class="divlinks" id="divcadastrar">
-            <a href="formPerfil.p" class="link" id="cadastrar"> CADASTRAR</a>
+            <a href="formPerfil.php" class="link" id="cadastrar"> CADASTRAR</a>
         </div>
         <div class="divlinks" id="divlogin">
             <a href="" class="link" id="login"> LOGIN</a>

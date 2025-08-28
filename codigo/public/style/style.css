@@ -20,6 +20,15 @@ truetype -ttf
 }
 #cabeca{
     background-color: #3d2f2b;
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+}
+#cabeca2{
+    background-color: #3d2f2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tit{
