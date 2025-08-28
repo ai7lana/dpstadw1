@@ -9,7 +9,7 @@
 </head>
 <body>
   <h2>Cadastro de Receita</h2>
-  <form method="POST" action="../salvarReceita.php">
+  <form action="salvarReceita.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
 
       <input type="text" name="nome_comida" placeholder="Nome da receita" required><br><br>
 
@@ -23,7 +23,7 @@
 
       <input type="text" name="rendimento" placeholder="Rendimento (ex: 4 porções)" required><br><br>
 
-      <input type="text" name="foto" placeholder="Nome do arquivo da foto (ex: bolo.jpg)" required><br><br>
+      <input type="file" name="foto" required> <br><br>
 
       <input type="text" name="regiao" placeholder="Região (opcional)"><br><br>
 
