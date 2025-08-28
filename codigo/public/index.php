@@ -12,25 +12,25 @@
         <div class="titu" id="titulogeral">
             <p class="tit" id="titulo">Brasil <br> na Cozinha</p>
         </div>
-        <div>
+        <div class="divlinks" id="divinicio">
             <p class="link" id="inicio">início</p>
         </div>
-        <div>
+        <div class="divlinks" id="divperfil">
             <p class="link" id="perfil">perfil</p>
         </div>
-        <div>
+        <div class="divlinks" id="divreceitas">
             <p class="link" id="receitas">receitas</p>
         </div>
-        <div>
+        <div class="divlinks" id="divbuscar">
             <p class="link" id="buscat">buscar</p>
         </div>
-        <div>
+        <div class="divlinks" id="divsobre">
             <p class="link" id="sobre">sobre nós </p>
         </div>
-        <div>
+        <div class="divlinks" id="divcadastrar">
             <p class="link" id="cadastrar">cadastrar</p>
         </div>
-        <div>
+        <div class="divlinks" id="divlogin">
             <p class="link" id="login">login</p>
         </div>
     </div>
