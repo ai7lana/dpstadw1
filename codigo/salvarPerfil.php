@@ -1,17 +1,18 @@
 <?php
 
 require_once "conexao.php";
+require_once "funcoes.php";
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 $nome_perfil = $_POST['nome_perfil'];
 
-$senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-
-$sql = "INSERT INTO perfil (nome, email, senha, nome_perfil) VALUES ('$nome', '$email', '$senha_hash', '$nome_perfil')";
-
-mysqli_query($conexao, $sql);
+if ($id == 0) {
+    salvarPerfil($conexao, $nome, $email, $senha, $nome_perfil);
+} else {
+    editarPerfil($conexao, $nome, $email, $senha, $nome_perfil, $id_perfil);
+}
 
 header("Location: /public/formPerfil.php");
 ?>

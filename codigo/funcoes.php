@@ -332,7 +332,7 @@ function pesquisarReceitaTipo($conexao, $tipo){
     return $receita;
 }
 
-function pesquisarReceitaComentario($conexao, $cometario){
+function pesquisarReceitaComentario($conexao, $comentario){
     $sql = "SELECT * FROM comentario LIKE ?";
     $comando = mysqli_prepare($conexao, $sql);
     $comentario = "%" . $comentario . "%";
