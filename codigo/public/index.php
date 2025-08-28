@@ -13,7 +13,7 @@
             <a href="" class="tit" id="titulo"> Brasil <br> na Cozinha</a>
         </div>
         <div class="divlinks" id="divinicio">
-            <a href="" class="link" id="inicio"> ÍNICIO</a>
+            <a href="" class="link" id="inicio"> ÍNICIO </a>
         </div>
         <div class="divlinks" id="divperfil">
             <a href="" class="link" id="perfil"> PERFIL</a>
