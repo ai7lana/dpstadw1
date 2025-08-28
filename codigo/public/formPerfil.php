@@ -9,8 +9,7 @@
 </head>
 <body>
   <h2>Criar Perfil</h2>
-<form action="formPerfil.php" method="POST">
-    <input type="hidden" name="acao" value="salvar">
+  <form action="../salvarPerfil.php" method="POST">
     
     Nome: <br><input type="text" name="nome" required><br>
     Nome de Usuário: <br> <input type="text" name="nome_perfil" required><br>
