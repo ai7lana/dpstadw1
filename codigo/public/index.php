@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="bodyindex">
-    <div id="cabeca"> <br> <br><br>
-        <div class="titu" id="titulogeral">
+    <div id="cabeca"> <br> <br><br> <br><br><br><br><br><br><br>
+        <div class="titu" id="titulogeral"> <br>
             <a href="" class="tit" id="titulo"> Brasil <br> na Cozinha</a>
         </div>
         <div class="divlinks" id="divinicio">
@@ -28,12 +28,13 @@
             <a href="" class="link" id="sobre">SOBRE NÓS</a>
         </div>
     </div>
-    <div id="cabeca2">
+    <div id="cabeca2"> <br><br><br>
         <div class="divlinks" id="divcadastrar">
-            <a href="formPerfil.php" class="link" id="cadastrar"> CADASTRAR</a>
+            <a href="formPerfil.php" class="link" id="cadastrar"> CADASTRAR &nbsp&nbsp
+            </a>
         </div>
         <div class="divlinks" id="divlogin">
-            <a href="" class="link" id="login"> LOGIN</a>
+            <a href="" class="link" id="login"> LOGIN &nbsp&nbsp&nbsp</a>
         </div>
     </div>
 </body>

@@ -22,12 +22,13 @@ truetype -ttf
 #cabeca{
     background-color: #3d2f2b;
     display: flex;
-    justify-content:flex-start;
+    /* justify-content:center; */
     align-items: center;
 }
 #cabeca2{
     background-color: #3d2f2b;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: end;
     align-items: center;
 }
@@ -37,6 +38,19 @@ truetype -ttf
     color: #f6f3ee;
     text-align: center;
     font-family: 'camiro';
+}
+.titu{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: flex-end;
+    width: 3px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30%;
+    margin-right: 30%;
+
 }
 .link{
     font-size:x-large;
