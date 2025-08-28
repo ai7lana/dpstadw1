@@ -1,0 +1,47 @@
+/*
+opentype - otf
+truetype -ttf
+*/
+@font-face {
+    font-family: 'qarinthen';
+    src: url(Qarinthen.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'camiro';
+    src: url(Camiro.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bodyindex{
+    background-color: #deb489;
+}
+#cabeca{
+    background-color: #3d2f2b;
+}
+
+.tit{
+    font-size: 300%;
+    color: #f6f3ee;
+    text-align: center;
+    font-family: 'camiro';
+}
+.link{
+    font-size:x-large;
+    color: #f6f3ee;
+    font-family: 'qarinthen';
+}
+#titulogeral{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+
