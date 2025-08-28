@@ -9,7 +9,7 @@
 </head>
 <body>
   <h2>Cadastro de Receita</h2>
-  <form action="salvarReceita.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+  <form action="../salvarReceita.php" method="post" enctype="multipart/form-data">
 
       <input type="text" name="nome_comida" placeholder="Nome da receita" required><br><br>
 

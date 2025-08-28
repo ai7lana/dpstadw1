@@ -1,5 +1,4 @@
 <?php
-
 require_once "conexao.php";
 require_once "funcoes.php";
 
@@ -8,9 +7,9 @@ $tipo = $_POST['tipo'];
 $ingredientes = $_POST['ingredientes'];
 $modo_de_preparo = $_POST['modo_de_preparo'];
 $tempo = $_POST['tempo'];
-$rendimento = ['rendimento'];
-$regiao = ['regiao'];
-$perfil_idperfil = ['perfil_idperfil'];
+$rendimento = $_POST['rendimento'];
+$regiao = $_POST['regiao'];
+$perfil_idperfil = $_POST['perfil_idperfil'];
 
 $nome_arquivo = $_FILES['foto']['name'];
 $caminho_temporario = $_FILES['foto']['tmp_name'];
@@ -28,12 +27,7 @@ $caminho_destino = "fotos/" . $novo_nome;
 // move a foto para o servidor
 move_uploaded_file($caminho_temporario, $caminho_destino);
 
-if ($id == 0) {
-    salvarReceita($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $foto, $regiao, $perfil_idperfil);
-} else {
-    editarReceita ($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, 
-    $foto, $regiao, $perfil_idperfil, $id);
-}
+salvarReceita($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $tempo, $rendimento, $novo_nome, $regiao, $perfil_idperfil);
 
-header("Location: /public/formReceita.php");
+// header("Location: /public/formReceita.php");
 ?>
