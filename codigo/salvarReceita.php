@@ -5,7 +5,7 @@ require_once "funcoes.php";
 $nome_comida = $_POST['nome_comida'];
 $tipo = $_POST['tipo'];
 $ingredientes = $_POST['ingredientes'];
-$modo_de_preparo = $_POST['modo_de_preparo'];
+$modo_preparo = $_POST['modo_de_preparo'];
 $tempo = $_POST['tempo'];
 $rendimento = $_POST['rendimento'];
 $regiao = $_POST['regiao'];
