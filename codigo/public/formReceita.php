@@ -64,7 +64,7 @@
 
       <input type="file" name="foto" value="<?php echo $foto; ?>"required> <br><br>
 
-      <input type="text" name="regiao" placeholder="Região (opcional) value="<?php echo $regiao; ?>" ><br><br>
+      <input type="text" name="regiao" placeholder="Região (opcional)" value="<?php echo $regiao; ?>" ><br><br>
 
       <input type="number" name="perfil_idperfil" placeholder="ID do perfil autor" value="<?php echo $perfil_idperfil; ?>" required><br><br>
 
