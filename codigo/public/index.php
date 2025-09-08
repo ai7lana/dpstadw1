@@ -9,10 +9,10 @@
 </head>
 <body class="bodyindex">
     <div id="fundo"> <br> <br><br> <br><br><br><br><br><br><br>
+    <div class="titu" id="titulogeral"> <br>
+        <p class="tit" id= "titulo"> Brasil <br> na Cozinha </p>
+    </div>
         <div id="cabeca">
-            <div class="titu" id="titulogeral"> <br>
-                <p class="tit" id= "titulo"> Brasil <br> na Cozinha </p>
-            </div>
             <div class="divlinks" id="divinicio">
                 <a href="" class="link" id="inicio"> &nbsp&nbsp ÍNICIO &nbsp&nbsp </a>
             </div>
