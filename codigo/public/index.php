@@ -11,7 +11,7 @@
     <div id="fundo"> <br> <br><br> <br><br><br><br><br><br><br>
         <div id="cabeca">
             <div class="titu" id="titulogeral"> <br>
-            <p class="tit" id= "titulo"> Brasil <br> na Cozinha </p>
+                <p class="tit" id= "titulo"> Brasil <br> na Cozinha </p>
             </div>
             <div class="divlinks" id="divinicio">
                 <a href="" class="link" id="inicio"> &nbsp&nbsp ÍNICIO &nbsp&nbsp </a>
@@ -28,7 +28,7 @@
             <div class="divlinks" id="divsobre">
                 <a href="" class="link" id="sobre"> &nbsp&nbsp SOBRE NÓS &nbsp&nbsp</a>
             </div>
-            </div>
+            </div>\
     </div>
 
     <div id="cabeca2"> <br><br><br>

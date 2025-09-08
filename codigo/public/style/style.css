@@ -41,6 +41,9 @@ truetype -ttf
     color: #f6f3ee;
     text-align: center;
     font-family: 'camiro';
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .titu{
     display: flex;
@@ -48,9 +51,9 @@ truetype -ttf
     gap: 100px;
     align-items: flex-end;
     width: 3px;
-    height: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
+    height: 3px;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 3px;
     margin-right: 3px;
 
@@ -61,7 +64,7 @@ truetype -ttf
     font-family: 'qarinthen';
 }
 #titulogeral{
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,4 +76,6 @@ a{
     text-decoration: none;
 }
 
-
+#divinicio{
+    
+}
