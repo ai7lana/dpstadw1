@@ -151,3 +151,90 @@ a{
     width: 50px;
     margin-bottom: 20px;
 }
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+#bodyinicial {
+  background-color: #a87f5f; /* cor de fundo marrom suave */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 50px;
+  color: #fffbe7;
+}
+
+/* Estilização da logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  align-items: flex-start;
+  
+}
+
+.logo img {
+  width: 800px;
+}
+
+/* Texto de boas-vindas */
+.boas-vindas {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Container direito */
+.painel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5b3c2a;
+  margin-right: 350px;
+}
+
+/* Botões */
+.botaopag {
+  background-color: #fffbe7;
+  color: #5b3c2a;
+  border: 3px solid #dcc9b2;
+  border-radius: 10px;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.botaopag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Gatinhos acima dos botões */
+.botaopag::before {
+  content: '';
+  background: url('gatinho.png') no-repeat center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Gatinho no canto inferior direito */
+.gato-caixa {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 200px;
+}
