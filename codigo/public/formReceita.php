@@ -12,7 +12,7 @@
         $nome_comida = $receita['nome_comida'];
         $tipo = $receita['tipo'];
         $ingredientes = $receita['ingredientes'];
-        $modo_preparo = $receita['modo_de_preparo'];
+        $modo_de_preparo = $receita['modo_de_preparo'];
         $tempo = $receita['tempo'];
         $rendimento = $receita['rendimento'];
         $foto = $receita['foto'];
@@ -27,7 +27,7 @@
         $nome_comida = "";
         $tipo = "";
         $ingredientes = "";
-        $modo_preparo = "";
+        $modo_de_preparo = "";
         $tempo = "";
         $rendimento = "";
         $foto = "";
@@ -56,7 +56,7 @@
 
       <input type="text" name="ingredientes" placeholder="Ingredientes" value="<?php echo $ingredientes; ?>"required><br><br>
 
-      <textarea name="modo_preparo" placeholder="Modo de preparo" value="<?php echo $modo_preparo; ?>"required></textarea><br><br>
+      <textarea name="modo_de_preparo" placeholder="Modo de preparo" value="<?php echo $modo_de_preparo; ?>"required></textarea><br><br>
 
       <input type="text" name="tempo" placeholder="Tempo de preparo (ex: 45min)" value="<?php echo $tempo; ?>" required><br><br>
 
@@ -66,7 +66,7 @@
 
       <input type="text" name="regiao" placeholder="Região (opcional)" value="<?php echo $regiao; ?>" ><br><br>
 
-      <input type="number" name="perfil_idperfil" placeholder="ID do perfil autor" value="<?php echo $perfil_idperfil; ?>" required><br><br>
+      <input type="number" minlength="0" name="perfil_idperfil" placeholder="ID do perfil autor" value="<?php echo $perfil_idperfil; ?>" required><br><br>
 
       <input type="submit" value="<?php echo $botao; ?>">
       

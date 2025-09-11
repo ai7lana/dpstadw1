@@ -5,7 +5,7 @@ require_once "funcoes.php";
 $nome_comida = $_POST['nome_comida'];
 $tipo = $_POST['tipo'];
 $ingredientes = $_POST['ingredientes'];
-$modo_preparo = $_POST['modo_de_preparo'];
+$modo_de_preparo = $_POST['modo_de_preparo'];
 $tempo = $_POST['tempo'];
 $rendimento = $_POST['rendimento'];
 $regiao = $_POST['regiao'];
@@ -22,7 +22,7 @@ $novo_nome = uniqid() . "." . $extensao;
 
 //criar um novo caminho para o arquivo
 // lembre-se de criar a pasta e ajustar as permissões
-$caminho_destino = "fotos/" . $novo_nome;
+$caminho_destino = "../foto/" . $novo_nome;
 
 // move a foto para o servidor
 move_uploaded_file($caminho_temporario, $caminho_destino);
