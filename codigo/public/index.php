@@ -41,8 +41,8 @@
             <a href="" class="link" id="login"> LOGIN &nbsp&nbsp&nbsp</a>
         </div>
     </div>
-    <div>
-
+    <div id=imagem>
+        <img src="style/images/indeximagem.jpg" alt="">
     </div>
 </body>
 
