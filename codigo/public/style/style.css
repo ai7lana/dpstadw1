@@ -24,11 +24,10 @@ truetype -ttf
 }
 #cabeca{
     background-color: #3d2f2b;
-    /* display: flex; */
-    flex-direction:row-reverse;
+    display: flex;
     justify-content:center;
     align-items: center;
-    width: 200px;
+    /* width: 200px; */
 }
 #cabeca2{
     background-color: #3d2f2b;
@@ -45,7 +44,7 @@ truetype -ttf
     align-items: center;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 2000px;
+    margin-right: -1850px;
 }
 .titu{
     display: flex;
