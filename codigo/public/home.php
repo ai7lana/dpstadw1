@@ -7,14 +7,7 @@
     <title>home</title>
 </head>
 <body>
-    <h1> Faça seu login!</h1>
-    <p>Nome</p> <br>
-    <input type="text" name="nome" id="nome"> <br><br>
-    <p>Nome de Usuário</p> <br>
-    <input type="text" name="nomeusu" id="nomeusu"> <br><br>
-    <p>Email</p><br>
-    <input type="text" name="email" id="email"> <br><br>
-    <p>Senha</p>
-    <input type="password" name="senha" id="senha">
+    <button type="button"> Cadastrar</button>
+    <button type="button"></button>
 </body>
 </html>

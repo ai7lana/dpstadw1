@@ -38,10 +38,10 @@
             </a>
         </div>
         <div class="divlinks" id="divlogin">
-            <a href="" class="link" id="login"> LOGIN &nbsp&nbsp&nbsp</a>
+            <a href="formPerfil.php" class="link" id="login"> LOGIN &nbsp&nbsp&nbsp</a>
         </div>
     </div>
-    <div id=imagem>
+    <div id=imagemindex>
         <img src="style/images/indeximagem.jpg" alt="">
     </div>
 </body>
