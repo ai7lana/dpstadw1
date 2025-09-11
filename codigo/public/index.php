@@ -10,13 +10,13 @@
 </head>
 
 <body class="bodyindex">
-    <div id="fundo"> <br> <br><br> <br><br><br><br><br><br><br>
-        <div class="titu" id="titulogeral"> <br>
-            <p class="tit" id="titulo"> Brasil <br> na Cozinha </p>
+    <div id="fundoindex"> <br> <br><br> <br><br><br><br><br><br><br>
+        <div class="titu" id="titulogeralindex"> <br>
+            <p class="tit" id="tituloindex"> Brasil <br> na Cozinha </p>
         </div>
         <div id="cabeca">
             <div class="divlinks" id="divinicio">
-                <a href="" class="link" id="inicio"> &nbsp&nbsp ÍNICIO &nbsp&nbsp </a>
+                <a href="home.php" class="link" id="inicio"> &nbsp&nbsp ÍNICIO &nbsp&nbsp </a>
             </div>
             <div class="divlinks" id="divperfil">
                 <a href="" class="link" id="perfil"> &nbsp&nbsp PERFIL &nbsp&nbsp</a>

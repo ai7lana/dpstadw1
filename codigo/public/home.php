@@ -7,7 +7,17 @@
     <title>home</title>
 </head>
 <body>
-    <button type="button"> Cadastrar</button>
-    <button type="button"></button>
+    <div id="imagemhome">
+
+    </div>
+    <div id="tithome">
+        <p> Seja Bem-Vindo(a)!</p>
+    </div>
+    <div>
+        <button type="button"> Cadastrar</button> <br><br>
+        <button type="button">Entrar</button>
+    </div>
+    <div>     
+    </div>
 </body>
 </html>
