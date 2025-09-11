@@ -6,11 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="../jquery-3.7.1.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body id="bodyperfil">
   <div class="container">
-    <h2>Criar Perfil</h2>
       <form class="form-container" action="../salvarPerfil.php" method="POST">
     
       Nome: <br><input type="text" name="nome" id="nome" required><br>
