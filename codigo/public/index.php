@@ -41,8 +41,8 @@
             <a href="formPerfil.php" class="link" id="login"> LOGIN &nbsp&nbsp&nbsp</a>
         </div>
     </div>
-    <div id=imagemindex>
-        <img src="style/images/indeximagem.jpg" alt="">
+    <!-- <div id=imagemindex>
+        <img src="style/images/indeximagem.jpg" alt=""> -->
     </div>
 </body>
 

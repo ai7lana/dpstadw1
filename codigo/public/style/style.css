@@ -47,8 +47,8 @@ truetype -ttf
     font-family: 'camiro';
     align-items: center;
     margin-top: -40px;
-    margin-bottom: 0px;
-    margin-right: -1850px;
+    margin-bottom: 30px;
+    margin-right: -1150px;
 }
 .titu{
     display: flex;
