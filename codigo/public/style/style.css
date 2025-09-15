@@ -41,13 +41,13 @@ truetype -ttf
 }
 
 .tit{
+    display: flex;
     font-size: 300%;
     color: #f6f3ee;
     text-align: center;
     font-family: 'camiro';
     align-items: center;
-    margin-top: -40px;
-    margin-bottom: 30px;
+    margin-top: 2px;
     margin-right: -1150px;
 }
 .titu{
