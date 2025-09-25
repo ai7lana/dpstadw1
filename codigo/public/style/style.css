@@ -49,6 +49,7 @@ truetype -ttf
     align-items: center;
     margin-top: 2px;
     margin-right: -1150px;
+    justify-content: center;
 }
 .titu{
     display: flex;
