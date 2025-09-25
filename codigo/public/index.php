@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
     <script src="../jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -41,8 +42,8 @@
             <a href="formPerfil.php" class="link" id="login"> LOGIN &nbsp&nbsp&nbsp</a>
         </div>
     </div>
-    <!-- <div id=imagemindex>
-        <img src="style/images/indeximagem.jpg" alt=""> -->
+    <div id=imagemindexdiv>
+        <img id="imagemindex" src="style/images/indeximagem.jpg" alt="">
     </div>
 </body>
 

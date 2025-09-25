@@ -3,6 +3,7 @@ opentype - otf
 truetype -ttf
 */
 
+
 @font-face {
     font-family: 'qarinthen';
     src: url(Qarinthen.otf) format('opentype');
@@ -21,13 +22,16 @@ truetype -ttf
 }
 #fundoindex{
     background-color: #3d2f2b;
-    height: 175px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 30px;
 }
 #cabeca{
     background-color: #3d2f2b;
     display: flex;
     margin-left: 100px;
-    margin-top: -100px;
+    margin-top: -50px;
     /* width: 200px; */
 }
 #cabeca2{
@@ -35,10 +39,12 @@ truetype -ttf
     display: flex;
     justify-content: end;
     align-items: center;
+    margin-left: 25px;
     margin-right: 250px;
-    margin-top: -90px;
+    margin-top: -100px;
     /* width: 2000px; */
 }
+
 
 .tit{
     display: flex;
@@ -47,20 +53,19 @@ truetype -ttf
     text-align: center;
     font-family: 'camiro';
     align-items: center;
-    margin-top: 2px;
+    /* margin-top: 0px; */
     margin-right: -1150px;
+    justify-content: center;
 }
 .titu{
     display: flex;
-    flex-direction: row-reverse;
     gap: 100px;
     align-items: flex-end;
     width: 3px;
     height: 3px;
-    margin-top: 0;
+    margin-top: 3px;
     margin-bottom: 0;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: 750px;
 
 }
 .link{
@@ -79,6 +84,16 @@ truetype -ttf
 
 a{
     text-decoration: none;
+}
+
+#imagemindex{
+
+    max-height: 650px;
+    width: auto;
+    height: auto;
+    margin-left:20px;
+    margin-bottom: 30px;
+    margin-top: 85px;
 }
 
 
@@ -152,22 +167,16 @@ a{
     margin-bottom: 20px;
 }
 
-/* Reset básico */
+/* Reset básico
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Georgia', serif;
-}
+} */
 
-#bodyinicial {
-  background-color: #a87f5f; /* cor de fundo marrom suave */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  padding: 0 50px;
-  color: #fffbe7;
+.bodyhome {
+  background-color: #8e725e; 
 }
 
 /* Estilização da logo */
