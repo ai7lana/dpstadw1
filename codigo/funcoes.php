@@ -200,7 +200,8 @@ function listarAvaliacao ($conexao){
 function pesquisarReceitaId($conexao, $idreceita) {
     $sql = "SELECT * FROM receita WHERE idreceita = ?";
     $comando = mysqli_prepare($conexao, $sql);
-    $idreceita = "%" . $idreceita . "%";
+    // $idreceita = "%" . $idreceita . "%";
+    $idreceita = $idreceita;
     mysqli_stmt_bind_param($comando, 'i', $idreceita);
 
     mysqli_stmt_execute($comando);

@@ -22,7 +22,7 @@ $novo_nome = uniqid() . "." . $extensao;
 
 //criar um novo caminho para o arquivo
 // lembre-se de criar a pasta e ajustar as permissões
-$caminho_destino = "../foto/" . $novo_nome;
+$caminho_destino = "/public/foto" . $novo_nome;
 
 // move a foto para o servidor
 move_uploaded_file($caminho_temporario, $caminho_destino);
@@ -31,3 +31,4 @@ salvarReceita($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_preparo, $t
 
 // header("Location: /public/formReceita.php");
 ?>
+

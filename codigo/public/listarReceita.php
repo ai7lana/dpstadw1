@@ -54,7 +54,7 @@
     echo "<td>$modo_preparo</td>";
     echo "<td>$tempo</td>";
     echo "<td>$rendimento</td>";
-    echo "<td><img src='fotos/$foto' alt='Foto da comida' width='100'></td>";
+    echo "<td><img src='foto/$foto' alt='Foto da comida' width='100'></td>";
     echo "<td>$regiao</td>";
     echo "<td>$nome_perfil</td>";
     echo "<td><a href='deletarReceita.php?id=$id'>Excluir</a></td>";
