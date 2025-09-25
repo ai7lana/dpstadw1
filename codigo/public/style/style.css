@@ -45,6 +45,7 @@ truetype -ttf
     /* width: 2000px; */
 }
 
+
 .tit{
     display: flex;
     font-size: 300%;
@@ -166,22 +167,16 @@ a{
     margin-bottom: 20px;
 }
 
-/* Reset básico */
+/* Reset básico
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Georgia', serif;
-}
+} */
 
-#bodyinicial {
-  background-color: #a87f5f; /* cor de fundo marrom suave */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  padding: 0 50px;
-  color: #fffbe7;
+.bodyhome {
+  background-color: #8e725e; 
 }
 
 /* Estilização da logo */

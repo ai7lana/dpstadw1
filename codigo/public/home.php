@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <title>home</title>
 </head>
-<body>
+<body class="bodyhome">
     <div id="imagemhome">
 
     </div>
