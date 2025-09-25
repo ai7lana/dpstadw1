@@ -17,6 +17,13 @@ truetype -ttf
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'gallient';
+    src: url(Gallient.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
 .bodyindex{
     background-color: #deb489;
 }
@@ -102,6 +109,9 @@ a{
 }
 
 .titulohome{
-    color: #f1f4d9;
-    font-family: 'camiro';
+   display: flex;
+   font-size: 300%;
+   color: #f1f4d9;
+   text-align: center;
+   font-family: 'gallient';
 }
