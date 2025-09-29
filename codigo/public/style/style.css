@@ -3,13 +3,14 @@ opentype - otf
 truetype -ttf
 */
 
-
+/*fontes importadas*/
 @font-face {
     font-family: 'qarinthen';
     src: url(Qarinthen.otf) format('opentype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'camiro';
     src: url(Camiro.ttf) format('truetype');
@@ -19,29 +20,70 @@ truetype -ttf
 
 @font-face {
     font-family: 'gallient';
-    src: url(Gallient.ttf) format(truetype);
+    src: url(Gallient.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-.bodyindex{
+@font-face {
+    font-family: 'vocago';
+    src: url(Vocago.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'brigast';
+    src: url(Brigast\ DEMO.otf) format('opentype');
+    font-weight: normal;
+    font-family: normal;
+}
+
+@font-face {
+    font-family: 'otez';
+    src: url(ZTOtez-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aesthetic';
+    src: url(Aesthetic-Regular.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'marchise';
+    src: url(MarchiseTrial-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*index*/
+.bodyindex {
     background-color: #deb489;
 }
-#fundoindex{
+
+#fundoindex {
     background-color: #3d2f2b;
     height: 200px;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 30px;
 }
-#cabeca{
+
+#cabeca {
     background-color: #3d2f2b;
     display: flex;
     margin-left: 100px;
     margin-top: -50px;
     /* width: 200px; */
 }
-#cabeca2{
+
+#cabeca2 {
     background-color: #3d2f2b;
     display: flex;
     justify-content: end;
@@ -53,18 +95,18 @@ truetype -ttf
 }
 
 
-.tit{
+.tit {
     display: flex;
     font-size: 300%;
     color: #f6f3ee;
     text-align: center;
     font-family: 'camiro';
     align-items: center;
-    /* margin-top: 0px; */
     margin-right: -1150px;
     justify-content: center;
 }
-.titu{
+
+.titu {
     display: flex;
     gap: 100px;
     align-items: flex-end;
@@ -75,12 +117,14 @@ truetype -ttf
     margin-left: 750px;
 
 }
-.link{
-    font-size:x-large;
+
+.link {
+    font-size: x-large;
     color: #f6f3ee;
     font-family: 'qarinthen';
 }
-#titulogeral{
+
+#titulogeral {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -89,29 +133,853 @@ truetype -ttf
 
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-#imagemindex{
-
+#imagemindex {
     max-height: 650px;
     width: auto;
     height: auto;
-    margin-left:20px;
+    margin-left: 20px;
     margin-bottom: 30px;
     margin-top: 85px;
 }
 
-
+/*home*/
 .bodyhome {
-    background-color: #8e725e; 
+    background-color: #8e725e;
 }
 
-.titulohome{
-   display: flex;
-   font-size: 300%;
-   color: #f1f4d9;
-   text-align: center;
-   font-family: 'gallient';
+#tithome {
+    position: absolute;
+    margin-left: 1150px;
+    margin-top: 120px;
+}
+
+.logodiv {
+    position: absolute;
+    width: 900px;
+    margin-left: 90px;
+    margin-top: 30px;
+}
+
+.logo {
+    position: absolute;
+    max-width: 1050px;
+    height: auto;
+    width: 100%;
+}
+
+.titulohome {
+    display: flex;
+    font-size: 450%;
+    color: #f1f4d9;
+    text-align: center;
+    font-family: 'gallient';
+    cursor: default;
+}
+
+#botaocadastrar {
+    padding: 65px;
+    transition: all .4s ease-out;
+}
+
+#botaologin {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: absolute;
+    margin-top: 60px;
+    transition: all .4s ease-out;
+}
+
+.botao {
+    background-color: #fffadf;
+    color: #654a32;
+    border-radius: 10px;
+    border: 3px solid #654a32;
+    font-size: 70px;
+    font-family: 'gallient';
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.botao:hover {
+    background-color: #3d2f2b;
+    color: #fffadf;
+    transition-duration: .4s;
+}
+
+#botaologin:hover {
+    padding-left: 115px;
+    padding-right: 115px;
+    padding-top: 65px;
+    margin-top: 40px;
+}
+
+#botaocadastrar:hover {
+    padding: 70px;
+}
+
+.butoesdiv {
+    position: absolute;
+    margin-left: 1250px;
+    margin-top: 340px;
+}
+
+.gatos {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    margin-left: 1250px;
+    margin-top: 200px;
+}
+
+.gatospao {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    margin-left: 1635px;
+    margin-top: 680px;
+    height: auto;
+}
+
+/*cadastro e login*/
+
+.bodycl {
+    background-color: #deb489;
+}
+
+/*cadastro*/
+.caixafundocadastro {
+    position: absolute;
+    background-color: #f1f4d9;
+    height: 800px;
+    width: 700px;
+    text-align: center;
+    border-radius: 15px 50px;
+    margin-left: 640px;
+    margin-top: 120px;
+}
+
+/*login*/
+.caixafundologin {
+    position: absolute;
+    background-color: #f1f4d9;
+    height: 600px;
+    width: 700px;
+    text-align: center;
+    border-radius: 15px 50px;
+    margin-left: 640px;
+    margin-top: 120px;
+}
+
+.titulocl {
+    font-family: 'gallient';
+    font-size: 300%;
+    color: #5e3a1d;
+    cursor: default;
+    letter-spacing: 4px;
+}
+
+.clpreencher {
+    font-family: "vocago";
+    color: #9b6b44;
+}
+
+.inputcl {
+    border: 3px solid #b79971;
+    border-radius: 10px;
+    height: 45px;
+    width: 300px;
+    font-family: 'otez';
+    font-size: 18px;
+    transition: all .4s ease-out;
+    color: #9b6b44;
+    padding-left: 6px;
+}
+
+.inputcl::placeholder {
+    font-size: 20px;
+    padding: 6px;
+}
+
+.inputcl:hover {
+    border: 3px solid #654a32;
+    transition-duration: .4s;
+    cursor: default;
+}
+
+.inputcl:focus {
+    outline: none;
+    border: 3px solid #5e3a1d;
+    color: #9b6b44;
+    font-size: 20px;
+    padding: 5px;
+    transition-duration: 0.4s;
+    cursor: default;
+}
+
+label {
+    font-size: 200%;
+    color: #9b6b44;
+}
+
+.botaosubmit {
+    text-decoration: none;
+}
+
+.botaosub {
+    border: none;
+    color: #fffadf;
+    background-color: #9b6b44;
+    border-radius: 50px;
+    position: absolute;
+    font-size: 30px;
+    font-family: 'gallient';
+    transition: all .4s ease-out;
+    letter-spacing: 2px;
+}
+
+#botaosubid {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 125px;
+    padding-right: 125px;
+    position: absolute;
+    margin-left: -165px;
+    margin-top: 10px;
+    transition: all .4s ease-out;
+}
+
+#botaocadastro {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: absolute;
+    margin-left: -165px;
+    margin-top: 10px;
+    transition: all .4s ease-out;
+}
+
+.botaosub:hover {
+    border: none;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 103px;
+    padding-right: 103px;
+    color: #f5dca5;
+    background-color: #3d2f2b;
+    position: absolute;
+    font-family: 'gallient';
+    font-size: 33px;
+}
+
+#botaocadastro:hover {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 105px;
+    padding-right: 105px;
+    margin-top: 15px;
+    margin-left: -175px;
+}
+
+#botaosubid:hover {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 130px;
+    padding-right: 130px;
+    margin-top: 13px;
+    margin-left: -175px;
+}
+
+/*Cadastro*/
+.linklogin {
+    position: absolute;
+    text-decoration: none;
+    font-family: 'otez';
+    font-size: 20px;
+    color: #9b6b44;
+    margin-top: 90px;
+    margin-left: -140px;
+    transition: all .4s ease;
+}
+
+.linklogin:hover {
+    color: #3d2f2b;
+}
+
+/*Login*/
+.linksenha {
+    position: absolute;
+    text-decoration: none;
+    font-family: 'otez';
+    font-size: 20px;
+    color: #9b6b44;
+    margin-top: 90px;
+    margin-left: -200px;
+    transition: all .4s ease;
+}
+
+.linksenha:hover {
+    color: #3d2f2b;
+}
+
+.novaconta {
+    position: absolute;
+    text-decoration: none;
+    font-family: 'otez';
+    font-size: 20px;
+    color: #9b6b44;
+    margin-top: 90px;
+    margin-left: 40px;
+    transition: all .4s ease;
+}
+
+.novaconta:hover {
+    color: #3d2f2b;
+}
+
+/*botão sobre nos buscar*/
+
+/* From Uiverse.io by dalbrechtmartin */
+.botaosn {
+    position: relative;
+    padding: 20px 35px;
+    background: #5f432c;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+    border-radius: 100px;
+    border: none;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    margin-top: 920px;
+    position: absolute;
+    margin-left: 500px;
+}
+
+.star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #342420);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #342420);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #342420);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #342420);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #342420);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #342420);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.botaosn:hover {
+    background: #000000;
+    color: #ffffff;
+    box-shadow: 0 0 80px #ffffff8c;
+}
+
+.botaosn:hover .star-1 {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 20px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.botaosn:hover .star-2 {
+    position: absolute;
+    top: 35%;
+    left: -25%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.botaosn:hover .star-3 {
+    position: absolute;
+    top: 80%;
+    left: -10%;
+    width: 10px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.botaosn:hover .star-4 {
+    position: absolute;
+    top: -25%;
+    left: 105%;
+    width: 20px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.botaosn:hover .star-5 {
+    position: absolute;
+    top: 30%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.botaosn:hover .star-6 {
+    position: absolute;
+    top: 80%;
+    left: 105%;
+    width: 10px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.fil0 {
+    fill: #fffdef;
+}
+
+/*sobre nós*/
+.fundosn1 {
+    background-color: #deb489;
+    height: 1000px;
+    width: 1963px;
+}
+
+.tricolor1 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 60px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.brasilcozinhasn {
+    text-decoration: none;
+    position: absolute;
+    font-family: 'camiro';
+    font-size: 45px;
+    color: #3d2f2b;
+    margin-left: 140px;
+    margin-top: 30px;
+}
+
+.linkssn1 {
+    position: absolute;
+    font-family: 'camiro';
+    font-size: 45px;
+}
+
+.linkscabecasn {
+    color: #3d2f2b;
+    margin-top: 30px;
+    display: inline-block;
+    width: auto;
+}
+
+#loginsn {
+    position: absolute;
+    margin-left: 1800px;
+}
+
+#cadastrosn {
+    position: absolute;
+    margin-left: 1609px;
+}
+
+#buscarsn {
+    position: absolute;
+    margin-left: 1469px;
+}
+
+#receitassn {
+    position: absolute;
+    margin-left: 1310px;
+}
+
+#perfilsn {
+    position: absolute;
+    margin-left: 1200px;
+}
+
+#iniciosn {
+    position: absolute;
+    margin-left: 1070px;
+}
+
+.paodequeijo {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-width: 680px;
+    margin-top:150px;
+    margin-left: 250px;
+}
+
+.sobrenos {
+    font-family: 'aesthetic';
+    transform: scaleY(0.8);
+    color: #5f432c;
+    letter-spacing: 15px;
+    font-size: 900%;
+}
+
+.sbrenostxt1 {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 800px;
+    z-index: 4;
+    cursor: default;
+}
+
+.paodequeijoesndiv {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.paodequeijoesndiv img {
+    display: block;
+    z-index: 3;
+}
+
+.sobrenostxt2 {
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 230px;
+    z-index: 2;
+}
+
+.estreladiv{
+    height: auto;
+    width: auto;
+    position: absolute;
+}
+
+#estrelacima{
+    height: auto;
+    width: auto;
+    width: 80px;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 200px;
+    z-index: 3;
+}
+
+#estrelabaixo{
+    height: auto;
+    width: auto;
+    width: 60px;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 190px;
+}
+
+.paogato{
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+#paogatodireita{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-width: 120px;
+    margin-top: 130px;
+    margin-left: 1800px;
+}
+#paogatoesquerda{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-width: 105px;
+    margin-top: 220px;
+    margin-left: 1730px;
+}
+
+.redessociaisdiv{
+    background-color: #deb489;
+    position: absolute;
+    z-index: 4;
+    padding-top:40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 200%;
+    font-family: 'otez';
+    color: #3d2f2b;
+    border-radius: 50px;
+    margin-top: 420px;
+    margin-left: 1500px;
+}
+
+.fundorpb{
+    background-color: #342420;
+    height: 400px;
+    width: 1963px;
+    position:absolute;
+    align-items: center;
+    margin-top: 730px;
+    z-index: 1;
+}
+.circulorpb{
+    position: absolute;
+    border-radius: 400%;
+    background-color: #b4956b;
+    padding: 50px;
+    padding-left: 55px;
+    padding-right: 55px;
+    font-family: 'otez';
+    font-size: 200%;
+    font-weight: lighter;
+    text-align: center;
+    color: #342420;
+    margin-top: 120px;
+    margin-left: 900px;
+}
+
+.fundosn2{
+    width: 1963px;
+    height:  1050px;
+}
+.tricolor2 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 60px;
+    margin-left: 40px;
+    margin-top: 173px;
+}
+
+.brasilcozinhasn2 {
+    text-decoration: none;
+    position: absolute;
+    font-family: 'camiro';
+    font-size: 45px;
+    color: #3d2f2b;
+    margin-left: 140px;
+    margin-top: 180px;
+}
+
+.linksn2 {
+    position: absolute;
+    font-family: 'camiro';
+    font-size: 45px;
+}
+
+.linkscabecasn2 {
+    color: #3d2f2b;
+    margin-top: 180px;
+    display: inline-block;
+    width: auto;
+}
+
+#loginsn2 {
+    position: absolute;
+    margin-left: 1800px;
+}
+
+#cadastrosn2 {
+    position: absolute;
+    margin-left: 1609px;
+}
+
+#buscarsn2 {
+    position: absolute;
+    margin-left: 1469px;
+}
+
+#receitassn2 {
+    position: absolute;
+    margin-left: 1310px;
+}
+
+#perfilsn2 {
+    position: absolute;
+    margin-left: 1200px;
+}
+
+#iniciosn2 {
+    position: absolute;
+    margin-left: 1070px;
+}
+
+.titulotextsn{
+    position: absolute;
+    font-size: 300%;
+    font-family: 'aesthetic';
+    margin-top: 300px;
+    margin-left: 300px;
+}
+
+.titulooutracor{
+    color: #5f432c;
+}
+
+.paragrafos{
+    font-size: 150%;
+    font-family: 'marchise';
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 300px;
+    width: 750px;
+    letter-spacing: 2px;
+}
+
+.quadrado{
+    background-color: #deb489;
+    width: 500px;
+    height: 450px;
+    position:absolute;
+    margin-top: 390px;
+    margin-left: 1290px;
+    z-index: 1;
+}
+
+.coxinha{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 1205px;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+.estrela1{
+    position: absolute;
+    z-index: 4;
+    margin-top: 490px;
+    margin-left: 1550px;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    transform: rotate(25deg);
+}
+
+.estrela2{
+    position: absolute;
+    z-index: 2;
+    margin-top: 250px;
+    margin-left: 1235px;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    transform: rotate(-25deg);
+}
+
+.contatosdiv{
+    font-family: 'otez';
+    font-size: 150%;
+    color: #fff;
+    background-color: #5f432c;
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 1290px;
+    width: 500px;
+    height: 200px;
+    z-index: 5;
+}
+
+.contatosdiv{
+    cursor:default;
+}
+
+#contatostitu{
+    position: absolute;
+    margin-top: 30px;
+    font-size: 150%;
+    margin-left: 160px;
+}
+
+#emailtext{
+    position: absolute;
+    margin-top: 95px;
+    margin-left: 80px;
+}
+
+#numero{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 80px;
+}
+
+.icon{
+    width: 100%;
+    height: auto;
+    max-width: 40px;
+}
+#emailicon{
+    position: absolute;
+    margin-top: 95px;
+    margin-left: 20px;
+}
+#telefoneicon{
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 20px;
 }
