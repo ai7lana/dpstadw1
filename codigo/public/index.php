@@ -35,11 +35,11 @@
     </div>
     <div id="cabeca2"> <br><br><br>
         <div class="divlinks" id="divcadastrar">
-            <a href="formPerfil.php" class="link" id="cadastrar"> CADASTRAR &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="formCadastrarPerfil.php" class="link" id="cadastrar"> CADASTRAR &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
             </a>
         </div>
         <div class="divlinks" id="divlogin">
-            <a href="formPerfil.php" class="link" id="login"> LOGIN &nbsp&nbsp&nbsp</a>
+            <a href="formLoginPerfil.php" class="link" id="login"> LOGIN &nbsp&nbsp&nbsp</a>
         </div>
     </div>
     <div id=imagemindexdiv>
