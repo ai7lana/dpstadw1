@@ -11,16 +11,21 @@
 </head>
 
 <body class="bodyhome">
-    <div id="logohome">
-        <img src="style/images/logosemfundo.png" alt="">
+    <div class="logodiv">
+        <img class="logo" src="style/images/logosemfundo.png" alt="">
     </div>
     <div id="tithome">
         <p class='titulohome'> Seja Bem-Vindo(a)!</p>
     </div>
     <div class="butoesdiv">
-        <button class="butoes" id="butaocadastrar" type="button"> Cadastrar</button> <br><br>
-        <button class="butoes" id="butaologin" type="button">Entrar</button>
+        <a href="cadastro.html"><button class="botao" id="botaocadastrar">cadastrar</button></a> <br>
+        <a href="pagina-de-login.html"><button class="botao" id="botaologin">entrar</button></a>
+      </div>
+    <div class="gatodiv">
+        <img class = "gatos" src="style/images/gatinhoshome.png" alt="">
     </div>
+        <img src="style/images/gatospaohome.png" alt="" class="gatospao">
+      
 </body>
 
 </html>
