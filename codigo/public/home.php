@@ -18,8 +18,8 @@
         <p class='titulohome'> Seja Bem-Vindo(a)!</p>
     </div>
     <div class="butoesdiv">
-        <a href="cadastro.html"><button class="botao" id="botaocadastrar">cadastrar</button></a> <br>
-        <a href="pagina-de-login.html"><button class="botao" id="botaologin">entrar</button></a>
+        <a href="formCadastrarPerfil.php"><button class="botao" id="botaocadastrar">cadastrar</button></a> <br>
+        <a href="form.php"><button class="botao" id="botaologin">entrar</button></a>
       </div>
     <div class="gatodiv">
         <img class = "gatos" src="style/images/gatinhoshome.png" alt="">
