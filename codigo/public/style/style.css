@@ -606,7 +606,7 @@ label {
 .fundosn1 {
     background-color: #deb489;
     height: 1000px;
-    width: 1963px;
+    width: 1950px;
 }
 
 .tricolor1 {
@@ -780,7 +780,7 @@ label {
 .fundorpb{
     background-color: #342420;
     height: 400px;
-    width: 1963px;
+    width: 1950px;
     position:absolute;
     align-items: center;
     margin-top: 730px;
@@ -803,7 +803,7 @@ label {
 }
 
 .fundosn2{
-    width: 1963px;
+    width: 1950px;
     height:  1050px;
 }
 .tricolor2 {
@@ -910,15 +910,17 @@ label {
     max-width: 600px;
 }
 
+
 .estrela1{
     position: absolute;
     z-index: 4;
     margin-top: 490px;
-    margin-left: 1550px;
+    margin-left: 1540px;
     width: 100%;
     height: auto;
     max-width: 350px;
     transform: rotate(25deg);
+    animation: cima .4s;
 }
 
 .estrela2{

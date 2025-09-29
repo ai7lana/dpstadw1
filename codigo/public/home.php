@@ -19,7 +19,7 @@
     </div>
     <div class="butoesdiv">
         <a href="formCadastrarPerfil.php"><button class="botao" id="botaocadastrar">cadastrar</button></a> <br>
-        <a href="form.php"><button class="botao" id="botaologin">entrar</button></a>
+        <a href="formLoginPerfil.php"><button class="botao" id="botaologin">entrar</button></a>
       </div>
     <div class="gatodiv">
         <img class = "gatos" src="style/images/gatinhoshome.png" alt="">
