@@ -14,7 +14,7 @@
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
-    $lista_perfil = listarPerfil($conexao); // precisa ter essa função no seu funcoes.php
+    $lista_perfil = listarPerfil($conexao); 
 
     if (count($lista_perfil) == 0) {
         echo "Não existem perfis cadastrados";
