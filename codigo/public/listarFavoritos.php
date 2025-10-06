@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h1>Lista de Perfis</h1>
+    <h1>Lista de Favoritos</h1>
 
     <?php
     require_once "../conexao.php";

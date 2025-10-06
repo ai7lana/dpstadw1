@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h1>Lista de Perfis</h1>
+    <h1>Lista de Avaliacao</h1>
 
     <?php
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
-    $listar_fav = listarFavorito($conexao); // precisa ter essa função no seu funcoes.php
+    $listar_avaliacao = listarAvaliacao($conexao); 
 
-    if (count($listar_fav) == 0) {
+    if (count($listar_avaliacao) == 0) {
         echo "Não existem perfis cadastrados";
     } else {
     ?>
@@ -25,20 +25,26 @@
 
                 <td>Nome do perfil</td>
                 <td>Nome da Receita</td>
+                <td>Comentario</td>
+                <td>Nota</td>
                 <td colspan="2">Ação</td>
             </tr>
         <?php
-        foreach ($listar_fav as $fav) {
-            $perfil_idperfil= $fav ['perfil_idperfil'];
-            $receita_idreceita= $fav['receita_idreceita'];
+        foreach ($listar_avaliacao as $avaliacao) {
+            $perfil_idperfil= $avaliacao ['perfil_idperfil'];
+            $receita_idreceita = $avaliacao ['receita_idreceita'];
+            $comentario =  $avaliacao ['comentario'];
+            $nota = $avaliacao ['nota'];
 
             echo "<tr>";
             
 
             echo "<td>$perfil_idperfil</td>";
             echo "<td>$receita_idreceita</td>";
-            echo "<td><a href='deletarFav.php?id=$perfil_idperfil and id=$receita_idreceita'>Excluir</a></td>";
-            echo "<td><a href='formFavoritos.php?id=$perfil_idperfil and id=$receita_idreceita'>Editar</a></td>";
+            echo "<td>$comentario</td>";
+            echo "<td>$nota</td>";
+            echo "<td><a href='deletarComentario.php?id=$perfil_idperfil and id=$receita_idreceita'>Excluir</a></td>";
+            echo "<td><a href='formAvaliacao.php?id=$perfil_idperfil and id=$receita_idreceita'>Editar</a></td>";
             echo "</tr>";
         }
     }
