@@ -23,13 +23,13 @@
                 <a href="" class="link" id="perfil"> &nbsp&nbsp PERFIL &nbsp&nbsp</a>
             </div>
             <div class="divlinks" id="divreceitas">
-                <a href="" class="link" id="receitas"> &nbsp&nbsp RECEITAS &nbsp&nbsp </a>
+                <a href="formReceita.php" class="link" id="receitas"> &nbsp&nbsp RECEITAS &nbsp&nbsp </a>
             </div>
             <div class="divlinks" id="divbuscar">
-                <a href="" class="link" id="buscar"> &nbsp&nbsp BUSCAR &nbsp&nbsp</a>
+                <a href="formPesquisar.php" class="link" id="buscar"> &nbsp&nbsp BUSCAR &nbsp&nbsp</a>
             </div>
             <div class="divlinks" id="divsobre">
-                <a href="" class="link" id="sobre"> &nbsp&nbsp SOBRE NÓS &nbsp&nbsp</a>
+                <a href="sobrenos.html" class="link" id="sobre"> &nbsp&nbsp SOBRE NÓS &nbsp&nbsp</a>
             </div>
         </div>
     </div>
