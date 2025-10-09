@@ -53,8 +53,8 @@ CREATE TABLE IF NOT EXISTS `cozinha`.`receita` (
   CONSTRAINT `fk_receita_perfil1`
     FOREIGN KEY (`perfil_idperfil`)
     REFERENCES `cozinha`.`perfil` (`idperfil`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE cascade
+    ON UPDATE cascade)
 ENGINE = InnoDB;
 
 
@@ -70,13 +70,13 @@ CREATE TABLE IF NOT EXISTS `cozinha`.`favoritos` (
   CONSTRAINT `fk_perfil_has_receita_perfil1`
     FOREIGN KEY (`perfil_idperfil`)
     REFERENCES `cozinha`.`perfil` (`idperfil`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE cascade
+    ON UPDATE cascade,
   CONSTRAINT `fk_perfil_has_receita_receita1`
     FOREIGN KEY (`receita_idreceita`)
     REFERENCES `cozinha`.`receita` (`idreceita`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE cascade
+    ON UPDATE cascade)
 ENGINE = InnoDB;
 
 
@@ -94,13 +94,13 @@ CREATE TABLE IF NOT EXISTS `cozinha`.`avaliacao` (
   CONSTRAINT `fk_perfil_has_receita_perfil2`
     FOREIGN KEY (`perfil_idperfil`)
     REFERENCES `cozinha`.`perfil` (`idperfil`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE cascade
+    ON UPDATE cascade,
   CONSTRAINT `fk_perfil_has_receita_receita2`
     FOREIGN KEY (`receita_idreceita`)
     REFERENCES `cozinha`.`receita` (`idreceita`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE cascade
+    ON UPDATE cascade)
 ENGINE = InnoDB;
 
 
