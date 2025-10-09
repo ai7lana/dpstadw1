@@ -34,31 +34,35 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="bodycl">
-    <div class="caixafundocadastro">
-        <div class="titulocl"> <br><br>
-            <p>Primeira vez aqui?</p>
-            <p>Faça seu cadastro!</p>  <br>
+    <form action="../salvarPerfil.php" method="post">
+        <div class="caixafundocadastro">
+            <div class="titulocl"> <br><br>
+                <p>Primeira vez aqui?</p>
+                <p>Faça seu cadastro!</p>  <br>
+            </div>
+            <div class="clpreencher">
+                <div class="inputgroup">
+                    <label>Nome:</label> <br>
+                    <input class="inputcl" type="text" name="nome" id="nome"  placeholder="Digite seu nome" value="<?php echo $nome;?>"> <br><br>
+                </div>
+                <div class="inputgroup">
+                    <label>Nome de usuario:</label> <br>
+                    <input class="inputcl" type="text" name="nome_perfil" id="nomeusu" placeholder="Digite o nome de usuário" value="<?php echo $nome_perfil;?>"> <br><br>
+                </div>
+                <div class="inputgroup">
+                    <label>E-mail:</label> <br>
+                    <input class="inputcl" type="text" name="email" id="email" placeholder="Digite seu E-mail" value="<?php echo $email;?>"> <br><br>
+                </div>
+                <div class="inputgroup">
+                    <label>Senha:</label> <br>
+                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $senha;?>"> <br><br>
+                </div>
+            </div>
+    
+            <input type="submit" value="<?php echo $botao;?>" class=  "botaosub" id="botaocadastro">
+            <!-- <a href="ReceitasFeed.php" class="botaosubimit"><button type="button" class="botaosub" id="botaocadastro">cadastrar</button></a> <br> -->
+            <a href="formLoginPerfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
         </div>
-        <div class="clpreencher">
-            <div class="inputgroup">
-                <label>Nome de usuário:</label> <br>
-                <input class="inputcl" type="text" name="nome" id="nome"  placeholder="Digite seu nome" value="<?php echo $;?>"> <br><br>
-            </div>
-            <div class="inputgroup">
-                <label>Nome:</label> <br>
-                <input class="inputcl" type="text" name="nome_perfil" id="nomeusu" placeholder="Digite o nome de usuário" value="<?php echo $;?>"> <br><br>
-            </div>
-            <div class="inputgroup">
-                <label>E-mail:</label> <br>
-                <input class="inputcl" type="text" name="email" id="email" placeholder="Digite seu E-mail" value="<?php echo $;?>"> <br><br>
-            </div>
-            <div class="inputgroup">
-                <label>Senha:</label> <br>
-                <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $;?>"> <br><br>
-            </div>
-        </div>
-        <a href="" class="botaosubimit"><button type="button" class="botaosub" id="botaocadastro">cadastrar</button></a> <br>
-        <a href="login.html" class="linklogin">Já possui uma conta? Clique aqui!</a>
-    </div>
+    </form>
 </body>
 </html>
