@@ -1,6 +1,5 @@
 <?php
     if (isset($_GET['id'])) {
-
         require_once "../conexao.php";
         require_once "../funcoes.php";
 
