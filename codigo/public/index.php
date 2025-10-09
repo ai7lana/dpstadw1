@@ -23,7 +23,7 @@
                 <a href="" class="link" id="perfil"> &nbsp&nbsp PERFIL &nbsp&nbsp</a>
             </div>
             <div class="divlinks" id="divreceitas">
-                <a href="formReceita.php" class="link" id="receitas"> &nbsp&nbsp RECEITAS &nbsp&nbsp </a>
+                <a href="listarReceita.php" class="link" id="receitas"> &nbsp&nbsp RECEITAS &nbsp&nbsp </a>
             </div>
             <div class="divlinks" id="divbuscar">
                 <a href="formPesquisar.php" class="link" id="buscar"> &nbsp&nbsp BUSCAR &nbsp&nbsp</a>
