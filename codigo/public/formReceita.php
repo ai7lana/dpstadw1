@@ -66,6 +66,7 @@
       <input type="number" minlength="0" name="perfil_idperfil" placeholder="ID do perfil autor" value="<?php echo $perfil_idperfil; ?>"><br><br>
 
       <input type="submit" value="<?php echo $botao; ?>">
+      <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
       
   </form>
 </body>

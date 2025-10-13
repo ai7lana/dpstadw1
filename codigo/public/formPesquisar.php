@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+     <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
 </body>
 </html>

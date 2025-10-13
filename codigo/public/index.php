@@ -20,7 +20,7 @@
                 <a href="home.php" class="link" id="inicio"> &nbsp&nbsp ÍNICIO &nbsp&nbsp </a>
             </div>
             <div class="divlinks" id="divperfil">
-                <a href="" class="link" id="perfil"> &nbsp&nbsp PERFIL &nbsp&nbsp</a>
+                <a href="perfil.php" class="link" id="perfil"> &nbsp&nbsp PERFIL &nbsp&nbsp</a>
             </div>
             <div class="divlinks" id="divreceitas">
                 <a href="listarReceita.php" class="link" id="receitas"> &nbsp&nbsp RECEITAS &nbsp&nbsp </a>

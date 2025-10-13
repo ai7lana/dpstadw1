@@ -64,5 +64,7 @@
     }
         ?>
         </table>
+        <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+        
 </body>
 </html>

@@ -23,6 +23,7 @@
       </div>
     <div class="gatodiv">
         <img class = "gatos" src="style/images/gatinhoshome.png" alt="">
+        <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
     </div>
         <img src="style/images/gatospaohome.png" alt="" class="gatospao">
       

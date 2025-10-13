@@ -15,6 +15,7 @@
     Receita: <br> <input type="text" name="receita_idreceita" required><br>
 
     <button type="submit">Salvar</button>
+    <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
 
 
 

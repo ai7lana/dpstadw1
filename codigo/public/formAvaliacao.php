@@ -16,6 +16,7 @@
     Nota: <br> <input type="text" name="nota" required><br>
 
     <button type="submit">Salvar</button>
+    <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
     
 </body>
 </html>

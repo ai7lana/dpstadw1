@@ -27,6 +27,7 @@
         <a href="" class="botaosubimit"><button type="button" class="botaosub" id="botaosubid">entrar</button></a> <br>
         <a href="login.html" class="linksenha">Esqueceu a senha?</a>
         <a href="cadastro.html" class="novaconta">Crie uma nova conta</a>
+        <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
     </div>
 </body>
 </html>
