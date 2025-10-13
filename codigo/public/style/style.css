@@ -606,7 +606,7 @@ label {
 .fundosn1 {
     background-color: #deb489;
     height: 1000px;
-    width: 1963px;
+    width: 1920px;
 }
 
 .tricolor1 {
@@ -614,7 +614,7 @@ label {
     width: auto;
     height: auto;
     max-width: 60px;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: 20px;
 }
 
@@ -624,7 +624,7 @@ label {
     font-family: 'camiro';
     font-size: 45px;
     color: #3d2f2b;
-    margin-left: 140px;
+    margin-left: 130px;
     margin-top: 30px;
 }
 
@@ -643,12 +643,12 @@ label {
 
 #loginsn {
     position: absolute;
-    margin-left: 1800px;
+    margin-left: 1760px;
 }
 
 #cadastrosn {
     position: absolute;
-    margin-left: 1609px;
+    margin-left: 1589px;
 }
 
 #buscarsn {
@@ -712,6 +712,7 @@ label {
     margin-left: 800px;
     margin-top: 230px;
     z-index: 2;
+    cursor: default;
 }
 
 .estreladiv{
@@ -799,7 +800,7 @@ label {
 .fundorpb{
     background-color: #342420;
     height: 400px;
-    width: 1963px;
+    width: 1920px;
     position:absolute;
     align-items: center;
     margin-top: 730px;
@@ -822,7 +823,7 @@ label {
 }
 
 .fundosn2{
-    width: 1963px;
+    width: 1920px;
     height:  1050px;
 }
 .tricolor2 {
