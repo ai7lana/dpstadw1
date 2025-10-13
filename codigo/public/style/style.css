@@ -606,7 +606,7 @@ label {
 .fundosn1 {
     background-color: #deb489;
     height: 1000px;
-    width: 1920px;
+    width: 1905px;
 }
 
 .tricolor1 {
@@ -765,7 +765,7 @@ label {
     height: auto;
     max-width: 120px;
     margin-top: 130px;
-    margin-left: 1800px;
+    margin-left: 1730px;
     transition: max-width .5s ease-out;
 }
 
@@ -778,7 +778,7 @@ label {
     height: auto;
     max-width: 105px;
     margin-top: 220px;
-    margin-left: 1730px;
+    margin-left: 1660px;
 }
 
 .redessociaisdiv{
@@ -794,13 +794,13 @@ label {
     color: #3d2f2b;
     border-radius: 50px;
     margin-top: 420px;
-    margin-left: 1500px;
+    margin-left: 1450px;
 }
 
 .fundorpb{
     background-color: #342420;
     height: 400px;
-    width: 1920px;
+    width: 1905px;
     position:absolute;
     align-items: center;
     margin-top: 730px;
@@ -823,7 +823,7 @@ label {
 }
 
 .fundosn2{
-    width: 1920px;
+    width: 1905px;
     height:  1050px;
 }
 .tricolor2 {
@@ -934,7 +934,7 @@ label {
     position: absolute;
     z-index: 4;
     margin-top: 490px;
-    margin-left: 1550px;
+    margin-left: 1500px;
     width: 100%;
     height: auto;
     max-width: 350px;
