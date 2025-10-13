@@ -61,7 +61,7 @@
     
             <input type="submit" value="<?php echo $botao;?>" class=  "botaosub" id="botaocadastro">
             <!-- <a href="ReceitasFeed.php" class="botaosubimit"><button type="button" class="botaosub" id="botaocadastro">cadastrar</button></a> <br> -->
-            <a href="formLoginPerfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
+            <a href="perfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
             <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
         </div>
     </form>

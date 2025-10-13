@@ -606,7 +606,7 @@ label {
 .fundosn1 {
     background-color: #deb489;
     height: 1000px;
-    width: 1963px;
+    width: 1920px;
 }
 
 .tricolor1 {
@@ -614,7 +614,7 @@ label {
     width: auto;
     height: auto;
     max-width: 60px;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: 20px;
 }
 
@@ -624,7 +624,7 @@ label {
     font-family: 'camiro';
     font-size: 45px;
     color: #3d2f2b;
-    margin-left: 140px;
+    margin-left: 130px;
     margin-top: 30px;
 }
 
@@ -643,32 +643,32 @@ label {
 
 #loginsn {
     position: absolute;
-    margin-left: 1800px;
+    margin-left: 1750px;
 }
 
 #cadastrosn {
     position: absolute;
-    margin-left: 1609px;
+    margin-left: 1559px;
 }
 
 #buscarsn {
     position: absolute;
-    margin-left: 1469px;
+    margin-left: 1425px;
 }
 
 #receitassn {
     position: absolute;
-    margin-left: 1310px;
+    margin-left: 1275px;
 }
 
 #perfilsn {
     position: absolute;
-    margin-left: 1200px;
+    margin-left: 1170px;
 }
 
 #iniciosn {
     position: absolute;
-    margin-left: 1070px;
+    margin-left: 1050px;
 }
 
 .paodequeijo {
@@ -677,7 +677,7 @@ label {
     height: auto;
     max-width: 680px;
     margin-top:150px;
-    margin-left: 250px;
+    margin-left: 150px;
 }
 
 .sobrenos {
@@ -691,7 +691,7 @@ label {
 .sbrenostxt1 {
     position: absolute;
     margin-top: 100px;
-    margin-left: 800px;
+    margin-left: 735px;
     z-index: 4;
     cursor: default;
 }
@@ -709,9 +709,10 @@ label {
 
 .sobrenostxt2 {
     position: absolute;
-    margin-left: 800px;
+    margin-left: 735px;
     margin-top: 230px;
     z-index: 2;
+    cursor: default;
 }
 
 .estreladiv{
@@ -726,7 +727,7 @@ label {
     width: 80px;
     position: absolute;
     margin-top: 240px;
-    margin-left: 200px;
+    margin-left: 100px;
     z-index: 3;
     transition: all .4s ease-in-out;
 }
@@ -746,7 +747,7 @@ label {
     width: 60px;
     position: absolute;
     margin-top: 300px;
-    margin-left: 190px;
+    margin-left: 90px;
 }
 
 .paogato{
@@ -799,7 +800,7 @@ label {
 .fundorpb{
     background-color: #342420;
     height: 400px;
-    width: 1963px;
+    width: 1920px;
     position:absolute;
     align-items: center;
     margin-top: 730px;
@@ -822,7 +823,7 @@ label {
 }
 
 .fundosn2{
-    width: 1963px;
+    width: 1920px;
     height:  1050px;
 }
 .tricolor2 {
