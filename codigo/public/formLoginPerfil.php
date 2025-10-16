@@ -1,3 +1,7 @@
+<?php
+require_once "../verificarLogado.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +18,7 @@
             <p>Olá de novo!</p>
             <p>Faça seu Login!</p>  <br>
         </div>
-        <form action="verficarlogin.php" method="post">
+        <form action="../verificarLogin.php" method="post">
             <div class="clpreencher">
                 <div class="inputgroup">
                     <label>Nome de Úsuario:</label> <br>
@@ -25,10 +29,12 @@
                     <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha"> <br><br>
                 </div>
             </div>
-            <a href="perfil.php" class="botaosubimit"><button type="button" class="botaosub" id="botaosubid">entrar</button></a> <br>
+            <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+            <input type="submit" value="acessar">
+            <!-- <a href="perfil.php" class="botaosubimit"><button type="button" class="botaosub" id="botaosubid">entrar</button></a> <br> -->
             <a href="login.html" class="linksenha">Esqueceu a senha?</a>
             <a href="cadastro.html" class="novaconta">Crie uma nova conta</a>
-            <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+            <br><br><br><br><br><br><br>
         </div>
         </form>
 </body>
