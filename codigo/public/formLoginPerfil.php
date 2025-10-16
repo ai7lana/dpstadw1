@@ -14,20 +14,22 @@
             <p>Olá de novo!</p>
             <p>Faça seu Login!</p>  <br>
         </div>
-        <div class="clpreencher">
-            <div class="inputgroup">
-                <label>Nome de Úsuario:</label> <br>
-                <input class="inputcl" type="text" name="nomeusuario" id="nomeusu" placeholder="Digite o nome de usuário"> <br><br>
+        <form action="verficarlogin.php" method="post">
+            <div class="clpreencher">
+                <div class="inputgroup">
+                    <label>Nome de Úsuario:</label> <br>
+                    <input class="inputcl" type="text" name="nomeusuario" id="nomeusu" placeholder="Digite o nome de usuário"> <br><br>
+                </div>
+                <div class="inputgroup">
+                    <label>Senha:</label> <br>
+                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha"> <br><br>
+                </div>
             </div>
-            <div class="inputgroup">
-                <label>Senha:</label> <br>
-                <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha"> <br><br>
-            </div>
+            <a href="perfil.php" class="botaosubimit"><button type="button" class="botaosub" id="botaosubid">entrar</button></a> <br>
+            <a href="login.html" class="linksenha">Esqueceu a senha?</a>
+            <a href="cadastro.html" class="novaconta">Crie uma nova conta</a>
+            <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
         </div>
-        <a href="" class="botaosubimit"><button type="button" class="botaosub" id="botaosubid">entrar</button></a> <br>
-        <a href="login.html" class="linksenha">Esqueceu a senha?</a>
-        <a href="cadastro.html" class="novaconta">Crie uma nova conta</a>
-        <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
-    </div>
+        </form>
 </body>
 </html>
