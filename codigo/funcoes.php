@@ -416,15 +416,23 @@ function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){
 function pesquisarReceitaNome($conexao, $nome_comida) {
     $sql = "SELECT * FROM receita WHERE nome_comida LIKE ?";
     $comando = mysqli_prepare($conexao, $sql);
+
     $nome_comida = "%" . $nome_comida . "%";
     mysqli_stmt_bind_param($comando, 's', $nome_comida);
 
     mysqli_stmt_execute($comando);
-    $resultado = mysqli_stmt_get_result($comando);
-    $receita = mysqli_fetch_assoc($resultado);
+
+    $resultados = mysqli_stmt_get_result($comando);
+    
+    // $receita = mysqli_fetch_assoc($resultado);
+
+    $lista_receitas = [];
+    while ($receitas = mysqli_fetch_assoc($resultados)) {
+        $lista_receitas[] = $receitas;
+    }
     
     mysqli_stmt_close($comando);
-    return $receita;
+    return $lista_receitas;
 
     
 }
