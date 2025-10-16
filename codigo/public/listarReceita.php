@@ -13,10 +13,33 @@
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
-    $lista_receitas = listarReceitas($conexao);
 
-    if (count($lista_receitas) == 0) {
-        echo "Não existem receitas cadastrados";
+    $sql = "SELECT
+        receita.idreceita,
+        receita.nome_comida,
+        receita.tipo,
+        receita.ingredientes,
+        receita.modo_de_preparo,
+        receita.tempo,
+        receita.rendimento,
+        receita.foto,
+        receita.regiao,
+        perfil.nome_perfil
+        FROM
+        receita
+        INNER JOIN
+        perfil ON receita.perfil_idperfil = perfil.idperfil
+        ORDER BY receita.idreceita;";
+
+   
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    mysqli_stmt_execute($comando);
+
+    $resultados = mysqli_stmt_get_result($comando);
+
+    if (mysqli_num_rows($resultados) == 0) {
+        echo "Não existem receitas cadastradas.";
     } else {
     ?>
         <table border="1">
@@ -28,43 +51,46 @@
                 <td>Modo de preparar</td>
                 <td>Tempo</td>
                 <td>Rendimento</td>
-                <td>foto</td>
-                <td>Regiao</td>
+                <td>Foto</td>
+                <td>Região</td>
                 <td>Nome do perfil</td>
                 <td colspan="2">Ação</td>
             </tr>
-        <?php
-        foreach ($lista_receitas as $receita) {
-    $id = $receita['idreceita'];
-    $nome_comida = $receita['nome_comida'];
-    $tipo = $receita['tipo'];
-    $ingredientes = $receita['ingredientes'];
-    $modo_preparo = $receita['modo_de_preparo'];
-    $tempo = $receita['tempo'];
-    $rendimento = $receita['rendimento'];
-    $foto = $receita['foto'];
-    $regiao = $receita['regiao'];
-    $nome_perfil = $receita['perfil_idperfil'];
 
-    echo "<tr>";
-    echo "<td>$id</td>";
-    echo "<td>$nome_comida</td>";
-    echo "<td>$tipo</td>";
-    echo "<td>$ingredientes</td>";
-    echo "<td>$modo_preparo</td>";
-    echo "<td>$tempo</td>";
-    echo "<td>$rendimento</td>";
-    echo "<td><img src='foto/$foto' alt='Foto da comida' width='100'></td>";
-    echo "<td>$regiao</td>";
-    echo "<td>$nome_perfil</td>";
-    echo "<td><a href='deletarReceita.php?id=$id'>Excluir</a></td>";
-    echo "<td><a href='formReceita.php?id=$id'>Editar</a></td>";
-    echo "</tr>";
+        <?php
+
+        while ($receita = mysqli_fetch_assoc($resultados)) {
+            $id = $receita['idreceita'];
+            $nome_comida = $receita['nome_comida'];
+            $tipo = $receita['tipo'];
+            $ingredientes = $receita['ingredientes'];
+            $modo_preparo = $receita['modo_de_preparo'];
+            $tempo = $receita['tempo'];
+            $rendimento = $receita['rendimento'];
+            $foto = $receita['foto'];
+            $regiao = $receita['regiao'];
+            $nome_perfil = $receita['nome_perfil'];
+
+            echo "<tr>";
+            echo "<td>$id</td>";
+            echo "<td>$nome_comida</td>";
+            echo "<td>$tipo</td>";
+            echo "<td>$ingredientes</td>";
+            echo "<td>$modo_preparo</td>";
+            echo "<td>$tempo</td>";
+            echo "<td>$rendimento</td>";
+            echo "<td><img src='foto/$foto' alt='Foto da comida' width='100'></td>";
+            echo "<td>$regiao</td>";
+            echo "<td>$nome_perfil</td>";
+            echo "<td><a href='deletarReceita.php?id=$id'>Excluir</a></td>";
+            echo "<td><a href='formReceita.php?id=$id'>Editar</a></td>";
+            echo "</tr>";
         }
-    }
         ?>
         </table>
         <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
-        
+    <?php
+    }
+    ?>
 </body>
 </html>
