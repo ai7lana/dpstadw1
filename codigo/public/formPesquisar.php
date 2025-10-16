@@ -23,9 +23,9 @@
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
-    $receita = pesquisarReceitaNome($conexao, $valor);
+    $receitas = pesquisarReceitaNome($conexao, $valor);
 
-    if (count($receita) == 0) {
+    if (count($receitas) == 0) {
       echo "<p>Nenhuma Receita encontrada</p>";
     } else {
       echo "<br><table border='1'>";
@@ -33,11 +33,13 @@
       echo "<th>Perfil</th>";
       echo "<th>Receita</th>";
       echo "</tr>";
-      foreach ($receita as $receita) {
-        echo "<tr>";
-        echo "<td>" . $receita["nome_comida"] . "</td>";
-        echo "<td>" . $receita["perfil_idperfil"] . "</td>";
-        echo "</tr>";
+      
+      foreach ($receitas as $receita) {
+      echo "<tr>";
+
+      echo "<td>" . $receita ["nome_comida"]. "</td>";
+      echo "<td>" . $receita["perfil_idperfil"] . "</td>";
+      echo "</tr>";
       }
     }
   }
