@@ -10,7 +10,7 @@
     $resultado = mysqli_query($conexao, $sql);
 
     if (mysqli_num_rows($resultado) == 0) {
-        header("Location: ./public/index.php");
+        header("Location: ./public/perfil.php");
     }
     else {
         $linha = mysqli_fetch_array($resultado);

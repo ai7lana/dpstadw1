@@ -44,7 +44,7 @@
             echo "<td>$email</td>";
             echo "<td>$senha</td>";
             echo "<td><a href='deletarPerfil.php?id=$idperfil'>Excluir</a></td>";
-            echo "<td><a href='formCadastrarPerfil.php?id=$idperfil'>Editar</a></td>";
+            echo "<td><a href='editarPerfil.php?id=$idperfil'>Editar</a></td>";
             echo "</tr>";
         }
     }

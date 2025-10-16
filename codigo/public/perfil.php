@@ -1,3 +1,7 @@
+<?php
+require_once "../verificarLogado.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +16,7 @@
     <a href="formPesquisar.php"> buscar receita</a> <br>
     <a href="listarComentario.php"> avaliacoes </a> <br>
     <a href="listarFavoritos.php"> Favoritos </a> <br>
+    <a href="editarPerfil.php">editar perfil</a> <br>
     
 
     <br>
