@@ -31,14 +31,18 @@
         foreach ($listar_fav as $fav) {
             $perfil_idperfil= $fav ['perfil_idperfil'];
             $receita_idreceita= $fav['receita_idreceita'];
+            $nome_perfil = $fav['nome_perfil'];
+            $nome_receita = $fav['nome_receita'];
+
 
             echo "<tr>";
             
 
-            echo "<td>$perfil_idperfil</td>";
-            echo "<td>$receita_idreceita</td>";
-            echo "<td><a href='deletarFav.php?id=$perfil_idperfil and id=$receita_idreceita'>Excluir</a></td>";
-            echo "<td><a href='formFavoritos.php?id=$perfil_idperfil and id=$receita_idreceita'>Editar</a></td>";
+            echo "<td>$nome_perfil</td>";
+            echo "<td>$nome_receita</td>";
+            echo "<td><a href='deletarFav.php?perfil=$perfil_idperfil&receita=$receita_idreceita'>Excluir</a></td>";
+            echo "<td><a href='formFavoritos.php?perfil=$perfil_idperfil&receita=$receita_idreceita'>Editar</a></td>";
+
             echo "</tr>";
         }
     }

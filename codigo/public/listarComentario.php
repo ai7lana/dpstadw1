@@ -31,8 +31,8 @@
             </tr>
         <?php
         foreach ($listar_avaliacao as $avaliacao) {
-            // $perfil_idperfil= $avaliacao ['perfil_idperfil'];
-            // $receita_idreceita = $avaliacao ['receita_idreceita'];
+            $perfil_idperfil= $avaliacao ['perfil_idperfil'];
+            $receita_idreceita = $avaliacao ['receita_idreceita'];
             // $comentario =  $avaliacao ['comentario'];
             // $nota = $avaliacao ['nota'];
             $nome_perfil = $avaliacao['nome_perfil'];

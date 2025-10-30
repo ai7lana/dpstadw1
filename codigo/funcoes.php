@@ -303,7 +303,18 @@ function listarPerfil ($conexao){
  * @return array Retorna um array contendo todos os favoritos encontrados na tabela "favoritos".
  **/
 function listarFavorito ($conexao){
-    $sql = "SELECT * FROM favoritos";
+    $sql = "SELECT 
+                f.perfil_idperfil,
+                f.receita_idreceita,
+                p.nome AS nome_perfil,
+                r.nome_comida AS nome_receita
+            FROM favoritos f
+            INNER JOIN perfil p 
+                ON f.perfil_idperfil = p.idperfil
+            INNER JOIN receita r 
+                ON f.receita_idreceita = r.idreceita
+            ORDER BY p.nome ASC, r.nome_comida ASC";
+            
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
