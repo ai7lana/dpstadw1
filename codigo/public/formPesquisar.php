@@ -38,8 +38,8 @@
       foreach ($receitas as $receita) {
       echo "<tr>";
 
-      echo "<td>" . $receita ["nome_comida"]. "</td>";
-      echo "<td>" . $receita["perfil_idperfil"] . "</td>";
+      echo "<td>" . $receita ["nome_perfil"]. "</td>";
+      echo "<td>" . $receita["nome_comida"] . "</td>";
       echo "</tr>";
       }
     }

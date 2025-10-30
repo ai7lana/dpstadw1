@@ -15,6 +15,8 @@
 
     $lista_receitas = listarReceitas($conexao);
 
+    
+
     if (count($lista_receitas) == 0) {
         echo "Não existem receitas cadastradas.";
     } else {

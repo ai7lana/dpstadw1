@@ -414,7 +414,23 @@ function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){
  * @return array|false Retorna um array com os dados da receita, ou false caso não encontre a receita.
  **/
 function pesquisarReceitaNome($conexao, $nome_comida) {
-    $sql = "SELECT * FROM receita WHERE nome_comida LIKE ?";
+            $sql = "SELECT 
+                r.idreceita,
+                r.nome_comida,
+                r.foto,
+                r.tipo,
+                r.ingredientes,
+                r.modo_de_preparo,
+                r.tempo,
+                r.rendimento,
+                r.regiao,
+                p.nome AS nome_perfil
+            FROM receita r
+            INNER JOIN perfil p 
+                ON r.perfil_idperfil = p.idperfil
+            WHERE r.nome_comida LIKE ?
+            ORDER BY r.nome_comida ASC";
+            
     $comando = mysqli_prepare($conexao, $sql);
 
     $nome_comida = "%" . $nome_comida . "%";

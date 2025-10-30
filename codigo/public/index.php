@@ -21,7 +21,7 @@
                 <a href="home.php" class="link" id="inicio"> &nbsp&nbsp ÍNICIO &nbsp&nbsp </a>
             </div>
             <div class="divlinks" id="divperfil">
-                <a href="perfil.php" class="link" id="perfil"> &nbsp&nbsp PERFIL &nbsp&nbsp</a>
+                <a href="todoPerfil.php" class="link" id="perfil"> &nbsp&nbsp PERFIL &nbsp&nbsp</a>
             </div>
             <div class="divlinks" id="divreceitas">
                 <a href="listagemParcial.php" class="link" id="receitas"> &nbsp&nbsp RECEITAS &nbsp&nbsp </a>
