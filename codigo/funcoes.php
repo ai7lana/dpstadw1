@@ -325,7 +325,20 @@ function listarFavorito ($conexao){
  * @return array Retorna um array contendo todas as avaliações encontradas na tabela "avaliacao".
  **/
 function listarAvaliacao ($conexao){
-    $sql = "SELECT * FROM avaliacao";
+    $sql = "SELECT 
+                a.perfil_idperfil,
+                a.receita_idreceita,
+                a.comentario,
+                a.nota,
+                p.nome AS nome_perfil,
+                r.nome_comida AS nome_receita
+            FROM avaliacao a
+            INNER JOIN perfil p 
+                ON a.perfil_idperfil = p.idperfil
+            INNER JOIN receita r 
+                ON a.receita_idreceita = r.idreceita
+            ORDER BY p.nome ASC, r.nome_comida ASC";
+            
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
@@ -430,7 +443,7 @@ function pesquisarReceitaNome($conexao, $nome_comida) {
                 ON r.perfil_idperfil = p.idperfil
             WHERE r.nome_comida LIKE ?
             ORDER BY r.nome_comida ASC";
-            
+
     $comando = mysqli_prepare($conexao, $sql);
 
     $nome_comida = "%" . $nome_comida . "%";

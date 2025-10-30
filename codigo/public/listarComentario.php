@@ -31,20 +31,25 @@
             </tr>
         <?php
         foreach ($listar_avaliacao as $avaliacao) {
-            $perfil_idperfil= $avaliacao ['perfil_idperfil'];
-            $receita_idreceita = $avaliacao ['receita_idreceita'];
-            $comentario =  $avaliacao ['comentario'];
-            $nota = $avaliacao ['nota'];
+            // $perfil_idperfil= $avaliacao ['perfil_idperfil'];
+            // $receita_idreceita = $avaliacao ['receita_idreceita'];
+            // $comentario =  $avaliacao ['comentario'];
+            // $nota = $avaliacao ['nota'];
+            $nome_perfil = $avaliacao['nome_perfil'];
+            $nome_receita = $avaliacao['nome_receita'];
+            $comentario = $avaliacao['comentario'];
+            $nota = $avaliacao['nota'];
 
             echo "<tr>";
             
 
-            echo "<td>$perfil_idperfil</td>";
-            echo "<td>$receita_idreceita</td>";
+            echo "<td>{$avaliacao['nome_perfil']}</td>";
+            echo "<td>{$avaliacao['nome_receita']}</td>";
             echo "<td>$comentario</td>";
             echo "<td>$nota</td>";
-            echo "<td><a href='deletarComentario.php?id=$perfil_idperfil and id=$receita_idreceita'>Excluir</a></td>";
-            echo "<td><a href='formAvaliacao.php?id=$perfil_idperfil and id=$receita_idreceita'>Editar</a></td>";
+            echo "<td><a href='deletarComentario.php?perfil={$avaliacao["perfil_idperfil"]}&receita={$avaliacao["receita_idreceita"]}'>Excluir</a>
+</td>";
+            echo "<td><a href='formAvaliacao.php?perfil={$avaliacao["perfil_idperfil"]}&receita={$avaliacao["receita_idreceita"]}'>Editar</a></td>";
             echo "</tr>";
         }
     }
