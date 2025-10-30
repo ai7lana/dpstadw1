@@ -400,6 +400,12 @@ label {
 }
 
 /*Cadastro*/
+
+/* #mostrarSenha{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -30px;
+} */
 .linklogin {
     position: absolute;
     text-decoration: none;

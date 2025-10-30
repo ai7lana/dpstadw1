@@ -29,7 +29,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça seu cadastro!</title>
-    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -58,12 +58,26 @@
                     <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $senha;?>"> <br><br>
                 </div>
             </div>
-    
+
+            
             <input type="submit" value="<?php echo $botao;?>" class=  "botaosub" id="botaocadastro">
             <!-- <a href="ReceitasFeed.php" class="botaosubimit"><button type="button" class="botaosub" id="botaocadastro">cadastrar</button></a> <br> -->
             <a href="perfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
         </div>
         <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
     </form>
+    <button type="button" id="mostrarSenha"> mostrar senha</button>
+    <script>
+        $(document).ready(function() {
+            $('#mostrarSenha').click(function() {
+                let tipo = $('#senha').attr('type');
+                if (tipo == 'password') {
+                    $('#senha').attr('type', 'text');
+                } else {
+                    $('#senha').attr('type', 'password');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
