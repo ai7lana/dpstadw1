@@ -259,7 +259,8 @@ a {
 .caixafundocadastro {
     position: absolute;
     background-color: #f1f4d9;
-    /* min-height: 800px; */
+    height: 800px;
+    min-height: auto;
     width: 700px;
     text-align: center;
     border-radius: 15px 50px;
@@ -415,10 +416,10 @@ label.error {
 }
 
 /* campo válido (opcional) */
-input.valid {
+/* input.valid {
   border: 2px solid #4CAF50;  /* verde */
-  background-color: #eaffea;
-}
+  /* background-color: #eaffea;
+} */
 
 /* #mostrarSenha{
     position: absolute;
