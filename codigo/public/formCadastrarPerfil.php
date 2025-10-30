@@ -32,6 +32,10 @@
     <script src="jquery-3.7.1.min.js"></script>
     <script src="jquery.validate.min.js"></script>
     <script>
+        jQuery.validator.addMethod("lettersOnly", function(value, element) {
+            return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
+        }, "Precisa de pelo menos um número e uma letra maiucula");
+        
         $(document).ready(function(){
             $("#formulario").validate({
                 rules:{
@@ -49,6 +53,7 @@
                     senha:{
                         required: true,
                         minlength: 6,
+                        lettersOnly: true,
                     }
                 },
                 messages: {

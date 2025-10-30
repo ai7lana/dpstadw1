@@ -278,6 +278,7 @@ a {
     border-radius: 15px 50px;
     margin-left: 640px;
     margin-top: 120px;
+    display: flex;
 }
 
 .titulocl {
@@ -286,11 +287,13 @@ a {
     color: #5e3a1d;
     cursor: default;
     letter-spacing: 4px;
+    margin-top: -25px;
 }
 
 .clpreencher {
     font-family: "vocago";
     color: #9b6b44;
+    margin-top: -15px;
 }
 
 .inputcl {
@@ -303,6 +306,7 @@ a {
     transition: all .4s ease-out;
     color: #9b6b44;
     padding-left: 6px;
+    margin-top: ;
 }
 
 .inputcl::placeholder {
@@ -324,6 +328,8 @@ a {
     padding: 5px;
     transition-duration: 0.4s;
     cursor: default;
+    margin-top: -10px;
+    margin-bottom: 0px;
 }
 
 label {
