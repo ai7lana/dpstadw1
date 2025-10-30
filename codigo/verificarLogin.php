@@ -10,7 +10,7 @@
     $resultado = mysqli_query($conexao, $sql);
 
     if (mysqli_num_rows($resultado) == 0) {
-        header("Location: ./public/perfil.php");
+        header("Location: ./public/index.php");
     }
     else {
         $linha = mysqli_fetch_array($resultado);
@@ -19,7 +19,7 @@
         if (password_verify($senha, $senha_banco)) {
             session_start();
             $_SESSION['logado'] = 'sim';
-            header("Location: ./public/perfil.php");
+            header("Location: ./public/todoPerfil.php");
         }
         else {
             header("Location: ./public/index.php");
