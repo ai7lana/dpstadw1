@@ -30,11 +30,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça seu cadastro!</title>
     <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#formulario").validate({
+                rules:{
+                    nome:{
+                        required: true,
+                        minlength: 5,
+                    },
+                    nome_perfil:{
+                        required: true,
+                        minlength: 5,
+                    },
+                    email:{
+                        required: true,
+                    },
+                    senha:{
+                        required: true,
+                        minlength: 6,
+                    }
+                },
+                messages: {
+                    nome: {
+                        required: "Esse campo precisa ser preenchido",
+                        minlength: "Precisa de no mínimo 5 caracteres"
+                    },
+                    nome_perfil: {
+                        required: "Esse campo precisa ser preenchido",
+                        minlength: "Precisa de no mínimo 5 caracteres"
+                    },
+                    email: {
+                        required: "Esse campo precisa ser preenchido",
+                        
+                    },
+                    senha: {
+                        required: "Esse campo precisa ser preenchido",
+                        minlength: "Precisa de no mínimo 6 caracteres"
+                    }
+                }
+            })
+        })
+    </script>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="bodycl">
-    <form action="../salvarPerfil.php" method="post">
+    <form action="../salvarPerfil.php" method="post" id=formulario>
         <div class="caixafundocadastro">
             <div class="titulocl"> <br><br>
                 <p>Primeira vez aqui?</p>
@@ -57,13 +99,13 @@
                     <label>Senha:</label> <br>
                     <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $senha;?>"> <br><br>
                 </div>
+                <input type="submit" value="<?php echo $botao;?>" class=  "botaosub" id="botaocadastro">
+                <!-- <a href="ReceitasFeed.php" class="botaosubimit"><button type="button" class="botaosub" id="botaocadastro">cadastrar</button></a> <br> -->
+                <a href="formLoginPerfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
+            </div>
             </div>
 
             
-            <input type="submit" value="<?php echo $botao;?>" class=  "botaosub" id="botaocadastro">
-            <!-- <a href="ReceitasFeed.php" class="botaosubimit"><button type="button" class="botaosub" id="botaocadastro">cadastrar</button></a> <br> -->
-            <a href="perfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
-        </div>
         <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
     </form>
     <button type="button" id="mostrarSenha"> mostrar senha</button>

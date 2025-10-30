@@ -259,7 +259,7 @@ a {
 .caixafundocadastro {
     position: absolute;
     background-color: #f1f4d9;
-    height: 800px;
+    /* min-height: 800px; */
     width: 700px;
     text-align: center;
     border-radius: 15px 50px;
@@ -400,6 +400,25 @@ label {
 }
 
 /*Cadastro*/
+
+input.error, select.error, textarea.error {
+  border: 2px solid #ff4d4d;  /* borda vermelha */
+  background-color: #ffe6e6;   /* leve fundo vermelho */
+}
+
+/* label da mensagem de erro */
+label.error {
+  color: #ff0000;
+  font-size: 100%;
+  margin-top: 5px;
+  display: block;
+}
+
+/* campo válido (opcional) */
+input.valid {
+  border: 2px solid #4CAF50;  /* verde */
+  background-color: #eaffea;
+}
 
 /* #mostrarSenha{
     position: absolute;
