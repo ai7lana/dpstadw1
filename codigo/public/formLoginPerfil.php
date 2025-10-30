@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça seu Login!</title>
-    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -33,5 +33,18 @@
             <br><br><br><br><br><br><br>
         </div>
         </form>
+        <button type="button" id="mostrarSenha"> mostrar senha</button>
+        <script>
+        $(document).ready(function() {
+            $('#mostrarSenha').click(function() {
+                let tipo = $('#senha').attr('type');
+                if (tipo == 'password') {
+                    $('#senha').attr('type', 'text');
+                } else {
+                    $('#senha').attr('type', 'password');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
