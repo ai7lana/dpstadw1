@@ -303,7 +303,18 @@ function listarPerfil ($conexao){
  * @return array Retorna um array contendo todos os favoritos encontrados na tabela "favoritos".
  **/
 function listarFavorito ($conexao){
-    $sql = "SELECT * FROM favoritos";
+    $sql = "SELECT 
+                f.perfil_idperfil,
+                f.receita_idreceita,
+                p.nome AS nome_perfil,
+                r.nome_comida AS nome_receita
+            FROM favoritos f
+            INNER JOIN perfil p 
+                ON f.perfil_idperfil = p.idperfil
+            INNER JOIN receita r 
+                ON f.receita_idreceita = r.idreceita
+            ORDER BY p.nome ASC, r.nome_comida ASC";
+            
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
@@ -325,7 +336,20 @@ function listarFavorito ($conexao){
  * @return array Retorna um array contendo todas as avaliações encontradas na tabela "avaliacao".
  **/
 function listarAvaliacao ($conexao){
-    $sql = "SELECT * FROM avaliacao";
+    $sql = "SELECT 
+                a.perfil_idperfil,
+                a.receita_idreceita,
+                a.comentario,
+                a.nota,
+                p.nome AS nome_perfil,
+                r.nome_comida AS nome_receita
+            FROM avaliacao a
+            INNER JOIN perfil p 
+                ON a.perfil_idperfil = p.idperfil
+            INNER JOIN receita r 
+                ON a.receita_idreceita = r.idreceita
+            ORDER BY p.nome ASC, r.nome_comida ASC";
+            
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
@@ -414,7 +438,23 @@ function pesquisarAvaliacaoId($conexao, $perfil_idperfil, $receita_idreceita){
  * @return array|false Retorna um array com os dados da receita, ou false caso não encontre a receita.
  **/
 function pesquisarReceitaNome($conexao, $nome_comida) {
-    $sql = "SELECT * FROM receita WHERE nome_comida LIKE ?";
+            $sql = "SELECT 
+                r.idreceita,
+                r.nome_comida,
+                r.foto,
+                r.tipo,
+                r.ingredientes,
+                r.modo_de_preparo,
+                r.tempo,
+                r.rendimento,
+                r.regiao,
+                p.nome AS nome_perfil
+            FROM receita r
+            INNER JOIN perfil p 
+                ON r.perfil_idperfil = p.idperfil
+            WHERE r.nome_comida LIKE ?
+            ORDER BY r.nome_comida ASC";
+
     $comando = mysqli_prepare($conexao, $sql);
 
     $nome_comida = "%" . $nome_comida . "%";

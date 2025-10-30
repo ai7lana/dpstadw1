@@ -15,6 +15,8 @@
 
     $lista_receitas = listarReceitas($conexao);
 
+    
+
     if (count($lista_receitas) == 0) {
         echo "Não existem receitas cadastradas.";
     } else {
@@ -39,7 +41,11 @@
             ?>
         </table>
         <br>
-      <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+      <!-- <input type="button" value="Voltar" onclick="javascript:history.go(-1)"> -->
+      <form>
+        <input type="button" value="Voltar" onClick="JavaScript: window.history.back();">
+      </form>
+      
     <?php } ?>
 </body>
 </html>
