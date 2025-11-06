@@ -8,6 +8,9 @@
     <script src="jquery.validate.min.js"></script>
     <script>
         $(document).ready(function(){
+            jQuery.validator.addMethod("lettersOnly", function(value, element) {
+            return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
+        }, "Digite a senha correta.");
             $('#formulario').validate({
                 rules:{
                     nomeusuario:{
@@ -39,6 +42,9 @@
         </div>
         <form action="../verificarLogin.php" method="post" id="formulario">
             <div class="clpreencher">
+                <div class="fundobrigadeirodiv">
+                    <img src="style/images/brigadeirocl .png" alt="" class="brigadeiroimagemcl">
+                </div>
                 <div class="inputgroup">
                     <label>Nome de Úsuario:</label> <br>
                     <input class="inputcl" type="text" name="nomeusuario" id="nomeusu" placeholder="Digite o nome de usuário"> <br><br>
