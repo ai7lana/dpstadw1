@@ -41,11 +41,10 @@ if (pesquisarReceitaId($conexao, $id)) {
                     <?php endif; ?>
             </p>
 
-            <div class="tiporeceitadetalhada">
+            <div class="tiporeceitadetalhadabola">
                 <p>Tipo: <?= htmlspecialchars($tipo) ?></p>
             </div>
 
-            <div>
                 <p class="mododepreparoreceitadetalhada">Modo de preparo:<br> <?= nl2br(htmlspecialchars($modo_de_preparo)) ?></p>
 
 
