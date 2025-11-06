@@ -34,7 +34,7 @@
     <script>
         jQuery.validator.addMethod("lettersOnly", function(value, element) {
             return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
-        }, "Precisa de pelo menos um número e uma letra maiucula");
+        }, "Precisa de pelo menos um número e uma letra maiscula");
         
         $(document).ready(function(){
             $("#formulario").validate({
@@ -91,6 +91,9 @@
                 <div class="inputgroup">
                     <label>Nome:</label> <br>
                     <input class="inputcl" type="text" name="nome" id="nome"  placeholder="Digite seu nome" value="<?php echo $nome;?>"> <br><br>
+                </div>
+                <div class="fundobrigadeiro">
+                    <img src="style/images/brigadeirocl.png" alt="">
                 </div>
                 <div class="inputgroup">
                     <label>Nome de usuario:</label> <br>
