@@ -36,34 +36,41 @@
 </head>
 <body class="bodycl">
     <div class="caixafundologin">
-        <div class="titulocl"> <br><br>
-            <p>Olá de novo!</p>
-            <p>Faça seu Login!</p>  <br>
-        </div>
         <form action="../verificarLogin.php" method="post" id="formulario">
-            <div class="clpreencher">
-                <div class="fundobrigadeirodiv">
-                    <img src="style/images/brigadeirocl .png" alt="" class="brigadeiroimagemcl">
-                </div>
-                <div class="inputgroup">
-                    <label>Nome de Úsuario:</label> <br>
-                    <input class="inputcl" type="text" name="nomeusuario" id="nomeusu" placeholder="Digite o nome de usuário"> <br><br>
-                </div>
-                <div class="inputgroup">
-                    <label>Senha:</label> <br>
-                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha"> <br><br>
-                </div>
+            <div class="fundobrigadeirodiv">
+                <img src="style/images/brigadeirocl .png" alt="" class="brigadeiroimagemcl">
             </div>
-            <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+            <div class="clpreencher">
+                <div class="titulocl"> <br><br>
+                    <p>Olá de novo!</p>
+                    <p>Faça seu Login!</p>  <br>
+                </div>
+                <div class="inputgroup">
+                    <!-- <label>Nome de Úsuario:</label> <br> -->
+                    <input class="inputcl" type="text" name="nomeusuario" id="nomeusu" placeholder="Digite o nome de usuário">
+                    <div class="labelline" id="1">Nome de Usuário</div>
+                    <br><br>
+                </div>
+                <div class="inputgroup">
+                    <!-- <label>Senha:</label> <br> -->
+                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha"> 
+                    <div class="labelline" id="2">Senha</div>
+                </div>
+                
+                <button type="button" id="mostrarSenha"><!---<img src='style/images/mostrarsenha.png' alt='' class='mostrarsenhabotao' --> mostrar</button>
+                <input type="submit" value="acessar">
+                <a href="formCadastrarPerfil.php" class="novaconta">Crie uma nova conta</a>
+            </div>
+            <button onclick="history.go(-1)">
+            <!-- <img src='style/images/voltar.png' alt='' class='voltarbotao'> --> voltar
+            </button>
+            <!-- <input type="button" value="<img src='style/images/voltar.png' alt='' class='voltarbotao'>" onclick="javascript:history.go(-1)"> -->
             <a href=""></a>
-            <input type="submit" value="acessar">
             <!-- <a href="perfil.php" class="botaosubimit"><button type="button" class="botaosub" id="botaosubid">entrar</button></a> <br> -->
 
-            <a href="formCadastrarPerfil.php" class="novaconta">Crie uma nova conta</a>
             <br><br><br><br><br><br><br>
         </div>
         </form>
-        <button type="button" id="mostrarSenha"> mostrar senha</button>
         <script>
         $(document).ready(function() {
             $('#mostrarSenha').click(function() {
