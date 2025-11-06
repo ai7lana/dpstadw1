@@ -33,6 +33,7 @@
       echo "<tr>";
       echo "<th>Perfil</th>";
       echo "<th>Receita</th>";
+      echo "<th>Foto</th>";
       echo "</tr>";
       
       foreach ($receitas as $receita) {
@@ -40,6 +41,7 @@
 
       echo "<td>" . $receita ["nome_perfil"]. "</td>";
       echo "<td>" . $receita["nome_comida"] . "</td>";
+      echo "<td><img src='foto/" . $receita["foto"] . "' alt='Foto da comida' width='100'></td>";
       echo "</tr>";
       }
     }
