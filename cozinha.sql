@@ -122,6 +122,8 @@ INSERT INTO perfil (nome, nome_perfil, senha, email) VALUES
 ('Aline Souza', 'alinechef', 'alinesegura', 'aline@gmail.com'),
 ('Eduardo Pinto', 'edu_p', 'edu123', 'eduardo@gmail.com'),
 ('Camila Farias', 'camif', 'camila2024', 'camila@gmail.com');
+('Alana Eduarda', 'ai7lana', 'Al123321', 'alana@gmail.com');
+('Apollo', 'ap00l', 'Ap123321', 'apollo@gmail.com');
 
 -- -----------------------------------------------------
 -- Inserts para RECEITA

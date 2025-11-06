@@ -35,7 +35,8 @@
                 echo "<tr>";
                 echo "<td>$nome_comida</td>";
                 echo "<td><img src='foto/$foto' alt='Foto da comida' width='100'></td>";
-                echo "<td><a href='listarReceita.php'>Mais informações</a></td>";
+                $id = $receita['idreceita'];
+                echo "<td><a href='receitaDetalhada.php?id=$id'>Mais informações</a></td>";
                 echo "</tr>";
             }
             ?>
