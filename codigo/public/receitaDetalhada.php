@@ -1,8 +1,7 @@
 <?php
-require_once "../funcoes.php";
-require_once "../conexao.php";
-
-$id = $_GET['id'];
+    require_once "../funcoes.php";
+    require_once "../conexao.php";
+    $id = $_GET['id'];
 
 if (pesquisarReceitaId($conexao, $id)) {
     $receita = pesquisarReceitaId($conexao, $id);
