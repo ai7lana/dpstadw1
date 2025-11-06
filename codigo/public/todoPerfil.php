@@ -1,7 +1,7 @@
 <?php
 
 require_once "../verificarLogado.php";
-require_once "../verificarLogin.php";
+// require_once "../verificarLogin.php";
 
 ?>
 
