@@ -258,9 +258,24 @@ function deletarAvaliacao($conexao, $perfil_idperfil, $receita_idreceita) {
  * @return array Retorna um array de todas as receitas.
  **/
 function listarReceitas($conexao) {
-    $sql = "SELECT * FROM receita";
-    $comando = mysqli_prepare($conexao, $sql);
+    $sql = "SELECT 
+                r.idreceita,
+                r.nome_comida,
+                r.tipo,
+                r.ingredientes,
+                r.modo_de_preparo,
+                r.tempo,
+                r.rendimento,
+                r.foto,
+                r.regiao,
+                r.perfil_idperfil,
+                p.nome AS nome_perfil
+            FROM receita r
+            INNER JOIN perfil p 
+                ON r.perfil_idperfil = p.idperfil
+            ORDER BY r.nome_comida ASC";
 
+    $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_execute($comando);
     $resultados = mysqli_stmt_get_result($comando);
 
@@ -268,6 +283,7 @@ function listarReceitas($conexao) {
     while ($receita = mysqli_fetch_assoc($resultados)) {
         $lista_receitas[] = $receita;
     }
+
     mysqli_stmt_close($comando);
 
     return $lista_receitas;
@@ -371,10 +387,15 @@ function listarAvaliacao ($conexao){
  * @return array|false Retorna um array com os dados da receita, ou false caso não encontre a receita.
  **/
 function pesquisarReceitaId($conexao, $idreceita) {
-    $sql = "SELECT * FROM receita WHERE idreceita = ?";
+    // Seleciona todos os campos da receita + o nome do perfil do autor
+    $sql = "SELECT 
+                r.*,
+                p.nome AS nome_perfil
+            FROM receita r
+            INNER JOIN perfil p ON r.perfil_idperfil = p.idperfil
+            WHERE r.idreceita = ?";
+
     $comando = mysqli_prepare($conexao, $sql);
-    // $idreceita = "%" . $idreceita . "%";
-    $idreceita = $idreceita;
     mysqli_stmt_bind_param($comando, 'i', $idreceita);
 
     mysqli_stmt_execute($comando);

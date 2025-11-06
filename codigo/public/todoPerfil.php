@@ -1,5 +1,7 @@
 <?php
 
+require_once "./codigo/verificarLogado.php";
+require_once "./codigo/verificarLogin.php";
 
 ?>
 
