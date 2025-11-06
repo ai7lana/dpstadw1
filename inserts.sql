@@ -11,7 +11,7 @@ INSERT INTO perfil (nome, nome_perfil, senha, email) VALUES
 ('Aline Souza', 'alinechef', 'alinesegura', 'aline@gmail.com'),
 ('Eduardo Pinto', 'edu_p', 'edu123', 'eduardo@gmail.com'),
 ('Camila Farias', 'camif', 'camila2024', 'camila@gmail.com');
-('Alana Eduarda', 'ai7lana', '$2y$10$VrD1j0LDGp8ODJa5/QvDgOK8eIPHh5M0CqqW3xYZ9wWyx2YrGwqWi', 'alana@gmail.com');
+('Alana Eduarda', 'ai7lana', '$2y$10$VrD1j0LDGp8ODJa5/QvDgOK8eIPHh5M0CqqW3xYZ9wWyx2YrGwqWi', 'alana@gmail.com'),
 ('Apollo', 'ap00l', '$2y$10$KZF/5mYeueSdFspYKgHciePydUMOnZsi04wmp3gLcEebBN9NIFOFS', 'apollo@gmail.com');
 
 
@@ -29,16 +29,17 @@ INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, re
 
 
 INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES
-(4, 1);
-(5, 2);
-(6, 3);
-(7, 4);
-(8, 5);
-(9, 6);
-(10, 7);
-(1, 8);
-(2, 9);
+(4, 1),
+(5, 2),
+(6, 3),
+(7, 4),
+(8, 5),
+(9, 6),
+(10, 7),
+(1, 8),
+(2, 9),
 (3, 10);
+
 
 INSERT INTO avaliacao (perfil_idperfil, receita_idreceita, comentario, nota) VALUES
 (4, 1, 'Delicioso, bem temperado!', 5),

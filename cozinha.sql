@@ -108,7 +108,6 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-
 USE cozinha;
 
 INSERT INTO perfil (nome, nome_perfil, senha, email) VALUES
@@ -122,12 +121,10 @@ INSERT INTO perfil (nome, nome_perfil, senha, email) VALUES
 ('Aline Souza', 'alinechef', 'alinesegura', 'aline@gmail.com'),
 ('Eduardo Pinto', 'edu_p', 'edu123', 'eduardo@gmail.com'),
 ('Camila Farias', 'camif', 'camila2024', 'camila@gmail.com');
-('Alana Eduarda', 'ai7lana', '$2y$10$VrD1j0LDGp8ODJa5/QvDgOK8eIPHh5M0CqqW3xYZ9wWyx2YrGwqWi', 'alana@gmail.com');
+('Alana Eduarda', 'ai7lana', '$2y$10$VrD1j0LDGp8ODJa5/QvDgOK8eIPHh5M0CqqW3xYZ9wWyx2YrGwqWi', 'alana@gmail.com'),
 ('Apollo', 'ap00l', '$2y$10$KZF/5mYeueSdFspYKgHciePydUMOnZsi04wmp3gLcEebBN9NIFOFS', 'apollo@gmail.com');
 
--- -----------------------------------------------------
--- Inserts para RECEITA
--- -----------------------------------------------------
+
 INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, rendimento, foto, regiao, perfil_idperfil) VALUES
 ('Moqueca Baiana', 'Almoço', 'Peixe, pimentão, cebola, coentro, leite de coco', 'Cozinhe todos os ingredientes em panela de barro...', '1h', '4 porções', 'moqueca.jpg', 'Nordeste', 4),
 ('Pão de Queijo', 'Lanche', 'Polvilho, queijo, leite, óleo, ovos', 'Misture tudo e asse em forno médio...', '45min', '20 unidades', 'paodequeijo.jpg', 'Sudeste', 5),
@@ -140,9 +137,7 @@ INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, re
 ('Empadão Goiano', 'Almoço', 'Frango, milho, palmito, massa podre', 'Recheie a massa e asse até dourar...', '1h30min', '8 pedaços', 'empadao.jpg', 'Centro-Oeste', 2),
 ('Tutu de Feijão', 'Almoço', 'Feijão, farinha de mandioca, alho, cebola', 'Misture o feijão com farinha e refogue...', '30min', '5 porções', 'tutu.jpg', 'Sudeste', 3);
 
--- -----------------------------------------------------
--- Inserts para FAVORITOS
--- -----------------------------------------------------
+
 INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES
 (4, 1),
 (5, 2),
@@ -150,14 +145,12 @@ INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES
 (7, 4),
 (8, 5),
 (9, 6),
-(1, 7),
+(10, 7),
 (1, 8),
 (2, 9),
 (3, 10);
 
--- -----------------------------------------------------
--- Inserts para AVALIAÇÃO
--- -----------------------------------------------------
+
 INSERT INTO avaliacao (perfil_idperfil, receita_idreceita, comentario, nota) VALUES
 (4, 1, 'Delicioso, bem temperado!', 5),
 (5, 2, 'Muito fácil de fazer!', 4),
@@ -169,5 +162,7 @@ INSERT INTO avaliacao (perfil_idperfil, receita_idreceita, comentario, nota) VAL
 (1, 8, 'Muito refrescante.', 4),
 (2, 9, 'Bem recheado e saboroso.', 5),
 (3, 10, 'Clássico mineiro bem feito!', 5);
+
+
 
 
