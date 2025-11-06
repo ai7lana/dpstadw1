@@ -42,19 +42,19 @@ if (pesquisarReceitaId($conexao, $id)) {
             </p>
 
             <div class="tiporeceitadetalhadabola">
-                <p>Tipo: <?= htmlspecialchars($tipo) ?></p>
+                <p class="tiporeceitad">Tipo: <br><?= htmlspecialchars($tipo) ?></p>
             </div>
+            <p class="ingredientesreceitadetalhada">Ingredientes: <br> <?= nl2br(htmlspecialchars($ingredientes)) ?></p>
 
-                <p class="mododepreparoreceitadetalhada">Modo de preparo:<br> <?= nl2br(htmlspecialchars($modo_de_preparo)) ?></p>
+            <p class="mododepreparoreceitadetalhada">Modo de preparo:<br> <?= nl2br(htmlspecialchars($modo_de_preparo)) ?></p>
 
 
-            <p class="ingredientesreceitadetalhada">Ingredientes:<br> <?= nl2br(htmlspecialchars($ingredientes)) ?></p>
 
             <div class="temporeceitadetalhada">
-                <p>Tempo:<?= htmlspecialchars($tempo) ?></p>
+                <p class="tempo">Tempo: <br><?= htmlspecialchars($tempo) ?></p>
             </div>
             <div class="porcoesreceitadetalhada">
-                <p>Rendimento: <?= htmlspecialchars($rendimento) ?></p>
+                <p class="rendimento">Rendimento: <br> <?= htmlspecialchars($rendimento) ?></p>
             </div>
 
             <img src="foto/<?= htmlspecialchars($foto) ?>" alt="Foto da comida" class="imagemreceitadetalhada">

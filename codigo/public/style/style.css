@@ -1122,53 +1122,59 @@ label.error {
     background-color: #5f432c;
     margin-left: 900px;
     margin-top: 15px;
-    padding-top: 110px;
-    padding-bottom: 110px;
-    padding-right: 50px;
-    padding-left: 50px;
+    height: 250px;
+    width: 250px;
     color: #f5f9f5;
     font-size: 200%;
     font-family: 'gallient';
     font-weight: 600;
     cursor: default;
+    text-align: center;
 }
 
-.temporeceitadetalhadabola{
-    position: absolute;
-    margin-left: 1200px;
+.tiporeceitad{
+    margin-top: 90px;
 }
 
-/* .temporeceitadetalhadabola{
+.temporeceitadetalhada{
     position: absolute;
     border-radius: 100%;
     background-color: #5f432c;
-    margin-left: 10200px;
+    margin-left: 1200px;
     margin-top: 15px;
-    padding-top: 110px;
-    padding-bottom: 110px;
-    padding-right: 50px;
-    padding-left: 50px;
+    height: 250px;
+    width: 250px;
     color: #f5f9f5;
     font-size: 200%;
     font-family: 'gallient';
     font-weight: 600;
+    text-align: center;
+    cursor: default;
 }
 
-.porcoesreceitadetalhadabola{
+.tempo{
+    margin-top: 90px;
+}
+
+.porcoesreceitadetalhada{
     position: absolute;
     border-radius: 100%;
     background-color: #5f432c;
     margin-left: 1500px;
     margin-top: 15px;
-    padding-top: 110px;
-    padding-bottom: 110px;
-    padding-right: 50px;
-    padding-left: 50px;
+    height: 250px;
+    width: 250px;
+    align-items: center;
     color: #f5f9f5;
     font-size: 200%;
     font-family: 'gallient';
     font-weight: 600;
-} */
+    text-align: center;
+    cursor: default;
+} 
+.rendimento{
+    margin-top: 90px;
+}
 
 .mododepreparoreceitadetalhada{
     position: absolute;
@@ -1176,6 +1182,8 @@ label.error {
 
 .ingredientesreceitadetalhada{
     position: absolute;
+    color: #5f432c;
+    margin-left: 800px;
 }
 
 .temporeceitadetalhada{
