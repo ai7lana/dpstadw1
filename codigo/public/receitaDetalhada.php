@@ -41,27 +41,34 @@ if (pesquisarReceitaId($conexao, $id)) {
                 $partes = explode(' ', trim($nome_comida), 2);
                 ?>
                 <p class="tituloreceitadetalhada">
-                    <?= htmlspecialchars($partes[0]) ?>
+                    <span class="linha1"><?= htmlspecialchars($partes[0]) ?></span>
                     <?php if (isset($partes[1])): ?>
-                        <br><?= htmlspecialchars($partes[1]) ?>
+                        <br><span class="linha2"><?= htmlspecialchars($partes[1]) ?></span>
                     <?php endif; ?>
             </p>
 
+            <div class="tiporeceitadetalhada">
+                <p>Tipo: <?= htmlspecialchars($tipo) ?></p>
+            </div>
 
-            <p>Tipo: <?= htmlspecialchars($tipo) ?></p>
+            <div>
+                <p class="mododepreparoreceitadetalhada">Modo de preparo:<br> <?= nl2br(htmlspecialchars($modo_de_preparo)) ?></p>
 
-            <p>Ingredientes:<br> <?= nl2br(htmlspecialchars($ingredientes)) ?></p>
 
-            <p>Modo de preparo:<br> <?= nl2br(htmlspecialchars($modo_de_preparo)) ?></p>
+            <p class="ingredientesreceitadetalhada">Ingredientes:<br> <?= nl2br(htmlspecialchars($ingredientes)) ?></p>
+
+            <div class="temporeceitadetalhada">
+                <p>Tempo:<?= htmlspecialchars($tempo) ?></p>
+            </div>
+            <div class="porcoesreceitadetalhada">
+                <p>Rendimento: <?= htmlspecialchars($rendimento) ?></p>
+            </div>
+
+            <img src="foto/<?= htmlspecialchars($foto) ?>" alt="Foto da comida" class="imagemreceitadetalhada">
             
-            <p>Tempo:<?= htmlspecialchars($tempo) ?></p>
-            <p>Rendimento: <?= htmlspecialchars($rendimento) ?></p>
-
-            <img src="foto/<?= htmlspecialchars($foto) ?>" alt="Foto da comida">
+            <p class="regiaoreceitadetalhada">Região:<?= htmlspecialchars($regiao) ?></p>
             
-            <p>Região:<?= htmlspecialchars($regiao) ?></p>
-            
-            <p>Autor: <?= htmlspecialchars($nome_perfil) ?></p>
+            <p class="autorreceitadetalhada">Autor: <?= htmlspecialchars($nome_perfil) ?></p>
     </body>
     </html>
 <?php
