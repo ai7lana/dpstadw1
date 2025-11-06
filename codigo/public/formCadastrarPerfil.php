@@ -34,7 +34,7 @@
     <script>
         jQuery.validator.addMethod("lettersOnly", function(value, element) {
             return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
-        }, "Precisa de pelo menos um número e uma letra maiucula");
+        }, "Precisa de pelo menos um número e uma letra maiúscula");
         
         $(document).ready(function(){
             $("#formulario").validate({
