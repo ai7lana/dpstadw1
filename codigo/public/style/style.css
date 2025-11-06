@@ -1092,7 +1092,52 @@ label.error {
 .tituloreceitadetalhada{
     color: #5f432c;
     z-index: 0;
-    margin-left: 600px;
+    margin-left: 150px;
+    margin-top: 50px;
     position: absolute;
     font-size: 600%;
+    font-family: 'aesthetic';
+}
+
+.tituloreceitadetalhada .linha1 {
+    color: #5f432c; /* cor da primeira linha */
+}
+
+.tituloreceitadetalhada .linha2 {
+    color: #000; /* cor da segunda linha */
+}
+
+.imagemreceitadetalhada{
+    position: absolute;
+    z-index: 3;
+    margin-left: 100px;
+    width: auto;
+    max-width: 300px;
+}
+
+.tiporeceitadetalhada{
+    position: absolute;
+}
+
+.mododepreparoreceitadetalhada{
+    position: absolute;
+}
+
+.ingredientesreceitadetalhada{
+    position: absolute;
+}
+
+.temporeceitadetalhada{
+    position: absolute;
+}
+
+.porcoesreceitadetalhada{
+    position: absolute;
+}
+
+.regiaoreceitadetalhada{
+    position: absolute;
+}
+.autorreceitadetalhada{
+    position: absolute;
 }
