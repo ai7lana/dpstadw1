@@ -19,6 +19,7 @@
         if (password_verify($senha, $senha_banco)) {
             session_start();
             $_SESSION['logado'] = 'sim';
+            $_SESSION['id_perfil'] = $linha['idperfil'];
             header("Location: ./public/todoPerfil.php");
         }
         else {

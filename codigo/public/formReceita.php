@@ -1,39 +1,62 @@
 <?php
-    if (isset($_GET['id'])) {
-        require_once "../conexao.php";
-        require_once "../funcoes.php";
+session_start();
 
-        $id = $_GET['id'];
+require_once "../conexao.php";
+require_once "../funcoes.php";
 
-        $receita = pesquisarReceitaId($conexao, $id);
-        
-        $nome_comida = $receita['nome_comida'];
-        $tipo = $receita['tipo'];
-        $ingredientes = $receita['ingredientes'];
-        $modo_de_preparo = $receita['modo_de_preparo'];
-        $tempo = $receita['tempo'];
-        $rendimento = $receita['rendimento'];
-        $foto = $receita['foto'];
-        $regiao = $receita['regiao'];
-        $nome_perfil = $receita['perfil_idperfil'];
+// Verifica se o usuário está logado
+if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== 'sim') {
+    header("Location: ../index.php");
+    exit;
+}
 
-        $botao = "Atualizar";
-    }
-    else {
-        $id = 0;
-        $nome_comida = "";
-        $tipo = "";
-        $ingredientes = "";
-        $modo_de_preparo = "";
-        $tempo = "";
-        $rendimento = "";
-        $foto = "";
-        $regiao = "";
-        $nome_perfil = "";
+// Garante que existe o ID na sessão
+if (!isset($_SESSION['id_perfil'])) {
+    die("Erro: sessão sem ID de perfil. Faça login novamente.");
+}
 
-        $botao = "Cadastrar";
-    }
+// Pega o ID do usuário logado
+$id_perfil_logado = intval($_SESSION['id_perfil']); // força ser número inteiro
+
+// Busca o nome do perfil logado com segurança
+$sqlPerfil = "SELECT nome_perfil FROM perfil WHERE idperfil = $id_perfil_logado";
+$resultadoPerfil = mysqli_query($conexao, $sqlPerfil) or die("Erro ao buscar nome do perfil: " . mysqli_error($conexao));
+
+$dadosPerfil = mysqli_fetch_assoc($resultadoPerfil);
+$nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
+
+// Se estiver editando receita
+if (isset($_GET['id'])) {
+    $id = intval($_GET['id']); // também converte pra número
+    $receita = pesquisarReceitaId($conexao, $id);
+    
+    $nome_comida = $receita['nome_comida'];
+    $tipo = $receita['tipo'];
+    $ingredientes = $receita['ingredientes'];
+    $modo_de_preparo = $receita['modo_de_preparo'];
+    $tempo = $receita['tempo'];
+    $rendimento = $receita['rendimento'];
+    $foto = $receita['foto'];
+    $regiao = $receita['regiao'];
+    $perfil_idperfil = $receita['perfil_idperfil'];
+
+    $botao = "Atualizar";
+} else {
+    $id = 0;
+    $nome_comida = "";
+    $tipo = "";
+    $ingredientes = "";
+    $modo_de_preparo = "";
+    $tempo = "";
+    $rendimento = "";
+    $foto = "";
+    $regiao = "";
+    $perfil_idperfil = $id_perfil_logado;
+
+    $botao = "Cadastrar";
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -63,7 +86,8 @@
 
       <input type="text" name="regiao" placeholder="Região (opcional)" value="<?php echo $regiao; ?>" ><br><br>
 
-      <input type="number" minlength="0" name="perfil_idperfil" placeholder="ID do perfil autor" value="<?php echo $perfil_idperfil; ?>"><br><br>
+      <input type="hidden" name="perfil_idperfil" value="<?php echo $perfil_idperfil; ?>">
+      <input type="text" value="<?php echo htmlspecialchars($nome_perfil_logado); ?>" readonly><br><br>
 
       <input type="submit" value="<?php echo $botao; ?>">
       <input type="button" value="Voltar" onclick="javascript:history.go(-1)">

@@ -54,7 +54,6 @@
                 <td>Foto</td>
                 <td>Região</td>
                 <td>Nome do perfil</td>
-                <td colspan="2">Ação</td>
             </tr>
 
         <?php
@@ -82,8 +81,6 @@
             echo "<td><img src='foto/$foto' alt='Foto da comida' width='100'></td>";
             echo "<td>$regiao</td>";
             echo "<td>$nome_perfil</td>";
-            echo "<td><a href='deletarReceita.php?id=$id'>Excluir</a></td>";
-            echo "<td><a href='formReceita.php?id=$id'>Editar</a></td>";
             echo "</tr>";
         }
         ?>
