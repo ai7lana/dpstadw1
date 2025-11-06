@@ -1182,8 +1182,15 @@ label.error {
 
 .ingredientesreceitadetalhada{
     position: absolute;
+    margin-left: 450px;
+    margin-top: 350px;
+}
+
+.titulo-ingredientes{
     color: #5f432c;
-    margin-left: 800px;
+    font-family: "gallient";
+    font-weight: 600;
+    font-size: 300%;
 }
 
 .temporeceitadetalhada{
