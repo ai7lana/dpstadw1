@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php
-    if (isset($_GET['id'])) {
-        require_once "../conexao.php";
-        require_once "../funcoes.php";
+<?php
+    require_once "../funcoes.php";
+    require_once "../conexao.php";
 
-        $id = $_GET['id'];
+    $id = $_GET['id'];
+
+    if (pesquisarReceitaId($conexao, $id)) {
 
         $receita = pesquisarReceitaId($conexao, $id);
         
@@ -25,11 +18,16 @@
         $regiao = $receita['regiao'];
         $nome_perfil = $receita['perfil_idperfil'];
 
-        $botao = "Atualizar";
+
+        echo "$nome_comida";
     }
     else {
-        echo "Não há detalhes";
+        header("Location: erro.php");
     }
+
+
+
+
+
+
 ?>
-</body>
-</html>
