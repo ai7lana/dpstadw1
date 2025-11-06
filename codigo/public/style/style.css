@@ -344,7 +344,7 @@ a {
     transition: all .4s ease-out;
     color: #9b6b44;
     padding-left: 6px;
-    margin-top: ;
+    /* margin-top: ; */
 }
 
 .inputcl::placeholder {
@@ -1073,3 +1073,19 @@ label.error {
     margin-top: 140px;
     margin-left: 20px;
 }
+
+
+/* receita detalhada */
+
+.bodyreceitadetalhada{
+    background-color: #f5f9f5;
+}
+
+.barralateralreceitadetalhada{
+    background-color: #342420;
+    position: absolute;
+    width: 150px;
+    height: 1000px;
+    z-index: 0;
+}
+
