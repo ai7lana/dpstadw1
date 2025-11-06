@@ -35,15 +35,33 @@ if (pesquisarReceitaId($conexao, $id)) {
         <p>...</p>
     </div>
     <body class=bodyreceitadetalhada>
-            <p class="tituloreceitadetalhada"><?= htmlspecialchars($nome_comida) ?></p>
-            <p><strong>Tipo:</strong> <?= htmlspecialchars($tipo) ?></p>
-            <p><strong>Ingredientes:</strong><br> <?= nl2br(htmlspecialchars($ingredientes)) ?></p>
-            <p><strong>Modo de preparo:</strong><br> <?= nl2br(htmlspecialchars($modo_de_preparo)) ?></p>
-            <p><strong>Tempo:</strong> <?= htmlspecialchars($tempo) ?></p>
-            <p><strong>Rendimento:</strong> <?= htmlspecialchars($rendimento) ?></p>
+            <!-- <p class="tituloreceitadetalhada"><?= htmlspecialchars($nome_comida) ?></p> -->
+            <p class="tituloreceitadetalhada">
+            <?php
+                $partes = explode(' ', trim($nome_comida), 2);
+                ?>
+                <p class="tituloreceitadetalhada">
+                    <?= htmlspecialchars($partes[0]) ?>
+                    <?php if (isset($partes[1])): ?>
+                        <br><?= htmlspecialchars($partes[1]) ?>
+                    <?php endif; ?>
+            </p>
+
+
+            <p>Tipo: <?= htmlspecialchars($tipo) ?></p>
+
+            <p>Ingredientes:<br> <?= nl2br(htmlspecialchars($ingredientes)) ?></p>
+
+            <p>Modo de preparo:<br> <?= nl2br(htmlspecialchars($modo_de_preparo)) ?></p>
+            
+            <p>Tempo:<?= htmlspecialchars($tempo) ?></p>
+            <p>Rendimento: <?= htmlspecialchars($rendimento) ?></p>
+
             <img src="foto/<?= htmlspecialchars($foto) ?>" alt="Foto da comida">
-            <p><strong>Região:</strong> <?= htmlspecialchars($regiao) ?></p>
-            <p><strong>Autor:</strong> <?= htmlspecialchars($nome_perfil) ?></p>
+            
+            <p>Região:<?= htmlspecialchars($regiao) ?></p>
+            
+            <p>Autor: <?= htmlspecialchars($nome_perfil) ?></p>
     </body>
     </html>
 <?php

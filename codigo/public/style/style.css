@@ -1086,6 +1086,13 @@ label.error {
     position: absolute;
     width: 150px;
     height: 1000px;
-    z-index: 0;
+    z-index: 1;
 }
 
+.tituloreceitadetalhada{
+    color: #5f432c;
+    z-index: 0;
+    margin-left: 600px;
+    position: absolute;
+    font-size: 600%;
+}
