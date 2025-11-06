@@ -16,7 +16,7 @@ if (pesquisarReceitaId($conexao, $id)) {
     $regiao = $receita['regiao'];
     $nome_perfil = $receita['nome_perfil'];
 ?>
-    <!-- ⬇️ Aqui você sai do PHP e escreve HTML normalmente -->
+
     <!DOCTYPE html>
     <html lang="pt-br">
     <head>
@@ -24,12 +24,6 @@ if (pesquisarReceitaId($conexao, $id)) {
         <title><?= htmlspecialchars($nome_comida) ?></title>
         <link rel="stylesheet" href="style/reset.css">
         <link rel="stylesheet" href="style/style.css">
-        <style>
-            img {
-                width: 200px;
-                border-radius: 8px;
-            }
-        </style>
     </head>
     <div class="barralateralreceitadetalhada">
         <p>...</p>
