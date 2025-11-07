@@ -1,5 +1,11 @@
 <?php
 require_once "../verificarLogado.php";
+require_once "../conexao.php";
+require_once "../funcoes.php";
+
+$idsessao = $_SESSION['idperfil']; // ou o nome correto da variável da sessão
+
+$listar_fav = listarFavorito($conexao, $idsessao); 
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
