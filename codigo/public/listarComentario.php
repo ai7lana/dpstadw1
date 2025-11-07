@@ -27,7 +27,7 @@
                 <td>Nome da Receita</td>
                 <td>Comentario</td>
                 <td>Nota</td>
-                <td colspan="2">Ação</td>
+
             </tr>
         <?php
         foreach ($listar_avaliacao as $avaliacao) {
@@ -40,6 +40,8 @@
             $comentario = $avaliacao['comentario'];
             $nota = $avaliacao['nota'];
 
+            // <td colspan="2">Ação</td>
+
             echo "<tr>";
             
 
@@ -47,9 +49,9 @@
             echo "<td>{$avaliacao['nome_receita']}</td>";
             echo "<td>$comentario</td>";
             echo "<td>$nota</td>";
-            echo "<td><a href='deletarComentario.php?perfil={$avaliacao["perfil_idperfil"]}&receita={$avaliacao["receita_idreceita"]}'>Excluir</a>
-</td>";
-            echo "<td><a href='formAvaliacao.php?perfil={$avaliacao["perfil_idperfil"]}&receita={$avaliacao["receita_idreceita"]}'>Editar</a></td>";
+           // echo "<td><a href='deletarComentario.php?perfil={$avaliacao["perfil_idperfil"]}&receita={$avaliacao["receita_idreceita"]}'>Excluir</a>
+// </td>";
+            // echo "<td><a href='formAvaliacao.php?perfil={$avaliacao["perfil_idperfil"]}&receita={$avaliacao["receita_idreceita"]}'>Editar</a></td>";
             echo "</tr>";
         }
     }

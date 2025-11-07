@@ -3,9 +3,6 @@ require_once "../verificarLogado.php";
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
-$idsessao = $_SESSION['idperfil']; // ou o nome correto da variável da sessão
-
-$listar_fav = listarFavorito($conexao, $idsessao); 
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -34,7 +31,7 @@ $listar_fav = listarFavorito($conexao, $idsessao);
 
                 <td>Nome do perfil</td>
                 <td>Nome da Receita</td>
-                <td colspan="2">Ação</td>
+                
             </tr>
         <?php
         foreach ($listar_fav as $fav) {
@@ -43,14 +40,16 @@ $listar_fav = listarFavorito($conexao, $idsessao);
             $nome_perfil = $fav['nome_perfil'];
             $nome_receita = $fav['nome_receita'];
 
+            // <td colspan="2">Ação</td>
+
 
             echo "<tr>";
             
 
             echo "<td>$nome_perfil</td>";
             echo "<td>$nome_receita</td>";
-            echo "<td><a href='deletarFav.php?perfil=$perfil_idperfil&receita=$receita_idreceita'>Excluir</a></td>";
-            echo "<td><a href='formFavoritos.php?perfil=$perfil_idperfil&receita=$receita_idreceita'>Editar</a></td>";
+            // echo "<td><a href='deletarFav.php?perfil=$perfil_idperfil&receita=$receita_idreceita'>Excluir</a></td>";
+            // echo "<td><a href='formFavoritos.php?perfil=$perfil_idperfil&receita=$receita_idreceita'>Editar</a></td>";
 
             echo "</tr>";
         }
