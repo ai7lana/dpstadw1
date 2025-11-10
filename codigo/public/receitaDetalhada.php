@@ -45,16 +45,14 @@ if (pesquisarReceitaId($conexao, $id)) {
                 <p class="tiporeceitad">Tipo: <br><?= htmlspecialchars($tipo) ?></p>
             </div>
             <p class="ingredientesreceitadetalhada">
-                <span class="titulo-ingredientes">Ingredientes:</span><br>
+                <span class="titulo-ingredientes">Ingredientes:</span><br><br>
                 <span class="texto-ingredientes"><?= nl2br(htmlspecialchars($ingredientes)) ?></span>
             </p>
 
             <p class="mododepreparoreceitadetalhada">
-                <span class="titulo-modo ">Modo de preparo:</span><br>
+                <span class="titulo-modo">Modo de preparo:</span><br><br>
                 <span class="texto-modo"><?= nl2br(htmlspecialchars($modo_de_preparo)) ?></span>
             </p>
-
-            <p class="mododepreparoreceitadetalhada">Modo de preparo:<br> <?= nl2br(htmlspecialchars($modo_de_preparo)) ?></p>
 
 
 

@@ -1226,6 +1226,19 @@ label.error {
 
 .mododepreparoreceitadetalhada{
     position: absolute;
+    top: 550px;
+    left: 450px;
+}
+
+.titulo-modo{
+    color: #5f432c;
+    font-family: "gallient";
+    font-weight: 600;
+    font-size: 300%;
+}
+
+.texto-modo{
+
 }
 
 .ingredientesreceitadetalhada{
