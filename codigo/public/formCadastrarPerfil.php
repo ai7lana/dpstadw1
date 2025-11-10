@@ -82,40 +82,41 @@
 </head>
 <body class="bodycl">
     <form action="../salvarPerfil.php" method="post" id=formulario>
+        <div class="fundobrigadeirodivcadastrar">
+                <img src="style/images/brigadeirocl .png" alt="" class="brigadeiroimagemlogin">
+        </div>
+            
         <div class="caixafundocadastro">
             <div class="titulocl"> <br><br>
                 <p>Primeira vez aqui?</p>
                 <p>Faça seu cadastro!</p>  <br>
             </div>
-            <div class="clpreencher">
+            <div class="fundobrigadeiro">
+                <img src="style/images/brigadeirocl.png" alt="">
+            </div>
+            <div class="containercadastro">
                 <div class="inputgroup">
-                    <label>Nome:</label> <br>
                     <input class="inputcl" type="text" name="nome" id="nome"  placeholder="Digite seu nome" value="<?php echo $nome;?>"> <br><br>
                 </div>
-                <div class="fundobrigadeiro">
-                    <img src="style/images/brigadeirocl.png" alt="">
-                </div>
                 <div class="inputgroup">
-                    <label>Nome de usuario:</label> <br>
                     <input class="inputcl" type="text" name="nome_perfil" id="nomeusu" placeholder="Digite o nome de usuário" value="<?php echo $nome_perfil;?>"> <br><br>
                 </div>
                 <div class="inputgroup">
-                    <label>E-mail:</label> <br>
                     <input class="inputcl" type="email" name="email" id="email" placeholder="Digite seu E-mail" value="<?php echo $email;?>"> <br><br>
                 </div>
                 <div class="inputgroup">
-                    <label>Senha:</label> <br>
                     <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $senha;?>"> <br><br>
+                    <button type="button" id="mostrarSenha"> 
+                        <img src='style/images/mostrarsenha.png' alt='' class='mostrarsenhabotaocadastro'>
+                    </button>
                 </div>
             </div>
             <input type="submit" value="<?php echo $botao;?>" class=  "botaosub" id="botaocadastro">
             <a href="formLoginPerfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
-            </div>
+        </div>
 
-            
-        <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+        <button onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
     </form>
-    <button type="button" id="mostrarSenha"> mostrar senha</button>
     <script>
         $(document).ready(function() {
             $('#mostrarSenha').click(function() {

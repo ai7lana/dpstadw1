@@ -61,6 +61,12 @@ truetype -ttf
 }
 
 
+.voltar{
+    background-color: transparent;
+    border: none;
+    font-family: 'vocago';
+    font-weight: 600;
+}
 
 /*index*/
 .bodyindex {
@@ -249,276 +255,318 @@ a {
     height: auto;
 }
 
-/*cadastro e login*/
 
-/* .bodycl {
-    background-color: #deb489;
-} */
+/*LOGIN E CADASTRO--------------------------------------------------------------------------------------------*/
 
-/*cadastro*/
-/* .caixafundocadastro {
-    position: absolute;
-    background-color: #f1f4d9;
-    height: 800px;
-    min-height: auto;
-    width: 700px;
-    text-align: center;
-    border-radius: 15px 50px;
-    margin-left: 640px;
-    margin-top: 120px;
-} */
+/*Cadastro----------------------------------------------------------------------------------------------------*/
 
-/*login*/
-
-/* .fundobrigadeirodiv{
+.fundobrigadeirodivcadastrar{
     background-color: #342420;
-    height: 700px;
-    width: 700px;
-    border-radius: 30px;
-    margin-left: 200px;
-    margin-top: 100px;
+    width: 35%;
+    height: 70%;
     position: absolute;
-     z-index: 1; 
+    top: 15%;
+    left: 50%;
+    border-radius: 5%;
+    z-index: 1;
 }
-.brigadeiroimagemcl{
+
+.caixafundocadastro{
+    position: absolute;
+    background-color: #af713f80;
+    z-index: 0;
+    height: 70%;
+    width: 45%;
+    top: 15%;
+    left: 15%;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.titulocl{
+    font-family: 'gallient';
+    cursor: default;
+    font-size: 350%;
+    position: absolute;
+    top: -15%;
+    left: 15%;
+    color: #342420;
+}
+
+.containercadastro{
+    position: absolute;
+    top: 25%;
+    left: 7%;
+    width: 60%;
+}
+
+.mostrarsenhabotaocadastro{
+    width: auto;
+    max-width: 6%;
+    margin-left: -110%;
+    margin-top: 35%;
+    z-index: 4;
+}
+
+.botaosub{
+    position: absolute;
+    left: 20%;
+    top: 75%;
+    border: none;
+    border-radius: 20px;
+    background-color: #342420;
+    color: #f1f4d9;
+    width: 30%;
+    height: 10%;
+    transition: 0.4s ease-in-out;
+    font-family: 'vocago';
+    font-size: 185%;
+}
+
+.botaosub:hover{
+    width: 33%;
+    height: 13%;
+    left: 18.5%;
+    top: 73%;
+    background: linear-gradient(to bottom, #342420, #654a32);
+    font-size: 190%;
+}
+
+.linklogin{
+    color: #342420;
+    position: absolute;
+    top: 87%;
+    left: 13.5%;
+    transition: 0.4s ease-in-out;
+    font-family: 'vocago';
+    font-size: 180%;
+}
+
+.linklogin:hover{
+    color: #654a32;
+}
+
+.inputgroup{
+    margin-top: 2%;
+}
+
+#nome::placeholder{
+    font-size: 20px;
+}
+
+#nomeusu::placeholder{
+    font-size: 20px;
+}
+
+#email::placeholder{
+    font-size: 20px;
+}
+
+#senha::placeholder{
+    font-size: 20px;
+}
+
+#nome:not(:placeholder-shown){
+    font-size: 15px;
+    top: 0.5%;
+}
+
+#nomeusu:not(:placeholder-shown){
+    font-size: 15px;
+    top: 0.5%;
+}
+
+#email:not(:placeholder-shown){
+    font-size: 15px;
+    top: 0%;
+}
+
+#senha:not(:placeholder-shown){
+    font-size: 15px;
+    top: 0%;
+}
+/*Login------------------------------------------------------------------------------------------------------*/ 
+
+.bodycl{
+    background-color: #f1f4d9;
+}
+
+.fundobrigadeirodiv{
+    background-color: #342420;
+    width: 35%;
+    height: 70%;
+    position: absolute;
+    top: 15%;
+    left: 13%;
+    border-radius: 5%;
+    z-index: 1;
+}
+
+.brigadeiroimagemlogin{
+    position: absolute;
     width: auto;
     max-width: 650px;
     height: 650px;
-    position: absolute;
-    margin-left: 20px;
-    margin-top:-30px;
+    left: 2%;
+    top: -6%;
+    z-index: 2;
 }
 
-.clpreencher{
-    background-color: #31170fb4;
+.loginpreencher{
+    position: absolute;
+    background-color: #af713f80;
+    z-index: 0;
+    height: 60%;
+    width: 45%;
+    top: 20%;
+    left: 40%;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.titulologin{
+    font-family: 'gallient';
+    cursor: default;
+    font-size: 350%;
+    position: absolute;
+    top: -15%;
+    left: 40%;
+    color: #342420;
+}
+#facaseulogin{
+    font-size: 70%;
+    color: #654a32;
+}
+
+.inputcl{
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2vw solid #342420;
+    width: 100%;
+    transition: 0.4s ease-in-out;
+    padding-top: 20px;
+}
+
+.inputcl:hover{
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2vw solid #7e624b;
+    width: 100%;
+}
+
+.inputcl:focus{
+    border-bottom: 0.2vw solid #7e624b;
+    outline: none;
+    font-family: 'otez';
+    color: #7e624b;
+}
+
+.inputcl:not(:placeholder-shown){
+    font-size: 25px;
+    color: #342420;
+    font-family: 'otez';
+    top: 5%;
+}
+.containerlogin{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 60%;
+}
+
+.inputcl::placeholder{
+    font-family: 'vocago';
+    font-weight: 900;
+    color: #5f432c;
+    font-size: 25px;
+}
+
+.inputcl::placeholder:focus{
+    color: #7e624b;
+}
+
+#mostrarSenha{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.mostrarsenhabotao{
     position: absolute;
     width: auto;
-    height: 600px;
-    margin-left: 300px;
-    margin-top: 150px;
-    z-index: 0;
-}
-.voltarbotao{
-    background-color: transparent !important;
-}
-.mostrarsenha{
-    background-color: transparent !important;
-    border: none
-} */
-
-
-.caixafundologin {
-    position: absolute;
-    background-color: #f1f4d9;
-    height: 600px;
-    width: 700px;
-    text-align: center;
-    border-radius: 15px 50px;
-    margin-left: 640px;
-    margin-top: 120px;
-    display: flex;
+    max-width: 4%;
+    left: 90%;
+    top: 90%;
+    z-index: 4;
 }
 
-.titulocl {
-    font-family: 'gallient';
-    font-size: 300%;
-    color: #5e3a1d;
-    cursor: default;
-    letter-spacing: 4px;
-    margin-top: -25px;
-}
-
-.clpreencher {
-    font-family: "vocago";
-    color: #9b6b44;
-    margin-top: -15px;
-}
-
-.inputcl {
-    border: 3px solid #b79971;
-    border-radius: 10px;
-    height: 45px;
-    width: 300px;
-    font-family: 'otez';
-    font-size: 18px;
-    transition: all .4s ease-out;
-    color: #9b6b44;
-    padding-left: 6px;
-    /* margin-top: ; */
-}
-
-.inputcl::placeholder {
-    font-size: 20px;
-    padding: 6px;
-}
-
-.inputcl:hover {
-    border: 3px solid #654a32;
-    transition-duration: .4s;
-    cursor: default;
-}
-
-.inputcl:focus {
-    outline: none;
-    border: 3px solid #5e3a1d;
-    color: #9b6b44;
-    font-size: 20px;
-    padding: 5px;
-    transition-duration: 0.4s;
-    cursor: default;
-    margin-top: -10px;
-    margin-bottom: 0px;
-}
-
-label {
-    font-size: 200%;
-    color: #9b6b44;
-}
-
-.botaosubmit {
-    text-decoration: none;
-}
-
-.botaosub {
-    border: none;
-    color: #fffadf;
-    background-color: #9b6b44;
-    border-radius: 50px;
-    position: absolute;
-    font-size: 30px;
-    font-family: 'gallient';
-    transition: all .4s ease-out;
-    letter-spacing: 2px;
-}
-
-#botaosubid {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 125px;
-    padding-right: 125px;
-    position: absolute;
-    margin-left: -165px;
-    margin-top: 10px;
-    transition: all .4s ease-out;
-}
-
-#botaocadastro {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
-    position: absolute;
-    margin-left: -165px;
-    margin-top: 10px;
-    transition: all .4s ease-out;
-}
-
-.botaosub:hover {
-    border: none;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    padding-left: 103px;
-    padding-right: 103px;
-    color: #f5dca5;
-    background-color: #3d2f2b;
-    position: absolute;
-    font-family: 'gallient';
-    font-size: 33px;
-}
-
-#botaocadastro:hover {
-    padding-top: 13px;
-    padding-bottom: 13px;
-    padding-left: 105px;
-    padding-right: 105px;
-    margin-top: 15px;
-    margin-left: -175px;
-}
-
-#botaosubid:hover {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 130px;
-    padding-right: 130px;
-    margin-top: 13px;
-    margin-left: -175px; 
-}
-
-/*Cadastro*/
 
 input.error, select.error, textarea.error {
-  border: 2px solid #ff4d4d;  /* borda vermelha */
-  background-color: #ffe6e6;   /* leve fundo vermelho */
+    border: none ;  
+    background-color: #ff00005b;   
+    border-bottom: 0.2vw solid #5f432c;
 }
 
-/* label da mensagem de erro */
+input.error, select.error, textarea.error:hover {
+    border: none ;  
+    background-color: #ad0d0d5b;   
+    border-bottom: 0.2vw solid #5f432c;
+}
+
 label.error {
-  color: #ff0000;
-  font-size: 100%;
-  margin-top: 5px;
-  display: block;
+    font-size: 100%;
+    color: #721515;
+    transform: 0.4s ease-in-out;
+    margin-bottom: 0.2px;
 }
 
-/* campo válido (opcional) */
-/* input.valid {
-  border: 2px solid #4CAF50;  /* verde */
-  /* background-color: #eaffea;
-} */
-
-/* #mostrarSenha{
+#acessar{
     position: absolute;
-    margin-top: -50px;
-    margin-left: -30px;
-} */
-.linklogin {
+    left: 40%;
+    top: 70%;
+    border: none;
+    border-radius: 20px;
+    background-color: #342420;
+    color: #f1f4d9;
+    width: 30%;
+    height: 10%;
+    transition: 0.4s ease-in-out;
+    font-family: 'vocago';
+    font-size: 185%;
+}
+
+#acessar:hover{
+    width: 33%;
+    height: 13%;
+    left: 38.5%;
+    top: 68.5%;
+    background: linear-gradient(to bottom, #342420, #654a32);
+    font-size: 190%;
+}
+
+.novaconta{
+    color: #342420;
     position: absolute;
-    text-decoration: none;
-    font-family: 'otez';
-    font-size: 20px;
-    color: #9b6b44;
-    margin-top: 90px;
-    margin-left: -140px;
-    transition: all .4s ease;
+    top: 85%;
+    left: 42%;
+    transition: 0.4s ease-in-out;
+    font-family: 'vocago';
+    font-size: 180%;
 }
 
-.linklogin:hover {
-    color: #3d2f2b;
+.novaconta:hover{
+    color: #654a32;
 }
 
-/*Login*/
-.linksenha {
+#voltarlogin{
     position: absolute;
-    text-decoration: none;
-    font-family: 'otez';
-    font-size: 20px;
-    color: #9b6b44;
-    margin-top: 90px;
-    margin-left: -200px;
-    transition: all .4s ease;
-}
-
-.linksenha:hover {
-    color: #3d2f2b;
-}
-
-.novaconta {
-    position: absolute;
-    text-decoration: none;
-    font-family: 'otez';
-    font-size: 20px;
-    color: #9b6b44;
-    margin-top: 90px;
-    margin-left: 40px;
-    transition: all .4s ease;
-}
-
-.novaconta:hover {
-    color: #3d2f2b;
+    top: 90%;
+    left: 2%;
+    font-size: 200%;
 }
 
 /*botão sobre nos buscar*/
 
-/* From Uiverse.io by dalbrechtmartin */
 .botaosn {
     position: relative;
     padding: 20px 35px;
@@ -1207,3 +1255,29 @@ label.error {
 .autorreceitadetalhada{
     position: absolute;
 }
+
+/*Perfil*/
+.bodyperfil{
+    background-color: #deb489;
+}
+
+.barrasuperior{
+    position: absolute;
+    background-color: #af723f;
+    width: 95%;
+    height: 20%;
+    left: 2.5%;
+    top: 2.5%;
+    z-index: 0;
+}
+
+.barralateral{
+    position: absolute;
+    background: #af723f;
+    width: 15%;
+    height: 95%;
+    left: 82.5%;
+    top: 2.5%;
+    z-index: 0;
+}
+

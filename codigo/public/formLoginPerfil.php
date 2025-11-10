@@ -38,32 +38,37 @@
     <div class="caixafundologin">
         <form action="../verificarLogin.php" method="post" id="formulario">
             <div class="fundobrigadeirodiv">
-                <img src="style/images/brigadeirocl .png" alt="" class="brigadeiroimagemcl">
+                <img src="style/images/brigadeirocl .png" alt="" class="brigadeiroimagemlogin">
             </div>
-            <div class="clpreencher">
-                <div class="titulocl"> <br><br>
+            
+            <div class="loginpreencher">
+                <div class="titulologin"> <br><br>
                     <p>Olá de novo!</p>
-                    <p>Faça seu Login!</p>  <br>
+                    <p id="facaseulogin">Faça seu Login:</p>  <br>
                 </div>
-                <div class="inputgroup">
-                    <!-- <label>Nome de Úsuario:</label> <br> -->
-                    <input class="inputcl" type="text" name="nomeusuario" id="nomeusu" placeholder="Digite o nome de usuário">
-                    <div class="labelline" id="1">Nome de Usuário</div>
-                    <br><br>
-                </div>
-                <div class="inputgroup">
-                    <!-- <label>Senha:</label> <br> -->
-                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha"> 
-                    <div class="labelline" id="2">Senha</div>
-                </div>
+
                 
-                <button type="button" id="mostrarSenha"><!---<img src='style/images/mostrarsenha.png' alt='' class='mostrarsenhabotao' --> mostrar</button>
-                <input type="submit" value="acessar">
-                <a href="formCadastrarPerfil.php" class="novaconta">Crie uma nova conta</a>
+                <div class="containerlogin">
+                    <div class="inputgroup" id="nomeusulogin">
+                        <input class="inputcl" type="text" name="nomeusuario" id="nomeusu" placeholder="Nome de Usuário"><br>
+                        <br><br>
+                    </div>
+    
+                    <div class="inputgroup" id="senhalogin">
+                        <input class="inputcl" type="password" name="senha" id="senha" placeholder="Senha"> 
+                    </div>
+                </div>
+                <button type="button" id="mostrarSenha">
+                    <img src='style/images/mostrarsenha.png' alt='' class='mostrarsenhabotao'>
+                </button>
+
+
+                <input type="submit" value="acessar" class="botaologin" id="acessar">
+                <a href="formCadastrarPerfil.html" class="novaconta">Crie uma nova conta</a>
+
             </div>
-            <button onclick="history.go(-1)">
-            <!-- <img src='style/images/voltar.png' alt='' class='voltarbotao'> --> voltar
-            </button>
+
+            <button onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
             <!-- <input type="button" value="<img src='style/images/voltar.png' alt='' class='voltarbotao'>" onclick="javascript:history.go(-1)"> -->
             <a href=""></a>
             <!-- <a href="perfil.php" class="botaosubimit"><button type="button" class="botaosub" id="botaosubid">entrar</button></a> <br> -->
