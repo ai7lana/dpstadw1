@@ -106,11 +106,11 @@
                 </div>
                 <div class="inputgroup">
                     <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $senha;?>"> <br><br>
-                    <button type="button" id="mostrarSenha"> 
-                        <img src='style/images/mostrarsenha.png' alt='' class='mostrarsenhabotaocadastro'>
-                    </button>
                 </div>
             </div>
+            <button type="button" id="mostrarSenha"> 
+                <img src='style/images/mostrarsenha.png' alt='' class='mostrarsenhabotaocadastro'>
+            </button>
             <input type="submit" value="<?php echo $botao;?>" class=  "botaosub" id="botaocadastro">
             <a href="formLoginPerfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
         </div>
