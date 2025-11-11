@@ -82,7 +82,7 @@
             echo "<td><img src='foto/$foto' alt='Foto da comida' width='100'></td>";
             echo "<td>$regiao</td>";
             echo "<td>$nome_perfil</td>";
-            echo "<td><a href='../salvarFavoritos.php?idreceita=$id'> Favoritar</a></td>";
+            echo "<td><a href='formFavoritos.php'> favoritar </a></td>";
             echo "<td><a href='formAvaliacao.php'> Comentar </a></td>";
             echo "<td></td>";
             echo "</tr>";

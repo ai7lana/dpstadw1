@@ -4,32 +4,30 @@ session_start();
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
-// Verifica se o usuário está logado
+
 if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== 'sim') {
     header("Location: ../index.php");
     exit;
 }
 
-// Garante que existe o ID na sessão
+
 if (!isset($_SESSION['id_perfil'])) {
     die("Erro: sessão sem ID de perfil. Faça login novamente.");
 }
 
-// Pega o ID do usuário logado
 $id_perfil_logado = intval($_SESSION['id_perfil']); // força ser número inteiro
 
-// Busca o nome do perfil logado com segurança
 $sqlPerfil = "SELECT nome_perfil FROM perfil WHERE idperfil = $id_perfil_logado";
 $resultadoPerfil = mysqli_query($conexao, $sqlPerfil) or die("Erro ao buscar nome do perfil: " . mysqli_error($conexao));
 
 $dadosPerfil = mysqli_fetch_assoc($resultadoPerfil);
 $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
 
-// Se estiver editando receita
+
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']); // também converte pra número
     $receita = pesquisarReceitaId($conexao, $id);
-    
+
     $nome_comida = $receita['nome_comida'];
     $tipo = $receita['tipo'];
     $ingredientes = $receita['ingredientes'];
