@@ -114,7 +114,8 @@ if (isset($_GET['id'])) {
             <a href="formLoginPerfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
         </div>
 
-        <button onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
+        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
+
     </form>
     <script>
         $(document).ready(function() {
