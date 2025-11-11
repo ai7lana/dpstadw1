@@ -31,9 +31,9 @@
         perfil ON receita.perfil_idperfil = perfil.idperfil
         ORDER BY receita.idreceita;";
 
-   
+
     $comando = mysqli_prepare($conexao, $sql);
-    
+
     mysqli_stmt_execute($comando);
 
     $resultados = mysqli_stmt_get_result($comando);
@@ -54,6 +54,7 @@
                 <td>Foto</td>
                 <td>Região</td>
                 <td>Nome do perfil</td>
+                <td colspan="2"> Adicionar </td>
             </tr>
 
         <?php
@@ -81,6 +82,9 @@
             echo "<td><img src='foto/$foto' alt='Foto da comida' width='100'></td>";
             echo "<td>$regiao</td>";
             echo "<td>$nome_perfil</td>";
+            echo "<td><a href='../salvarFavoritos.php?idreceita=$id'> Favoritar</a></td>";
+            echo "<td><a href='formAvaliacao.php'> Comentar </a></td>";
+            echo "<td></td>";
             echo "</tr>";
         }
         ?>
