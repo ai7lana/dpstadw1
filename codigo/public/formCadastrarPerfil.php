@@ -1,14 +1,39 @@
 <?php
-$id = 0;
-$nome = "";
-$nome_perfil = "";
-$senha = "";
-$email = "";
-$botao = "cadastrar";
-?>
+require_once "../conexao.php";
+require_once "../funcoes.php";
+if (isset($_GET['id'])) {
 
+    $id = $_GET['id'];
+    $perfil = pesquisarPerfilId($conexao, $id);
+    if ($perfil === false) {
+        echo "Perfil não encontrado!";
+    } else {
+
+        $nome = $perfil['nome'];
+        $nome_perfil = $perfil['nome_perfil'];
+        $senha = $perfil['senha'];
+        $email = $perfil['email'];
+    }
+
+    $nome = $perfil['nome'];
+    $nome_perfil = $perfil['nome_perfil'];
+    $senha = $perfil['senha'];
+    $email = $perfil['email'];
+
+    $botao = "atualizar";
+} else {
+    $id = 0;
+    $nome = "";
+    $nome_perfil = "";
+    $senha = "";
+    $email = "";
+    $botao = "";
+
+    $botao = "cadastrar";
+}
+?>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,26 +44,26 @@ $botao = "cadastrar";
     <script>
         jQuery.validator.addMethod("lettersOnly", function(value, element) {
             return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
-        }, "Precisa de pelo menos um número e uma letra maiúscula");
+        }, "Precisa de pelo menos um número e uma letra maiscula");
 
         $(document).ready(function() {
             $("#formulario").validate({
                 rules: {
                     nome: {
                         required: true,
-                        minlength: 5
+                        minlength: 5,
                     },
                     nome_perfil: {
                         required: true,
-                        minlength: 5
+                        minlength: 5,
                     },
                     email: {
-                        required: true
+                        required: true,
                     },
                     senha: {
                         required: true,
                         minlength: 6,
-                        lettersOnly: true
+                        lettersOnly: true,
                     }
                 },
                 messages: {
@@ -51,68 +76,55 @@ $botao = "cadastrar";
                         minlength: "Precisa de no mínimo 5 caracteres"
                     },
                     email: {
-                        required: "Esse campo precisa ser preenchido"
+                        required: "Esse campo precisa ser preenchido",
+
                     },
                     senha: {
                         required: "Esse campo precisa ser preenchido",
                         minlength: "Precisa de no mínimo 6 caracteres"
                     }
                 }
-            });
-        });
+            })
+        })
     </script>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body class="bodycl">
-    <form action="../salvarPerfil.php" method="post" id="formulario">
-        <input type="hidden" name="id" value="<?php echo $id; ?>">
-
+    <form action="../salvarPerfil.php" method="post" id=formulario>
         <div class="fundobrigadeirodivcadastrar">
-            <img src="style/images/brigadeirocl.png" alt="" class="brigadeiroimagemlogin" id="bridgadeirocadastrar">
+            <img src="style/images/brigadeirocl.png" alt="" class="brigadeiroimagemlogin">
         </div>
 
         <div class="caixafundocadastro">
-            <div class="titulocl">
-                <br><br>
+            <div class="titulocl"> <br><br>
                 <p>Primeira vez aqui?</p>
-                <p>Faça seu cadastro!</p>
-                <br>
+                <p>Faça seu cadastro!</p> <br>
             </div>
-
             <div class="containercadastro">
                 <div class="inputgroup">
-                    <input class="inputcl" type="text" name="nome" id="nome" placeholder="Digite seu nome" value="<?php echo $nome; ?>">
-                    <br><br>
+                    <input class="inputcl" type="text" name="nome" id="nome" placeholder="Digite seu nome" value="<?php echo $nome; ?>"> <br><br>
                 </div>
                 <div class="inputgroup">
-                    <input class="inputcl" type="text" name="nome_perfil" id="nomeusu" placeholder="Digite o nome de usuário" value="<?php echo $nome_perfil; ?>">
-                    <br><br>
+                    <input class="inputcl" type="text" name="nome_perfil" id="nomeusu" placeholder="Digite o nome de usuário" value="<?php echo $nome_perfil; ?>"> <br><br>
                 </div>
                 <div class="inputgroup">
-                    <input class="inputcl" type="email" name="email" id="email" placeholder="Digite seu E-mail" value="<?php echo $email; ?>">
-                    <br><br>
+                    <input class="inputcl" type="email" name="email" id="email" placeholder="Digite seu E-mail" value="<?php echo $email; ?>"> <br><br>
                 </div>
                 <div class="inputgroup">
-                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $senha; ?>">
-                    <br><br>
+                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $senha; ?>"> <br><br>
                 </div>
             </div>
-
             <button type="button" id="mostrarSenha">
                 <img src='style/images/mostrarsenha.png' alt='' class='mostrarsenhabotaocadastro'>
             </button>
-
-            <!-- ENVIA O NOME DO BOTÃO PARA O PHP -->
-            <input type="submit" name="botao" value="<?php echo $botao; ?>" class="botaosub" id="botaocadastro">
-
+            <input type="submit" value="<?php echo $botao; ?>" class="botaosub" id="botaocadastro">
             <a href="formLoginPerfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
         </div>
 
         <button onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
     </form>
-
     <script>
         $(document).ready(function() {
             $('#mostrarSenha').click(function() {

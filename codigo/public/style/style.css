@@ -1590,4 +1590,13 @@ label.error {
   left: 35%;
 }
 
+.formpesquisardiv {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 90%;
+}
 
+.tabela-personalizada {
+  background-color: transparent;
+}
