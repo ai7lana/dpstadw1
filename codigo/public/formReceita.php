@@ -64,38 +64,70 @@ if (isset($_GET['id'])) {
     <meta name="Receita" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../jquery-3.7.1.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            jQuery.validator.addMethod("lettersOnly", function(value, element) {
+                return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
+            }, "Digite a senha correta.");
+            $('#formulario').validate({
+                rules: {
+                    nomeusuario: {
+                        required: true,
+                    },
+                    senha: {
+                        required: true,
+                    }
+                },
+                messages: {
+                    nomeusuario: {
+                        required: "Esse campo precisa ser preenchido"
+                    },
+                    senha: {
+                        required: "Esse campo precisa ser preenchido"
+                    }
+                }
+            })
+        })
+    </script>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
-    <h2>Cadastro de Receita</h2>
-    <form action="../salvarReceita.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+<body class="bodyforms">
+    <div class="formsivfundo" id="receitasdiv">
 
-        <input type="text" name="nome_comida" placeholder="Nome da receita" value="<?php echo $nome_comida; ?>"><br><br>
+        <p class="tituloforms">Cadastro de Receita</p>
+        <form action="../salvarReceita.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
 
-        <input type="text" name="tipo" placeholder="Tipo (almoço, lanche...)" value="<?php echo $tipo; ?>"><br><br>
+            <input type="text" name="nome_comida" placeholder="Nome da receita" value="<?php echo $nome_comida; ?>" class="inputforms" id="inputnome"><br><br>
 
-        <input type="text" name="ingredientes" placeholder="Ingredientes" value="<?php echo $ingredientes; ?>"><br><br>
+            <input type="text" name="tipo" placeholder="Tipo (almoço, lanche...)" value="<?php echo $tipo; ?>" class="inputforms" id="inputtipo"><br><br>
 
-        <textarea name="modo_de_preparo" placeholder="Modo de preparo"
-            value="<?php echo $modo_de_preparo; ?>"></textarea><br><br>
+            <input type="text" name="ingredientes" placeholder="Ingredientes" value="<?php echo $ingredientes; ?>" class="inputforms" id="inputingredientes"><br><br>
 
-        <input type="text" name="tempo" placeholder="Tempo de preparo (ex: 45min)"
-            value="<?php echo $tempo; ?>"><br><br>
+            <textarea name="modo_de_preparo" placeholder="Modo de preparo"
+                value="<?php echo $modo_de_preparo; ?>" class="inputforms" id="inputmodo"></textarea><br><br>
 
-        <input type="text" name="rendimento" placeholder="Rendimento (ex: 4 porções)"
-            value="<?php echo $rendimento; ?>"><br><br>
+            <input type="text" name="tempo" placeholder="Tempo de preparo (ex: 45min)"
+                value="<?php echo $tempo; ?>" class="inputforms" id="inputtempo"><br><br>
 
-        <input type="file" name="foto" value="<?php echo $foto; ?>"> <br><br>
+            <input type="text" name="rendimento" placeholder="Rendimento (ex: 4 porções)"
+                value="<?php echo $rendimento; ?>" class="inputforms" id="inputrendimento"><br><br>
 
-        <input type="text" name="regiao" placeholder="Região (opcional)" value="<?php echo $regiao; ?>"><br><br>
+            <input type="file" name="foto" value="<?php echo $foto; ?>" class="inputforms" id="inputfoto"> <br><br>
 
-        <input type="hidden" name="perfil_idperfil" value="<?php echo $perfil_idperfil; ?>">
-        <input type="text" value="<?php echo htmlspecialchars($nome_perfil_logado); ?>" readonly><br><br>
+            <input type="text" name="regiao" placeholder="Região (opcional)" value="<?php echo $regiao; ?>" class="inputforms" id="inputregiao"><br><br>
 
-        <input type="submit" value="<?php echo $botao; ?>">
-        <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+            <input type="hidden" name="perfil_idperfil" value="<?php echo $perfil_idperfil; ?>">
+            <input type="text" value="<?php echo htmlspecialchars($nome_perfil_logado); ?>" readonly class="inputforms" id="inputperfil"><br><br>
 
-    </form>
+            <input type="submit" value="<?php echo $botao; ?>" class="botaosubmitforms">
+            <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
+
+        </form>
+    </div>
 </body>
 
 </html>

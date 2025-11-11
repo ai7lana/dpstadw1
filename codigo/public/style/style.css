@@ -1516,15 +1516,6 @@ label.error {
 }
 
 /*listar e tabela -------------------------------------------------------------------*/
-.tabelas {
-  border: none;
-}
-
-.tabeladiv {
-  position: absolute;
-  top: 30%;
-  left: 12%;
-}
 
 .Excluiretabela {
   font-family: "otez";
@@ -1606,7 +1597,7 @@ label.error {
   background-color: #af723f;
 }
 
-.listar {
+.listartudo {
   position: absolute;
   top: 25%;
   width: 100%;
@@ -1614,4 +1605,89 @@ label.error {
 
 .listar {
   color: #342420;
+}
+
+.voltarlistarreceitas {
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  font-size: large;
+}
+
+#minhasreceitasdiv {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+
+/* forms ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.tituloforms {
+  font-family: "camiro";
+  font-size: 250%;
+  color: #654a32;
+  left: 40%;
+  position: absolute;
+}
+
+/* .formsivfundo {
+  background: #654a32;
+  border-radius: 30px;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+}
+
+#receitasdiv {
+  width: 40%;
+  height: 90%;
+} */
+
+.inputforms {
+  border: none;
+  border-bottom: 0.2vw solid #342420;
+  background-color: transparent;
+  font-family: "otez";
+  font-size: 100%;
+  position: absolute;
+}
+
+.inputforms::placeholder {
+  font-family: "otez";
+  font-size: 100%;
+  color: #342420;
+}
+
+.inputforms::placeholder:focus {
+  font-family: "otez";
+  font-size: 100%;
+  color: #342420;
+}
+
+#inputnome {
+  top: 20%;
+}
+
+#inputtipo {
+}
+
+#inputingredientes {
+}
+
+#inputmodo {
+}
+
+#inputtempo {
+}
+
+#inputrendimento {
+}
+
+#inputfoto {
+}
+
+#inputregiao {
+}
+
+#inputperfil {
 }

@@ -51,7 +51,7 @@
             echo "Não existem receitas cadastradas.";
         } else {
         ?>
-            <table border="1">
+            <table border="1" class="table">
                 <tr>
                     <td>Id</td>
                     <td>Nome da comida</td>
@@ -91,18 +91,20 @@
                     echo "<td><img src='foto/$foto' alt='Foto da comida' width='100'></td>";
                     echo "<td>$regiao</td>";
                     echo "<td>$nome_perfil</td>";
-                    echo "<td><a href='formFavoritos.php?id=$id'> favoritar </a></td>";
-                    echo "<td><a href='formAvaliacao.php?id=$id'> Comentar </a></td>";
+                    echo "<td><a href='formFavoritos.php?id=$id' class='Excluiretabela'> favoritar </a></td>";
+                    echo "<td><a href='formAvaliacao.php?id=$id' class='Excluiretabela'> Comentar  </a></td>";
                     echo "<td></td>";
                     echo "</tr>";
                 }
                 ?>
             </table>
     </div>
-    <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+    <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlistarreceitas"> ↩ Voltar </button>
 <?php
         }
 ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</div>
 </body>
 
 </html>

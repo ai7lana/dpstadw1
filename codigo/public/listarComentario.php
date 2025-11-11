@@ -15,7 +15,7 @@
         <p class="titulopesquisar" id="listar">Brasil <br> Na Cozinha</p>
     </div>
 
-    <div class="listar">
+    <div class="listartudo">
 
         
         <?php

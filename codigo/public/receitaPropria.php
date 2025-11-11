@@ -31,6 +31,7 @@ $resultado = mysqli_query($conexao, $sql) or die("Erro ao buscar receitas: " . m
     <script src="jquery.validate.min.js"></script>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body class="bodyaddreceita">
@@ -40,62 +41,62 @@ $resultado = mysqli_query($conexao, $sql) or die("Erro ao buscar receitas: " . m
     <img src="style/images/adicionarreceita.png" alt="" class="addreceita">
 
 
-
-
-    <div class="tabeladiv">
+    <div class="listartudo" id="minhasreceitasdiv">
         <?php
-if (mysqli_num_rows($resultado) == 0) {
-    echo "<p>Não existem receitas cadastradas.</p>";
-} else {
-    echo "<table border='1' class='tabelas'>
+        if (mysqli_num_rows($resultado) == 0) {
+            echo "<p>Não existem receitas cadastradas.</p>";
+        } else {
+            echo "<table border='1' class='tabel'>
             <tr>
-                <td>Id</td>
-                <td>Nome da comida</td>
-                <td>Tipo</td>
-                <td>Ingredientes</td>
-                <td>Modo de preparo</td>
-                <td>Tempo</td>
+                <td>&nbsp&nbspId</td>
+                <td>&nbsp&nbspNome da comida</td>
+                <td>&nbsp&nbspTipo</td>
+                <td>&nbsp&nbspIngredientes</td>
+                <td>&nbsp&nbspModo de preparo</td>
+                <td>&nbsp&nbspTempo</td>
                 <td>Rendimento</td>
-                <td>Foto</td>
-                <td>Região</td>
-                <td>Nome do perfil</td>
-                <td colspan='2'>Ação</td>
+                <td>&nbsp&nbspFoto</td>
+                <td>&nbsp&nbspRegião</td>
+                <td>&nbsp&nbspNome do perfil</td>
+                <td colspan='2'>&nbsp&nbspAção</td>
             </tr>";
 
-    while ($receita = mysqli_fetch_assoc($resultado)) {
-        $id = $receita['idreceita'];
-        $nome_comida = $receita['nome_comida'];
-        $tipo = $receita['tipo'];
-        $ingredientes = $receita['ingredientes'];
-        $modo_preparo = $receita['modo_de_preparo'];
-        $tempo = $receita['tempo'];
-        $rendimento = $receita['rendimento'];
-        $foto = $receita['foto'];
-        $regiao = $receita['regiao'];
-        $nome_perfil = $receita['nome_perfil'];
+            while ($receita = mysqli_fetch_assoc($resultado)) {
+                $id = $receita['idreceita'];
+                $nome_comida = $receita['nome_comida'];
+                $tipo = $receita['tipo'];
+                $ingredientes = $receita['ingredientes'];
+                $modo_preparo = $receita['modo_de_preparo'];
+                $tempo = $receita['tempo'];
+                $rendimento = $receita['rendimento'];
+                $foto = $receita['foto'];
+                $regiao = $receita['regiao'];
+                $nome_perfil = $receita['nome_perfil'];
 
-        echo "<tr>
+                echo "<tr>
                 <td>$id</td>
-                <td>$nome_comida</td>
-                <td>$tipo</td>
-                <td>$ingredientes</td>
-                <td>$modo_preparo</td>
-                <td>$tempo</td>
-                <td>$rendimento</td>
-                <td><img src='foto/$foto' alt='Foto da comida' width='100'></td>
-                <td>$regiao</td>
-                <td>$nome_perfil</td>
-                <td><a href='deletarReceita.php?id=$id' class='Excluiretabela'>Excluir</a></td>
-                <td><a href='formReceita.php?id=$id' class='Excluiretabela'>Editar</a></td>
+                <td>&nbsp&nbsp$nome_comida</td>
+                <td>&nbsp&nbsp$tipo</td>
+                <td>&nbsp&nbsp$ingredientes</td>
+                <td>&nbsp&nbsp$modo_preparo</td>
+                <td>&nbsp&nbsp$tempo</td>
+                <td>&nbsp&nbsp$rendimento</td>
+                <td>&nbsp&nbsp<img src='foto/$foto' alt='Foto da comida' width='100'></td>
+                <td>&nbsp&nbsp$regiao</td>
+                <td>&nbsp&nbsp$nome_perfil</td>
+                <td><a href='deletarReceita.php?id=$id' class='Excluiretabela'>&nbsp&nbsp Excluir</a></td>
+                <td><a href='formReceita.php?id=$id' class='Excluiretabela'>&nbsp&nbsp Editar</a></td>
               </tr>";
-    }
+            }
 
-    echo "</table>";
-}
-?>
+            echo "</table>";
+        }
+        ?>
     </div>
     <br>
     <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
