@@ -10,7 +10,7 @@
     <h2>Adicionar favoritos</h2>
     <form action="../salvarFavoritos.php" method="post">
 
-    
+
     Perfil: <br><input type="text" name="perfil_idperfil" required><br>
     Receita: <br> <input type="text" name="receita_idreceita" required><br>
 
