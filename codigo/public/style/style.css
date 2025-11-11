@@ -1600,3 +1600,9 @@ label.error {
 .tabela-personalizada {
   background-color: transparent;
 }
+
+/* Listar comentario --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.bodyListarComentário {
+  background-color: #f1f4d9;
+}
