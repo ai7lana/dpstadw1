@@ -19,8 +19,7 @@
   <p class="titulopesquisar">Brasil <br> Na Cozinha</p>
 </div>
   <form action="formPesquisar.php">
-    Receita: <br>
-    <input type="text" name="valor"> <br><br>
+     <input type="text" name="valor" class="inputpesquisarreceitas" placeholder="Pesquise Aqui..."> <br><br>
     
     <input type="submit" value="Pesquisar" class="pesquisarreceitasbotao">
   </form>
