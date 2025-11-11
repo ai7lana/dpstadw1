@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,24 @@
     <script src="jquery-3.7.1.min.js"></script>
     <script src="jquery.validate.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             jQuery.validator.addMethod("lettersOnly", function(value, element) {
-            return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
-        }, "Digite a senha correta.");
+                return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
+            }, "Digite a senha correta.");
             $('#formulario').validate({
-                rules:{
-                    nomeusuario:{
-                        required:true,
+                rules: {
+                    nomeusuario: {
+                        required: true,
                     },
-                    senha:{
+                    senha: {
                         required: true,
                     }
                 },
-                messages:{
-                    nomeusuario:{
+                messages: {
+                    nomeusuario: {
                         required: "Esse campo precisa ser preenchido"
                     },
-                    senha:{
+                    senha: {
                         required: "Esse campo precisa ser preenchido"
                     }
                 }
@@ -34,28 +35,29 @@
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body class="bodycl">
     <div class="caixafundologin">
         <form action="../verificarLogin.php" method="post" id="formulario">
             <div class="fundobrigadeirodiv">
-                <img src="style/images/brigadeirocl .png" alt="" class="brigadeiroimagemlogin">
+                <img src="style/images/brigadeirocl.png" alt="" class="brigadeiroimagemlogin">
             </div>
-            
+
             <div class="loginpreencher">
                 <div class="titulologin"> <br><br>
                     <p>Olá de novo!</p>
-                    <p id="facaseulogin">Faça seu Login:</p>  <br>
+                    <p id="facaseulogin">Faça seu Login:</p> <br>
                 </div>
 
-                
+
                 <div class="containerlogin">
                     <div class="inputgroup" id="nomeusulogin">
                         <input class="inputcl" type="text" name="nomeusuario" id="nomeusu" placeholder="Nome de Usuário"><br>
                         <br><br>
                     </div>
-    
+
                     <div class="inputgroup" id="senhalogin">
-                        <input class="inputcl" type="password" name="senha" id="senha" placeholder="Senha"> 
+                        <input class="inputcl" type="password" name="senha" id="senha" placeholder="Senha">
                     </div>
                 </div>
                 <button type="button" id="mostrarSenha">
@@ -64,7 +66,7 @@
 
 
                 <input type="submit" value="acessar" class="botaologin" id="acessar">
-                <a href="formCadastrarPerfil.html" class="novaconta">Crie uma nova conta</a>
+                <a href="formCadastrarPerfil.php" class="novaconta">Crie uma nova conta</a>
 
             </div>
 
@@ -74,9 +76,9 @@
             <!-- <a href="perfil.php" class="botaosubimit"><button type="button" class="botaosub" id="botaosubid">entrar</button></a> <br> -->
 
             <br><br><br><br><br><br><br>
-        </div>
-        </form>
-        <script>
+    </div>
+    </form>
+    <script>
         $(document).ready(function() {
             $('#mostrarSenha').click(function() {
                 let tipo = $('#senha').attr('type');
@@ -89,4 +91,5 @@
         });
     </script>
 </body>
+
 </html>

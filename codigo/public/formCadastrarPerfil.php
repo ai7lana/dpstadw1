@@ -1,30 +1,30 @@
 <?php
-    if(isset($_GET['id'])){
-        require_once "../conexao.php";
-        require_once "../funcoes.php";
+if (isset($_GET['id'])) {
+    require_once "../conexao.php";
+    require_once "../funcoes.php";
 
-        $id = $_GET['id'];
-        $perfil = pesquisarPerfilId($conexao, $id);
+    $id = $_GET['id'];
+    $perfil = pesquisarPerfilId($conexao, $id);
 
-        $nome = $perfil['nome'];
-        $nome_perfil = $perfil['nome_perfil'];
-        $senha = $perfil['senha'];
-        $email = $perfil['email'];
-        $botao = "atualizar";
-    }
-    else {
-        $id = 0;
-        $nome = "";
-        $nome_perfil = "";
-        $senha = "";
-        $email = "";
-        $botao = "";
+    $nome = $perfil['nome'];
+    $nome_perfil = $perfil['nome_perfil'];
+    $senha = $perfil['senha'];
+    $email = $perfil['email'];
+    $botao = "atualizar";
+} else {
+    $id = 0;
+    $nome = "";
+    $nome_perfil = "";
+    $senha = "";
+    $email = "";
+    $botao = "";
 
-        $botao = "cadastrar";
-    }
+    $botao = "cadastrar";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,22 +35,22 @@
         jQuery.validator.addMethod("lettersOnly", function(value, element) {
             return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
         }, "Precisa de pelo menos um número e uma letra maiscula");
-        
-        $(document).ready(function(){
+
+        $(document).ready(function() {
             $("#formulario").validate({
-                rules:{
-                    nome:{
+                rules: {
+                    nome: {
                         required: true,
                         minlength: 5,
                     },
-                    nome_perfil:{
+                    nome_perfil: {
                         required: true,
                         minlength: 5,
                     },
-                    email:{
+                    email: {
                         required: true,
                     },
-                    senha:{
+                    senha: {
                         required: true,
                         minlength: 6,
                         lettersOnly: true,
@@ -67,7 +67,7 @@
                     },
                     email: {
                         required: "Esse campo precisa ser preenchido",
-                        
+
                     },
                     senha: {
                         required: "Esse campo precisa ser preenchido",
@@ -80,38 +80,37 @@
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body class="bodycl">
     <form action="../salvarPerfil.php" method="post" id=formulario>
         <div class="fundobrigadeirodivcadastrar">
-                <img src="style/images/brigadeirocl .png" alt="" class="brigadeiroimagemlogin">
+            <img src="style/images/brigadeirocl.png" alt="" class="brigadeiroimagemlogin" id="bridgadeirocadastrar">
         </div>
-            
+
         <div class="caixafundocadastro">
             <div class="titulocl"> <br><br>
                 <p>Primeira vez aqui?</p>
-                <p>Faça seu cadastro!</p>  <br>
+                <p>Faça seu cadastro!</p> <br>
             </div>
-            <div class="fundobrigadeiro">
-                <img src="style/images/brigadeirocl.png" alt="">
-            </div>
+
             <div class="containercadastro">
                 <div class="inputgroup">
-                    <input class="inputcl" type="text" name="nome" id="nome"  placeholder="Digite seu nome" value="<?php echo $nome;?>"> <br><br>
+                    <input class="inputcl" type="text" name="nome" id="nome" placeholder="Digite seu nome" value="<?php echo $nome; ?>"> <br><br>
                 </div>
                 <div class="inputgroup">
-                    <input class="inputcl" type="text" name="nome_perfil" id="nomeusu" placeholder="Digite o nome de usuário" value="<?php echo $nome_perfil;?>"> <br><br>
+                    <input class="inputcl" type="text" name="nome_perfil" id="nomeusu" placeholder="Digite o nome de usuário" value="<?php echo $nome_perfil; ?>"> <br><br>
                 </div>
                 <div class="inputgroup">
-                    <input class="inputcl" type="email" name="email" id="email" placeholder="Digite seu E-mail" value="<?php echo $email;?>"> <br><br>
+                    <input class="inputcl" type="email" name="email" id="email" placeholder="Digite seu E-mail" value="<?php echo $email; ?>"> <br><br>
                 </div>
                 <div class="inputgroup">
-                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $senha;?>"> <br><br>
+                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo $senha; ?>"> <br><br>
                 </div>
             </div>
-            <button type="button" id="mostrarSenha"> 
+            <button type="button" id="mostrarSenha">
                 <img src='style/images/mostrarsenha.png' alt='' class='mostrarsenhabotaocadastro'>
             </button>
-            <input type="submit" value="<?php echo $botao;?>" class=  "botaosub" id="botaocadastro">
+            <input type="submit" value="<?php echo $botao; ?>" class="botaosub" id="botaocadastro">
             <a href="formLoginPerfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
         </div>
 
@@ -130,4 +129,5 @@
         });
     </script>
 </body>
+
 </html>

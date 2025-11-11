@@ -19,6 +19,7 @@ $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,28 +27,54 @@ $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
     <script src="jquery.validate.min.js"></script>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>Perfil</title>
+    <title>Meu Perfil</title>
 </head>
-<body class="bodyperfil">
-    <div class="barrasuperior"></div>
-    <div class="barralateral"></div>
-    
-    <p class="tituloperfil" id="titperfil"><img src="" alt="">Bem-vindo, <?php echo htmlspecialchars($nome_perfil_logado); ?>!</p>
 
+<body class="bodyperfil">
+    <div class="barrasuperior">
+        <div class="brasilperfildiv">
+            <p class="brasilperfil">Brasil <br> Na Cozinha</p>
+        </div>
+        <p class="tituloperfil" id="titperfil"><img src="" alt="">Bem-vindo,
+            <?php echo htmlspecialchars($nome_perfil_logado); ?>!
+        </p>
+        <img src="style/images/perfil.png" alt="" class="fotoperfil">
+
+    </div>
+    <div class="barralateral">
+
+        <a href="listarReceita.php" target="receitas" class="linkperfil" id="listreceitasperfil">Ver receitas</a> <br>
+
+        <a href="formPesquisar.php" class="linkperfil" id="pesquisarperfil"> Buscar receita</a> <br>
+        <img src="style/images/pesquisar.png" class="iconperfil" id="buscarreceitaimg">
+
+        <a href="listarComentario.php" class="linkperfil" id="listcomentariosperfil"> avaliacoes </a> <br>
+        <img src="style/images/comentarios.png" class="iconperfil" id="avaliacoesimg" alt="">
+
+        <a href="listarFavoritos.php" class="linkperfil" id="listfavperfil"> Favoritos </a> <br>
+        <img src="style/images/favoritos.png" alt="" class="iconperfil" id="favsimg">
+
+        <a href="receitaPropria.php" target="receitas" class="linkperfil" id="minhasreceitasperfil"> Minhas Receitas
+        </a>
+        <img src="style/images/minhasreceitas.png" class="iconperfil" id="minhasreceitasicon" alt="">
+
+        <a href="editarPerfil.php" class="linkperfil" id="editarperfil"> editar perfil</a>
+        <img src="style/images/editarperfil.png" alt="" class="iconperfil" id="editarperfilicon">
+        <a href="../deslogar.php" class="linkperfil" id="deslogar"> sair </a>
+        <img src="style/images/logout.png" alt="" class="iconperfil" id="deslogarperfil">
+    </div>
     <div class="linkperfildiv">
-        <a href="formReceita.php" class="linkperfil" id="receitasp"> <img src="style/images/adicionar.png" alt="" class="addreceita"> adicionar receita</a> <br>
-        <a href="listarReceita.php" class="linkperfil" id="listreceitas"> class="reeitasver">ver receitas</a> <br>
-        <a href="formPesquisar.php" class="linkperfil" id="pesquisarp"> <img src="style/images/pesquisar.png" alt=""> buscar receita</a> <br>
-        <a href="listarComentario.php" class="linkperfil" id="listcomentarios"> <img src="style/images/comentarios.png" alt="">avaliacoes </a> <br>
-        <a href="listarFavoritos.php" class="linkperfil" id="listfav"> <img src="style/images/favoritos.png" alt="" class="favoritos">Favoritos </a> <br>
-        <a href="receitaPropria.php" class="linkperfil" id="minhasreceitas"> Minhas Receitas </a> <br>
-        <a href="editarPerfil.php" class="linkperfil" id="editarp"> <img src="style/images/editarperfil.png" alt="" class="editarperfil">editar perfil</a> <br> <br><br><br>
+        <iframe name="receitas" frameborder="0"></iframe>
+
+
     </div>
 
     <div class="acoesperfil">
-        <a href="../deslogar.php" class="linkperfil" class="deslogar"> sair </a>
         <br>
-        <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+        <div class="voltardiv">
+            <button onclick="history.go(-1)" class="voltar" id="voltarperfil"> ↩ Voltar </button>
+        </div>
     </div>
 </body>
+
 </html>
