@@ -44,6 +44,7 @@ $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
     <div class="barralateral">
 
         <a href="listarReceita.php" class="linkperfil" id="listreceitasperfil">Ver receitas</a> <br>
+        <img src="style/images/verreceitas.png" alt="" class="iconperfil" id="listarreceitasimg">
 
         <a href="formPesquisar.php" target="receitas" class="linkperfil" id="pesquisarperfil"> Buscar receita</a> <br>
         <img src="style/images/pesquisar.png" class="iconperfil" id="buscarreceitaimg">

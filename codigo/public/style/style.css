@@ -1368,6 +1368,13 @@ label.error {
   top: 60%;
 }
 
+#listarreceitasimg {
+  position: absolute;
+  top: 70%;
+  max-width: 40px;
+  left: 7%;
+}
+
 #deslogarperfil {
   position: absolute;
   top: 90%;
