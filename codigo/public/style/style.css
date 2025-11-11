@@ -1553,12 +1553,11 @@ label.error {
   top: 5%;
   font-weight: 500;
 }
-.titulopesquisar {
-}
+
 .pesquisarreceitasbotao {
   position: absolute;
-  left: 50%;
-  top: 20%;
+  left: 55%;
+  top: 25%;
   border: none;
   border-radius: 20px;
   background-color: #342420;
@@ -1573,8 +1572,6 @@ label.error {
 .pesquisarreceitasbotao:hover {
   width: 7.5%;
   height: 5.5%;
-  left: 50.5%;
-  top: 20.5%;
   background: linear-gradient(to bottom, #342420, #654a32);
   font-size: 110%;
 }
@@ -1586,23 +1583,35 @@ label.error {
   border-bottom: 0.2vw solid #5f432c;
   background-color: transparent;
   position: absolute;
-  top: 21%;
-  left: 35%;
+  top: 26%;
+  left: 40%;
+}
+
+.inputpesquisarreceitas:focus {
+  border-bottom: 0.2vw solid #5f432c;
+  outline: none;
+  font-family: "otez";
 }
 
 .formpesquisardiv {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 5%;
   width: 90%;
 }
 
-.tabela-personalizada {
-  background-color: transparent;
-}
-
 /* Listar comentario --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.bodyListarComentário {
-  background-color: #f1f4d9;
+.bodyListar {
+  background-color: #af723f;
+}
+
+.listar {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+}
+
+.listar {
+  color: #342420;
 }

@@ -10,32 +10,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body class="bodyListarComentário">
-    <h1>Lista de Avaliacao</h1>
+<body class="bodyListar">
     <div class="titulopesquisardiv">
-        <p class="titulopesquisar">Brasil <br> Na Cozinha</p>
+        <p class="titulopesquisar" id="listar">Brasil <br> Na Cozinha</p>
     </div>
 
-    <?php
+    <div class="listar">
+
+        
+        <?php
     require_once "../conexao.php";
     require_once "../funcoes.php";
-
+    
     $listar_avaliacao = listarAvaliacao($conexao);
-
+    
     if (count($listar_avaliacao) == 0) {
         echo "Não existem perfis cadastrados";
     } else {
     ?>
         <table border="1" class="table">
             <tr>
-
+                
                 <td>Nome do perfil</td>
                 <td>Nome da Receita</td>
                 <td>Comentario</td>
                 <td>Nota</td>
-
+                
             </tr>
-        <?php
+            <?php
         foreach ($listar_avaliacao as $avaliacao) {
             $perfil_idperfil = $avaliacao['perfil_idperfil'];
             $receita_idreceita = $avaliacao['receita_idreceita'];
@@ -45,12 +47,12 @@
             $nome_receita = $avaliacao['nome_receita'];
             $comentario = $avaliacao['comentario'];
             $nota = $avaliacao['nota'];
-
+            
             // <td colspan="2">Ação</td>
 
             echo "<tr>";
-
-
+            
+            
             echo "<td>{$avaliacao['nome_perfil']}</td>";
             echo "<td>{$avaliacao['nome_receita']}</td>";
             echo "<td>$comentario</td>";
@@ -66,6 +68,7 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </div>
 </body>
 
 </html>
