@@ -64,7 +64,7 @@ $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
         <img src="style/images/logout.png" alt="" class="iconperfil" id="deslogarperfil">
     </div>
     <div class="linkperfildiv">
-        <iframe name="receitas" frameborder="0"></iframe>
+        <iframe name="receitas" frameborder="0" class="minhasreceitas"></iframe>
 
 
     </div>

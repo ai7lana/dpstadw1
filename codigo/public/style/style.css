@@ -72,6 +72,9 @@ truetype -ttf
   color: #5f432c;
 }
 
+.voltareditar {
+}
+
 /*index*/
 .bodyindex {
   background-color: #deb489;
@@ -410,8 +413,8 @@ a {
 .brigadeiroimagemlogin {
   position: absolute;
   width: auto;
-  max-width: 650px;
-  height: 650px;
+  max-width: 550px;
+  height: 550px;
   left: 2%;
   top: -6%;
   z-index: 2;
@@ -1454,8 +1457,9 @@ label.error {
   width: 77%;
   height: 70%;
   top: 50%;
-  left: 0%;
+  left: -10%;
   z-index: 0;
+  position: absolute;
 }
 
 /*Minhas Receitas -----------------------------------------------------------------------------------------------------*/

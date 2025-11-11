@@ -1,5 +1,5 @@
 <?php
-if(isset($_GET['id'])){
+if (isset($_GET['id'])) {
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
@@ -23,6 +23,7 @@ if(isset($_GET['id'])){
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,21 +35,21 @@ if(isset($_GET['id'])){
             return this.optional(element) || /^(?=.*[A-Z])(?=.*\d)./.test(value);
         }, "Precisa de pelo menos um número e uma letra maiúscula");
 
-        $(document).ready(function(){
+        $(document).ready(function() {
             $("#formulario").validate({
-                rules:{
-                    nome:{
+                rules: {
+                    nome: {
                         required: true,
                         minlength: 5,
                     },
-                    nome_perfil:{
+                    nome_perfil: {
                         required: true,
                         minlength: 5,
                     },
-                    email:{
+                    email: {
                         required: true,
                     },
-                    senha:{
+                    senha: {
                         required: true,
                         minlength: 6,
                         lettersOnly: true,
@@ -77,6 +78,7 @@ if(isset($_GET['id'])){
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body class="bodycl">
 
     <form action="../salvarPerfil.php" method="post" id="formulario">
@@ -85,55 +87,45 @@ if(isset($_GET['id'])){
         <div class="fundobrigadeirodivcadastrar">
             <img src="style/images/brigadeirocl.png" alt="brigadeiro" class="brigadeiroimagemlogin">
         </div>
-            
+
         <div class="caixafundocadastro">
-            <div class="titulocl"> 
+            <div class="titulocl">
                 <br><br>
-                <?php if($botao == "atualizar"): ?>
-                    <p>O que vai mudar?</p>
-                    <p>Edite seu perfil abaixo</p>
-                <?php else: ?>
-                    <p>Primeira vez aqui?</p>
-                    <p>Faça seu cadastro!</p>
-                <?php endif; ?>
+                <p>O que vai mudar?</p>
+                <p>Edite seu perfil abaixo</p>
                 <br>
             </div>
 
 
             <div class="containercadastro">
                 <div class="inputgroup">
-                    <input class="inputcl" type="text" name="nome" id="nome" placeholder="Digite seu nome" value="<?php echo htmlspecialchars($nome); ?>"> 
+                    <input class="inputcl" type="text" name="nome" id="nome" placeholder="Digite seu nome" value="<?php echo htmlspecialchars($nome); ?>">
                     <br><br>
                 </div>
                 <div class="inputgroup">
-                    <input class="inputcl" type="text" name="nome_perfil" id="nomeusu" placeholder="Digite o nome de usuário" value="<?php echo htmlspecialchars($nome_perfil); ?>"> 
+                    <input class="inputcl" type="text" name="nome_perfil" id="nomeusu" placeholder="Digite o nome de usuário" value="<?php echo htmlspecialchars($nome_perfil); ?>">
                     <br><br>
                 </div>
                 <div class="inputgroup">
-                    <input class="inputcl" type="email" name="email" id="email" placeholder="Digite seu E-mail" value="<?php echo htmlspecialchars($email); ?>"> 
+                    <input class="inputcl" type="email" name="email" id="email" placeholder="Digite seu E-mail" value="<?php echo htmlspecialchars($email); ?>">
                     <br><br>
                 </div>
                 <div class="inputgroup">
-                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo htmlspecialchars($senha); ?>"> 
+                    <input class="inputcl" type="password" name="senha" id="senha" placeholder="Digite sua senha" value="<?php echo htmlspecialchars($senha); ?>">
                     <br><br>
                 </div>
             </div>
 
-            <button type="button" id="mostrarSenha"> 
+            <button type="button" id="mostrarSenha">
                 <img src="style/images/mostrarsenha.png" alt="mostrar senha" class="mostrarsenhabotaocadastro">
             </button>
 
-            <input type="submit" value="<?php echo $botao; ?>" class="botaosub" id="botaocadastro">
-            
-            <?php if($botao == "atualizar"): ?>
-                <a href="perfil.php" class="linklogin">Voltar para o perfil</a>
-            <?php else: ?>
-                <a href="formLoginPerfil.php" class="linklogin">Já possui uma conta? Clique aqui!</a>
-            <?php endif; ?>
-        </div>
+            <input type="submit" value="atualizar" class="botaosub" id="botaocadastro">
 
-        <button onclick="history.go(-1)" class="voltar" id="voltarlogin">↩ Voltar</button>
+            <a href="perfil.php" class="linklogin">Voltar para o perfil</a>
+
     </form>
+    <button onclick="history.go(-1)" class="voltar" id="voltareditar">↩ Voltar</button>
 
     <script>
         $(document).ready(function() {
@@ -148,4 +140,5 @@ if(isset($_GET['id'])){
         });
     </script>
 </body>
+
 </html>
