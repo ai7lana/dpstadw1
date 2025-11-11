@@ -1355,17 +1355,17 @@ label.error {
 
 #avaliacoesimg {
   position: absolute;
-  top: 42.5%;
+  top: 40%;
 }
 
 #favsimg {
   position: absolute;
-  top: 55%;
+  top: 50%;
 }
 
 #minhasreceitasicon {
   position: absolute;
-  top: 68%;
+  top: 60%;
 }
 
 #deslogarperfil {
@@ -1399,19 +1399,25 @@ label.error {
 }
 
 #listcomentariosperfil {
-  top: 44.5%;
+  top: 42%;
   left: 35%;
   position: absolute;
 }
 
 #listfavperfil {
-  top: 57%;
+  top: 52%;
   left: 35%;
   position: absolute;
 }
 
 #minhasreceitasperfil {
-  top: 68%;
+  top: 61%;
+  left: 35%;
+  position: absolute;
+}
+
+#listreceitasperfil {
+  top: 71%;
   left: 35%;
   position: absolute;
 }
@@ -1453,8 +1459,8 @@ label.error {
 .iframeperfil {
   width: 77%;
   height: 70%;
-  top: 50%;
-  left: -10%;
+  top: 25%;
+  left: 3.5%;
   z-index: 0;
   position: absolute;
 }
