@@ -122,10 +122,10 @@ if (isset($_GET['id'])) {
 
             <input type="submit" value="atualizar" class="botaosub" id="botaocadastro">
 
-            <a href="perfil.php" class="linklogin">Voltar para o perfil</a>
+            <a href="todoPerfil.php" class="linklogin">Voltar para o perfil</a>
 
+            <button onclick="history.go(-1)" class="voltar" id="voltareditar">↩ Voltar</button>
     </form>
-    <button onclick="history.go(-1)" class="voltar" id="voltareditar">↩ Voltar</button>
 
     <script>
         $(document).ready(function() {

@@ -64,8 +64,6 @@ $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
         <img src="style/images/logout.png" alt="" class="iconperfil" id="deslogarperfil">
     </div>
     <div class="linkperfildiv">
-        <iframe name="receitas" frameborder="0" class="minhasreceitas"></iframe>
-
 
     </div>
 
@@ -75,6 +73,7 @@ $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
             <button onclick="history.go(-1)" class="voltar" id="voltarperfil"> ↩ Voltar </button>
         </div>
     </div>
+    <iframe name="receitas" frameborder="0" class="iframeperfil"></iframe>
 </body>
 
 </html>

@@ -23,19 +23,31 @@ $resultado = mysqli_query($conexao, $sql) or die("Erro ao buscar receitas: " . m
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Minhas Receitas</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
-    <h2>Minhas Receitas</h2>
-    <a href="formReceita.php">Adicionar nova receita</a> <br><br>
 
-<?php
+<body class="bodyaddreceita">
+    <div class="lateraladdreceita"></div>
+    <p class="minhasreceitas">Minhas Receitas</p>
+    <a href="formReceita.php" class="addreceitalink"> adicionar nova receita</a> <br><br>
+    <img src="style/images/adicionarreceita.png" alt="" class="addreceita">
+
+
+
+
+    <div class="tabeladiv">
+        <?php
 if (mysqli_num_rows($resultado) == 0) {
     echo "<p>Não existem receitas cadastradas.</p>";
 } else {
-    echo "<table border='1'>
+    echo "<table border='1' class='tabelas'>
             <tr>
                 <td>Id</td>
                 <td>Nome da comida</td>
@@ -73,15 +85,17 @@ if (mysqli_num_rows($resultado) == 0) {
                 <td><img src='foto/$foto' alt='Foto da comida' width='100'></td>
                 <td>$regiao</td>
                 <td>$nome_perfil</td>
-                <td><a href='deletarReceita.php?id=$id'>Excluir</a></td>
-                <td><a href='formReceita.php?id=$id'>Editar</a></td>
+                <td><a href='deletarReceita.php?id=$id' class='Excluiretabela'>Excluir</a></td>
+                <td><a href='formReceita.php?id=$id' class='Excluiretabela'>Editar</a></td>
               </tr>";
     }
 
     echo "</table>";
 }
 ?>
+    </div>
     <br>
     <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
 </body>
+
 </html>

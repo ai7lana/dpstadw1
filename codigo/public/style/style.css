@@ -72,9 +72,6 @@ truetype -ttf
   color: #5f432c;
 }
 
-.voltareditar {
-}
-
 /*index*/
 .bodyindex {
   background-color: #deb489;
@@ -1453,7 +1450,7 @@ label.error {
   z-index: 4;
 }
 
-.minhasreceitas {
+.iframeperfil {
   width: 77%;
   height: 70%;
   top: 50%;
