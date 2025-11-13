@@ -47,7 +47,7 @@
         <input type="text" name="nota" required placeholder="avaliação" class="inputforms" id="inputavaliação"><br>
 
         <button type="submit" class="botaosubmitforms" id="botaoava" >Salvar</button>
-        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
+        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarform"> ↩ Voltar </button>
 
 </body>
 
