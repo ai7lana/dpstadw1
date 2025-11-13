@@ -75,7 +75,7 @@ $resultado = mysqli_query($conexao, $sql) or die("Erro ao buscar avaliações: "
                     echo "<td>$nome_receita</td>";
                     echo "<td>$comentario</td>";
                     echo "<td>$nota</td>";
-                    echo "<td><a href='formAvaliacao.php?perfil=$perfil_idperfil&receita=$receita_idreceita'  class='Excluiretabela' >Editar</a></td>";
+                    // echo "<td><a href='formAvaliacao.php?perfil=$perfil_idperfil&receita=$receita_idreceita'  class='Excluiretabela' >Editar</a></td>";
                     echo "<td><a href='deletarComentario.php?perfil=$perfil_idperfil&receita=$receita_idreceita' class='Excluiretabela' onclick='return confirm(\"Deseja realmente excluir esta avaliação?\")'>Excluir</a></td>";
                     //echo "<td><a href='formAvaliacao.php?perfil=$perfil_idperfil&receita=$receita_idreceita' >Editar</a></td>";
                     // echo "<td><a href='deletarComentario.php?perfil=$perfil_idperfil&receita=$receita_idreceita' class='btn btn-danger btn-sm' onclick='return confirm(\"Deseja realmente excluir esta avaliação?\")'>Excluir</a></td>";

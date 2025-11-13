@@ -60,7 +60,7 @@ $nome_perfil = $perfil ['nome'];
         <!-- <input type="text" name="receita_idreceita" required  placeholder="Receita" class="inputforms" id="inputidreceitas"><br> -->
 
 
-        <form action="../salvarFavoritos.php" method="post">
+        <!-- <form action="../salvarFavoritos.php" method="post"> -->
         <input type="hidden" name="perfil_idperfil" value="<?= $id_perfil ?>">
         <input type="hidden" name="receita_idreceita" value="<?= $id_receita ?>">
 
