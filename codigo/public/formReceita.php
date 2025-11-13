@@ -16,7 +16,7 @@ if (!isset($_SESSION['id_perfil'])) {
     die("Erro: sessão sem ID de perfil. Faça login novamente.");
 }
 
-$id_perfil_logado = intval($_SESSION['id_perfil']); // força ser número inteiro
+$id_perfil_logado = intval($_SESSION['id_perfil']);
 
 $sqlPerfil = "SELECT nome_perfil FROM perfil WHERE idperfil = $id_perfil_logado";
 $resultadoPerfil = mysqli_query($conexao, $sqlPerfil) or die("Erro ao buscar nome do perfil: " . mysqli_error($conexao));
