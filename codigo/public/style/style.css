@@ -72,6 +72,10 @@ truetype -ttf
   color: #5f432c;
 }
 
+body{
+  background-color: #f1f4d9;
+}
+
 /*index*/
 .bodyindex {
   background-color: #deb489;
@@ -1145,6 +1149,29 @@ label.error {
   background-color: #f5f9f5;
 }
 
+#voltarreceitadetalhada{
+  position: absolute;
+  font-size: 200%;
+  font-family: 'otez';
+  color: #342420;
+  top: 25%;
+}
+
+#voltarreceitadetalhada:hover{
+  color: #654a32;
+}
+
+.fundovoltarreceitadetalhada{
+  width: 20%;
+  height: 10%;
+  position: absolute;
+  top: 70%;
+  left: 2%;
+  z-index: 5;
+  background-color: #f5f9f5;
+  border-radius: 20px;
+}
+
 .barralateralreceitadetalhada {
   background-color: #342420;
   position: absolute;
@@ -1333,7 +1360,7 @@ label.error {
   text-align: center;
   position: absolute;
   top: 25%;
-  left: 8%;
+  left: 87%;
 }
 
 .brasilperfil {
@@ -1512,6 +1539,7 @@ label.error {
   color: #654a32;
 }
 
+
 .addreceita {
   z-index: 4;
   width: auto;
@@ -1597,6 +1625,12 @@ label.error {
   width: 90%;
 }
 
+.listartudodiv{
+  position: absolute;
+  top: 25%;
+  width: 100%;
+}
+
 /* Listar comentario --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .tituu{
@@ -1606,8 +1640,12 @@ label.error {
   color: #f1f4d9;
 }
 
+.bodyListarparcial{
+  background-color: #deb489;
+}
+
 .bodyListar {
-  background-color: #b4956b;
+  background-color: #f1f4d9;
   align-items: center;
 }
 
