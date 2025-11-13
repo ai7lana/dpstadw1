@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+require_once "../verificarLogado.php";
 require_once "../conexao.php";
 require_once "../funcoes.php";
 
@@ -73,18 +74,54 @@ if (isset($_GET['id'])) {
             }, "Digite a senha correta.");
             $('#formulario').validate({
                 rules: {
-                    nomeusuario: {
+                    nome_comida: {
                         required: true,
                     },
-                    senha: {
+                    tipo: {
+                        required: true,
+                    },
+                    ingredientes: {
+                        required: true,
+                    },
+                    modo_de_preparo: {
+                        required: true,
+                    },
+                    nome_comida: {
+                        required: true,
+                    },
+                    tipo: {
+                        required: true,
+                    },
+                    tempo: {
+                        required: true,
+                    },
+                    rendimento: {
                         required: true,
                     }
                 },
                 messages: {
-                    nomeusuario: {
+                    nome_comida: {
                         required: "Esse campo precisa ser preenchido"
                     },
-                    senha: {
+                    tipo: {
+                        required: "Esse campo precisa ser preenchido"
+                    },
+                    ingredientes: {
+                        required: "Esse campo precisa ser preenchido"
+                    },
+                    modo_de_preparo: {
+                        required: "Esse campo precisa ser preenchido"
+                    },
+                    nome_comida: {
+                        required: "Esse campo precisa ser preenchido"
+                    },
+                    tipo: {
+                        required: "Esse campo precisa ser preenchido"
+                    },
+                    tempo: {
+                        required: "Esse campo precisa ser preenchido"
+                    },
+                    rendimento: {
                         required: "Esse campo precisa ser preenchido"
                     }
                 }
@@ -95,6 +132,7 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="style/style.css">
 </head>
 
+div.tudo
 <body class="bodyforms">
     <div class="formsivfundo" id="receitasdiv">
 

@@ -56,6 +56,18 @@ $resultado = mysqli_query($conexao, $sql) or die("Erro ao buscar favoritos: " . 
                 }
             } else {
                 echo "<tr><td colspan='4'>Nenhuma receita favorita encontrada.</td></tr>";
+                // <td colspan="2">Ação</td>
+
+
+                echo "<tr>";
+
+
+                echo "<td>$nome_perfil</td>";
+                echo "<td>$nome_receita</td>";
+                // echo "<td><a href='deletarFav.php?perfil=$perfil_idperfil&receita=$receita_idreceita' class='Excluiretabela'>Excluir</a></td>";
+                // echo "<td><a href='formFavoritos.html?perfil=$perfil_idperfil&receita=$receita_idreceita' class='Excluiretabela'>Editar</a></td>";
+
+                echo "</tr>";
             }
             ?>
         </table>

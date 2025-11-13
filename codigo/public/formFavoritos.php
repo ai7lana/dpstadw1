@@ -1,3 +1,6 @@
+<?php
+require_once "../verificarLogado.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../jquery-3.7.1.min.js"></script>
-    script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
     <script src="jquery.validate.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -15,18 +18,18 @@
             }, "Digite a senha correta.");
             $('#formulario').validate({
                 rules: {
-                    nomeusuario: {
+                    perfil_idperfil: {
                         required: true,
                     },
-                    senha: {
+                    receita_idreceita: {
                         required: true,
                     }
                 },
                 messages: {
-                    nomeusuario: {
+                    perfil_idperfil: {
                         required: "Esse campo precisa ser preenchido"
                     },
-                    senha: {
+                    receita_idreceita: {
                         required: "Esse campo precisa ser preenchido"
                     }
                 }
@@ -37,16 +40,16 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
-    <h2>Adicionar favoritos</h2>
+<body class="bodyforms">
+    <p class="tituloforms">Adicionar favoritos</p>
     <form action="../salvarFavoritos.php" method="post">
 
 
-        Perfil: <br><input type="text" name="perfil_idperfil" required><br>
-        Receita: <br> <input type="text" name="receita_idreceita" required><br>
+        <input type="text" name="perfil_idperfil" required placeholder="Perfil" class="inputforms" id="inputidperfil"><br>
+        <input type="text" name="receita_idreceita" required  placeholder="Receita" class="inputforms" id="inputidreceitas"><br>
 
-        <button type="submit">Salvar</button>
-        <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+        <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button>
+        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
 
 
 
