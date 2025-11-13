@@ -43,15 +43,17 @@ require_once "../funcoes.php";
 </head>
 
 <body class="bodyforms">
-    <p class="tituloforms">Adicionar favoritos</p>
+    <p class="tituloforms" id="favtit">Adicionar favoritos</p>
     <form action="../salvarFavoritos.php" method="post">
 
 
         <input type="text" name="perfil_idperfil" required placeholder="Perfil" class="inputforms" id="inputidperfil"><br>
+        <p class="infoinput" id="infoperfil">Perfil</p>
         <input type="text" name="receita_idreceita" required  placeholder="Receita" class="inputforms" id="inputidreceitas"><br>
+        <p class="infoinput" id="inputreceita">Receita</p>
 
         <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button>
-        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
+        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarform"> ↩ Voltar </button>
 
 
 

@@ -1787,18 +1787,20 @@ label.error {
 }
 
 #inputidperfil{
-  top: 20%;
-  left: 45%
+  top: 25%;
+  left: 35%;
+  width: 26%;
 }
 
 #inputidreceitas{
-  top: 40%;
-  left: 45%
+  top: 35%;
+  left: 35%;
+  width: 26%;
 }
 
 #botaofavoritos{
-  top: 60%;
-  left: 50%;
+  top: 45%;
+  left: 45%;
 }
 
 /* -------------------------------------------------------------------- */
@@ -1833,4 +1835,26 @@ label.error {
 #botaoava{
   top: 45%;
   left: 45%;
+}
+
+#favtit{
+  top: 10%;
+  left: 41%;
+}
+
+.infoinput{
+  font-family: 'otez';
+  color: #3d2f2b;
+  font-size: 100%;
+  position: absolute;
+}
+
+#infoperfil{
+  top: 28%;
+  left: 47%;
+}
+
+#inputreceita{
+  top: 38%;
+  left: 47%;
 }
