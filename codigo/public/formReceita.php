@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 require_once "../verificarLogado.php";
 require_once "../conexao.php";
@@ -132,7 +132,6 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-div.tudo
 <body class="bodyforms">
     <div class="formsivfundo" id="receitasdiv">
 

@@ -37,7 +37,7 @@ $resultado = mysqli_query($conexao, $sql) or die("Erro ao buscar receitas: " . m
 <body class="bodyaddreceita">
     <div class="lateraladdreceita"></div>
     <p class="minhasreceitas">Minhas Receitas</p>
-    <a href="formReceita.html" class="addreceitalink"> adicionar nova receita</a> <br><br>
+    <a href="formReceita.php" class="addreceitalink"> adicionar nova receita</a> <br><br>
     <img src="style/images/adicionarreceita.png" alt="" class="addreceita">
 
 
