@@ -134,8 +134,8 @@ INSERT INTO receita (nome_comida, tipo, ingredientes, modo_de_preparo, tempo, re
 
 
 INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES
-(4, 1),
-(5, 2),
+(6, 1),
+(6, 2),
 (6, 3),
 (7, 4),
 (7, 5),
@@ -147,8 +147,8 @@ INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES
 
 
 INSERT INTO avaliacao (perfil_idperfil, receita_idreceita, comentario, nota) VALUES
-(4, 1, 'Delicioso, bem temperado!', 5),
-(5, 2, 'Muito fácil de fazer!', 4),
+(6, 1, 'Delicioso, bem temperado!', 5),
+(6, 2, 'Muito fácil de fazer!', 4),
 (6, 3, 'Receita prática do dia a dia.', 5),
 (7, 4, 'Adorei o sabor e a textura.', 5),
 (5, 1, 'Lembrou muito as festas juninas!', 4),
