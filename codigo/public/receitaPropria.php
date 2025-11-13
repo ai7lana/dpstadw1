@@ -2,7 +2,7 @@
 
 // alana aqui vai da erro e quando eu for apresentar o prof vai érguntar pq e eu irei respondes que o motivo é pq esta chamando a sessao duas vezes 
 
-session_start();
+// session_start();
 require_once "../verificarLogado.php";
 require_once "../conexao.php";
 
