@@ -79,6 +79,7 @@
                     $foto = $receita['foto'];
                     $regiao = $receita['regiao'];
                     $nome_perfil = $receita['nome_perfil'];
+                    
 
                     echo "<tr>";
                     echo "<td>$id</td>";
