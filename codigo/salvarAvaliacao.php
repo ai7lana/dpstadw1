@@ -15,6 +15,6 @@ if ($id == 0) {
     editarAvaliacao($conexao, $comentario, $nota, $perfil_idperfil, $receita_idreceita, $id);
 }
 
-header("Location: /public/listarAvaliacao.php");
+header("Location: /public/listarComentario.php");
 exit;
 ?>

@@ -1,15 +1,15 @@
 <?php 
-require_once "../verificarLogado.php";
-require_once "../conexao.php";
-require_once "../funcoes.php";
+// require_once "../verificarLogado.php";
+// require_once "../conexao.php";
+// require_once "../funcoes.php";
 
-$id_receita = $_GET['id'];
-$receita = pesquisarReceitaId($conexao, $id_receita);
-$nome_receita = $receita['nome_comida'];
+// $id_receita = $_GET['id'];
+// $receita = pesquisarReceitaId($conexao, $id_receita);
+// $nome_receita = $receita['nome_comida'];
 
-$id_perfil = $_SESSION['id_perfil'];
-$perfil = pesquisarPerfilId($conexao, $id_perfil);
-$nome_perfil = $perfil ['nome'];
+// $id_perfil = $_SESSION['id_perfil'];
+// $perfil = pesquisarPerfilId($conexao, $id_perfil);
+// $nome_perfil = $perfil ['nome'];
 
 ?>
 <!DOCTYPE html>
@@ -59,8 +59,6 @@ $nome_perfil = $perfil ['nome'];
         <input type="text" name="receita_idreceita" required placeholder="Receita" class="inputforms" id="inputreceita"  > <br>
         <input type="text" name="comentario" required placeholder="comentário" class="inputforms" id="inputcomentario"><br>
         <input type="text" name="nota" required placeholder="avaliação" class="inputforms" id="inputavaliação"><br>
-
-
 
         <button type="submit" class="botaosubmitforms" id="botaoava" >Salvar</button>
         <button type="button" onclick="history.go(-1)" class="voltar" id="voltarform"> ↩ Voltar </button>
