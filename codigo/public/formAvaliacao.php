@@ -38,15 +38,15 @@
 </head>
 
 <body class="bodyforms">
-    <p class="tituloforms">Avaliar</p>
+    <p class="tituloforms" id="avaliartit">Avaliar</p>
     <form action="../salvarAvaliacao.php" method="post">
 
-        Perfil: <br><input type="text" name="perfil_idperfil" required placeholder="Perfil" class="inputforms" id="inputperfil"><br>
-        Receita: <br> <input type="text" name="receita_idreceita" required placeholder="Receita" class="inputforms" id="inputreceita"><br>
-        Comentar? <br><input type="text" name="comentario" required placeholder="comentário" class="inputforms" id="inputcomentario"><br>
-        Nota: <br> <input type="text" name="nota" required placeholder="avaliação" class="inputforms" id="inputavaliação"><br>
+        <input type="text" name="perfil_idperfil" required placeholder="Perfil" class="inputforms" id="inputperfilava"><br>
+        <input type="text" name="receita_idreceita" required placeholder="Receita" class="inputforms" id="inputreceita"><br>
+        <input type="text" name="comentario" required placeholder="comentário" class="inputforms" id="inputcomentario"><br>
+        <input type="text" name="nota" required placeholder="avaliação" class="inputforms" id="inputavaliação"><br>
 
-        <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button>
+        <button type="submit" class="botaosubmitforms" id="botaoava" >Salvar</button>
         <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
 
 </body>

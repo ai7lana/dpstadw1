@@ -1791,3 +1791,37 @@ label.error {
   top: 60%;
   left: 50%;
 }
+
+/* -------------------------------------------------------------------- */
+#inputperfilava{
+  top: 20%;
+  left: 35%;
+  width: 26%;
+}
+
+#inputreceita{
+  top: 25%;
+  left: 35%;
+  width: 26%;}
+
+#inputcomentario{
+  top: 30%;
+  left: 35%;
+  width: 26%;
+}
+
+#inputavaliação{
+  top: 35%;
+  left: 35%;
+  width: 26%;
+}
+
+#avaliartit{
+  top: 10%;
+  left: 46%;
+}
+
+#botaoava{
+  top: 45%;
+  left: 45%;
+}
