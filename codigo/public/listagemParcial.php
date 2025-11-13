@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Receitas (Simplificada)</title>
     <script src="../jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
-    <h1>Lista de receitas</h1>
+<body class="bodyListar">
+    <div class="container mt-5">
 
+        <h1 class="tituu">Lista de receitas</h1>
+        
     <?php
     require_once "../conexao.php";
     require_once "../funcoes.php";
 
     $lista_receitas = listarReceitas($conexao);
- 
+    
 
     if (count($lista_receitas) == 0) {
         echo "Não existem receitas cadastradas.";
@@ -40,6 +44,7 @@
             }
             ?>
         </table>
+    </div>
         <br>
       <!-- <input type="button" value="Voltar" onclick="javascript:history.go(-1)"> -->
       <form>

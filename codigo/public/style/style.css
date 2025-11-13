@@ -1333,7 +1333,7 @@ label.error {
   text-align: center;
   position: absolute;
   top: 25%;
-  left: 87%;
+  left: 8%;
 }
 
 .brasilperfil {
@@ -1599,8 +1599,16 @@ label.error {
 
 /* Listar comentario --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+.tituu{
+  margin-left: 35%;  
+  font-family: 'camiro';
+  font-size: 400%;
+  color: #f1f4d9;
+}
+
 .bodyListar {
-  background-color: #af723f;
+  background-color: #b4956b;
+  align-items: center;
 }
 
 .listartudo {
