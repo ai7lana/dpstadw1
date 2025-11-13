@@ -308,7 +308,7 @@ a {
   width: auto;
   max-width: 6%;
   margin-left: -82%;
-  margin-top: 93%;
+  margin-top: 90%;
   z-index: 4;
 }
 
@@ -335,6 +335,7 @@ a {
   background: linear-gradient(to bottom, #342420, #654a32);
   font-size: 190%;
 }
+
 
 .linklogin {
   color: #342420;
