@@ -20,7 +20,7 @@
         echo "Não existem receitas cadastradas.";
     } else {
     ?>
-        <table border="1">
+        <table border="1" class="table">
             <tr>
                 <th>Nome da comida</th>
                 <th>Foto</th>

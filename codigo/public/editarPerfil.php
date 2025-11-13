@@ -116,9 +116,6 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
 
-            <button type="button" id="mostrarSenha">
-                <img src="style/images/mostrarsenha.png" alt="mostrar senha" class="mostrarsenhabotaocadastro">
-            </button>
 
             <input type="submit" value="atualizar" class="botaosub" id="botaocadastro">
 
@@ -127,18 +124,6 @@ if (isset($_GET['id'])) {
             <button onclick="history.go(-1)" class="voltar" id="voltarlogin">↩ Voltar</button>
     </form>
 
-    <script>
-        $(document).ready(function() {
-            $('#mostrarSenha').click(function() {
-                let tipo = $('#senha').attr('type');
-                if (tipo == 'password') {
-                    $('#senha').attr('type', 'text');
-                } else {
-                    $('#senha').attr('type', 'password');
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

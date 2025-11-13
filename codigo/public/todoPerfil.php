@@ -33,7 +33,7 @@ $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
 <body class="bodyperfil">
     <div class="barrasuperior">
         <div class="brasilperfildiv">
-            <p class="brasilperfil">Brasil <br> Na Cozinha</p>
+            <a href="index.php" class="brasilperfil">Brasil <br> Na Cozinha</a>
         </div>
         <p class="tituloperfil" id="titperfil"><img src="" alt="">Bem-vindo,
             <?php echo htmlspecialchars($nome_perfil_logado); ?>!
