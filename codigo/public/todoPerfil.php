@@ -52,10 +52,10 @@ $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
         <a href="listarComentario.php" target="receitas" class="linkperfil" id="listcomentariosperfil"> avaliacoes </a> <br>
         <img src="style/images/comentarios.png" class="iconperfil" id="avaliacoesimg" alt="">
 
-        <a href="listarFavoritos.html" target="receitas" class="linkperfil" id="listfavperfil"> Favoritos </a> <br>
+        <a href="listarFavoritos.php" target="receitas" class="linkperfil" id="listfavperfil"> Favoritos </a> <br>
         <img src="style/images/favoritos.png" alt="" class="iconperfil" id="favsimg">
 
-        <a href="receitaPropria.html" target="receitas" class="linkperfil" id="minhasreceitasperfil"> Minhas Receitas
+        <a href="receitaPropria.php" target="receitas" class="linkperfil" id="minhasreceitasperfil"> Minhas Receitas
         </a>
         <img src="style/images/minhasreceitas.png" class="iconperfil" id="minhasreceitasicon" alt="">
 
