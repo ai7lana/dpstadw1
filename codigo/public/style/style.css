@@ -66,15 +66,23 @@ truetype -ttf
   font-family: "vocago";
   font-weight: 600;
   transition: 0.4s ease-in-out;
+  font-size: 200%;
 }
 
 .voltar:hover {
   color: #5f432c;
 }
 
+#voltarform{
+  position: absolute;
+  left: 2%;
+}
+
 body{
   background-color: #f1f4d9;
 }
+
+
 
 /*index*/
 .bodyindex {
@@ -1486,7 +1494,7 @@ label.error {
   position: absolute;
   top: 2%;
   left: 2.5%;
-  font-size: 120%;
+  font-size: 190%;
   z-index: 4;
 }
 
@@ -1555,6 +1563,7 @@ label.error {
   font-family: "otez";
   color: #3d2f2b;
   transition: 0.4s ease-in-out;
+  text-decoration: none;
 }
 
 .Excluiretabela:hover {
@@ -1790,4 +1799,38 @@ label.error {
 #botaofavoritos{
   top: 60%;
   left: 50%;
+}
+
+/* -------------------------------------------------------------------- */
+#inputperfilava{
+  top: 20%;
+  left: 35%;
+  width: 26%;
+}
+
+#inputreceita{
+  top: 25%;
+  left: 35%;
+  width: 26%;}
+
+#inputcomentario{
+  top: 30%;
+  left: 35%;
+  width: 26%;
+}
+
+#inputavaliação{
+  top: 35%;
+  left: 35%;
+  width: 26%;
+}
+
+#avaliartit{
+  top: 10%;
+  left: 46%;
+}
+
+#botaoava{
+  top: 45%;
+  left: 45%;
 }
