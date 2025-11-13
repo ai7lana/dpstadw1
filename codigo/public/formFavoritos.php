@@ -1,5 +1,7 @@
 <?php
 require_once "../verificarLogado.php";
+require_once "../conexao.php";
+require_once "../funcoes.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
