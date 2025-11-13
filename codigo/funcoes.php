@@ -64,18 +64,26 @@ function salvarReceita($conexao, $nome_comida, $tipo, $ingredientes, $modo_de_pr
  * @param int $perfil_idperfil O ID do perfil do usuário que fez a avaliação.
  * @return bool Retorna true se a avaliação foi salva com sucesso, ou false em caso de erro.
  **/
-function salvarAvaliacao($conexao, $comentario, $nota, $receita_idreceita, $perfil_idperfil)
-{
-    $sql = "INSERT INTO avaliacao (comentario, nota, receita_idreceita, perfil_idperfil)
-    VALUES (?, ?, ?, ?)";
-    $comando = mysqli_prepare($conexao, $sql);
+function salvarAvaliacao($conexao, $comentario, $nota, $receita_idreceita, $perfil_idperfil) {
+    // Verifica se o usuário já avaliou essa receita
+    $sqlCheck = "SELECT 1 FROM avaliacao WHERE perfil_idperfil = ? AND receita_idreceita = ?";
+    $stmtCheck = mysqli_prepare($conexao, $sqlCheck);
+    mysqli_stmt_bind_param($stmtCheck, "ii", $perfil_idperfil, $receita_idreceita);
+    mysqli_stmt_execute($stmtCheck);
+    $resultado = mysqli_stmt_get_result($stmtCheck);
 
-    mysqli_stmt_bind_param($comando, 'ssii', $comentario, $nota, $receita_idreceita, $perfil_idperfil);
+    if (mysqli_num_rows($resultado) > 0) {
+        // Já existe uma avaliação — pode retornar false ou atualizar a existente
+        return false; // ou você pode chamar uma função atualizarAvaliacao()
+    }
 
-    $funcionou = mysqli_stmt_execute($comando);
-    mysqli_stmt_close($comando);
-    return $funcionou;
+    // Se não existe, insere normalmente
+    $sql = "INSERT INTO avaliacao (comentario, nota, receita_idreceita, perfil_idperfil) VALUES (?, ?, ?, ?)";
+    $stmt = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($stmt, "siii", $comentario, $nota, $receita_idreceita, $perfil_idperfil);
+    return mysqli_stmt_execute($stmt);
 }
+
 
 /**
  * Salva um favorito para um perfil e receita.
@@ -86,17 +94,26 @@ function salvarAvaliacao($conexao, $comentario, $nota, $receita_idreceita, $perf
  * @return bool Retorna true se a operação for bem-sucedida, caso contrário, retorna false.
  **/
 
-function salvarFavoritos($conexao, $perfil_idperfil, $receita_idreceita)
-{
+function salvarFavoritos($conexao, $perfil_idperfil, $receita_idreceita) {
+    // Verifica se já existe esse favorito
+    $sqlCheck = "SELECT 1 FROM favoritos WHERE perfil_idperfil = ? AND receita_idreceita = ?";
+    $stmtCheck = mysqli_prepare($conexao, $sqlCheck);
+    mysqli_stmt_bind_param($stmtCheck, "ii", $perfil_idperfil, $receita_idreceita);
+    mysqli_stmt_execute($stmtCheck);
+    $resultado = mysqli_stmt_get_result($stmtCheck);
+
+    if (mysqli_num_rows($resultado) > 0) {
+        // Já existe esse favorito — não insere de novo
+        return false;
+    }
+
+    // Se não existe, insere normalmente
     $sql = "INSERT INTO favoritos (perfil_idperfil, receita_idreceita) VALUES (?, ?)";
-    $comando = mysqli_prepare($conexao, $sql);
-
-    mysqli_stmt_bind_param($comando, 'ii', $perfil_idperfil, $receita_idreceita);
-
-    $funcionou = mysqli_stmt_execute($comando);
-    mysqli_stmt_close($comando);
-    return $funcionou;
+    $stmt = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($stmt, "ii", $perfil_idperfil, $receita_idreceita);
+    return mysqli_stmt_execute($stmt);
 }
+
 /**
  * Edita uma receita no banco de dados.
  * 

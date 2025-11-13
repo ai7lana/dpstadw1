@@ -19,5 +19,5 @@ if ($id == 0) {
     editarPerfil($conexao, $nome, $nome_perfil, $email, $senha_hash, $id);
 }
 
-header("Location: /public/todoPerfil.php");
+header("Location: /public/listarAvaliacao.php");
 ?>
