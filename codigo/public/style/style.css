@@ -1788,14 +1788,14 @@ label.error {
 
 #inputidperfil{
   top: 25%;
-  left: 35%;
-  width: 26%;
+  left: 43%;
+  width: 10%;
 }
 
 #inputidreceitas{
   top: 35%;
-  left: 35%;
-  width: 26%;
+  left: 43%;
+  width: 10%;
 }
 
 #botaofavoritos{
@@ -1850,11 +1850,11 @@ label.error {
 }
 
 #infoperfil{
-  top: 28%;
+  top: 28.5%;
   left: 47%;
 }
 
 #inputreceita{
-  top: 38%;
+  top: 38.5%;
   left: 47%;
 }
