@@ -59,7 +59,7 @@ $nome_perfil_logado = $dadosPerfil['nome_perfil'] ?? 'Usuário desconhecido';
         </a>
         <img src="style/images/minhasreceitas.png" class="iconperfil" id="minhasreceitasicon" alt="">
 
-        <a href="formCadastrarPerfil.php" class="linkperfil" id="editarperfil"> editar perfil</a>
+        <a href="editarPerfil.php?id=<?php echo $id_perfil_logado; ?>" class="linkperfil" id="editarperfil"> editar perfil</a>
         <img src="style/images/editarperfil.png" alt="" class="iconperfil" id="editarperfilicon">
         <a href="../deslogar.php" class="linkperfil" id="deslogar"> sair </a>
         <img src="style/images/logout.png" alt="" class="iconperfil" id="deslogarperfil">

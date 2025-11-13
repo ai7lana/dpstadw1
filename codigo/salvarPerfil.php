@@ -16,7 +16,7 @@ if ($id == 0) {
     salvarPerfil($conexao, $nome, $nome_perfil, $email, $senha_hash);
     $sql = "INSERT INTO tb_usuario (nome, email, senha, tipo) VALUES ('$nome', '$email', '$senha_hash', 'c')";
 } else {
-    editarPerfil($conexao, $nome, $nome_perfil, $email, $senha_hash, $idperfil);
+    editarPerfil($conexao, $nome, $nome_perfil, $email, $senha_hash, $id);
 }
 
 header("Location: /public/todoPerfil.php");
