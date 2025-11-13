@@ -52,10 +52,17 @@ $nome_perfil = $perfil ['nome'];
 </head>
 
 <body class="bodyforms">
-    <p class="tituloforms">Adicionar favoritos</p>
+    <p class="tituloforms" id="favtit">Adicionar favoritos</p>
     <form action="../salvarFavoritos.php" method="post">
 
 
+        <input type="text" name="perfil_idperfil" required class="inputforms" id="inputidperfil"><br>
+        <p class="infoinput" id="infoperfil">Perfil</p>
+        <input type="text" name="receita_idreceita" required  class="inputforms" id="inputidreceitas"><br>
+        <p class="infoinput" id="inputreceita">Receita</p>
+
+        <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button>
+        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarform"> ↩ Voltar </button>
         <!-- <input type="text" name="perfil_idperfil" required placeholder="Perfil" class="inputforms" id="inputidperfil" ><br> -->
         <!-- <input type="text" name="receita_idreceita" required  placeholder="Receita" class="inputforms" id="inputidreceitas"><br> -->
 
@@ -67,8 +74,8 @@ $nome_perfil = $perfil ['nome'];
         <p class="inputforms" id="inputidperfil"> <?= htmlspecialchars($nome_perfil) ?></p>
         <p class="inputforms" id="inputidreceitas"> <?= htmlspecialchars($nome_receita) ?></p>
 
-        <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button>
-        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin">↩ Voltar</button>
+        <!-- <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button>
+        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin">↩ Voltar</button> -->
         </form>
 
         <!-- <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button> -->
