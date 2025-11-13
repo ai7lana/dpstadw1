@@ -2,6 +2,15 @@
 require_once "../verificarLogado.php";
 require_once "../conexao.php";
 require_once "../funcoes.php";
+
+$id_receita = $_GET['id'];
+$receita = pesquisarReceitaId($conexao, $id_receita);
+$nome_receita = $receita['nome_comida'];
+
+$id_perfil = $_SESSION['id_perfil'];
+$perfil = pesquisarPerfilId($conexao, $id_perfil);
+$nome_perfil = $perfil ['nome'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,11 +56,23 @@ require_once "../funcoes.php";
     <form action="../salvarFavoritos.php" method="post">
 
 
-        <input type="text" name="perfil_idperfil" required placeholder="Perfil" class="inputforms" id="inputidperfil"><br>
-        <input type="text" name="receita_idreceita" required  placeholder="Receita" class="inputforms" id="inputidreceitas"><br>
+        <!-- <input type="text" name="perfil_idperfil" required placeholder="Perfil" class="inputforms" id="inputidperfil" ><br> -->
+        <!-- <input type="text" name="receita_idreceita" required  placeholder="Receita" class="inputforms" id="inputidreceitas"><br> -->
+
+
+        <form action="../salvarFavoritos.php" method="post">
+        <input type="hidden" name="perfil_idperfil" value="<?= $id_perfil ?>">
+        <input type="hidden" name="receita_idreceita" value="<?= $id_receita ?>">
+
+        <p class="inputforms" id="inputidperfil"> <?= htmlspecialchars($nome_perfil) ?></p>
+        <p class="inputforms" id="inputidreceitas"> <?= htmlspecialchars($nome_receita) ?></p>
 
         <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button>
-        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
+        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin">↩ Voltar</button>
+        </form>
+
+        <!-- <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button> -->
+        <!-- <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button> -->
 
 
 
