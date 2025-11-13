@@ -1502,8 +1502,13 @@ label.error {
   font-size: 100%;
   position: absolute;
   left: 17%;
-  top: 20%;
+  top: 25%;
   font-family: "otez";
+  text-decoration: none;
+}
+
+.addreceitalink:hover{
+  color: #654a32;
 }
 
 .addreceita {
@@ -1512,7 +1517,7 @@ label.error {
   max-width: 3.5%;
   position: absolute;
   left: 13%;
-  top: 18%;
+  top: 24%;
 }
 
 /*listar e tabela -------------------------------------------------------------------*/
@@ -1616,7 +1621,7 @@ label.error {
 
 #minhasreceitasdiv {
   position: absolute;
-  top: 30%;
+  top: 40%;
   width: 100%;
 }
 
@@ -1629,19 +1634,6 @@ label.error {
   left: 40%;
   position: absolute;
 }
-
-/* .formsivfundo {
-  background: #654a32;
-  border-radius: 30px;
-  position: absolute;
-  top: 5%;
-  left: 30%;
-}
-
-#receitasdiv {
-  width: 40%;
-  height: 90%;
-} */
 
 .inputforms {
   border: none;
@@ -1662,32 +1654,93 @@ label.error {
   font-family: "otez";
   font-size: 100%;
   color: #342420;
+  border: none;
+  border-bottom: 0.2vw solid #342420;
 }
 
 #inputnome {
-  top: 20%;
+  top: 15%;
+  left: 35%;
 }
 
 #inputtipo {
-}
-
-#inputingredientes {
-}
-
-#inputmodo {
+  top: 15%;
+  left: 60%;
 }
 
 #inputtempo {
+  top: 25%;
+  left: 35%;
 }
 
 #inputrendimento {
+  top: 25%;
+  left: 60%;
 }
 
+#inputingredientes {
+  top: 35%;
+  left: 40%;
+  width: 35%;
+}
+
+#inputmodo {
+  top: 45%;
+  left: 40%;
+  width: 35%;
+  height: 10%;
+}
+
+
 #inputfoto {
+  top: 65%;
+  left: 40%;
+
 }
 
 #inputregiao {
+  top: 75%;
+  left: 35%;
 }
 
 #inputperfil {
+  top: 75%;
+  left: 60%;
+}
+
+.botaosubmitforms{
+  position: absolute;
+  left: 53%;
+  top: 85%;
+  border: none;
+  border-radius: 20px;
+  background-color: #342420;
+  color: #f1f4d9;
+  width: 7%;
+  height: 5%;
+  transition: 0.4s ease-in-out;
+  font-family: "vocago";
+  font-size: 100%;
+}
+
+.botaosubmitforms:hover {
+  width: 7.5%;
+  height: 5.5%;
+  background: linear-gradient(to bottom, #342420, #654a32);
+  font-size: 110%;
+}
+
+#inputidperfil{
+  top: 20%;
+  left: 45%
+}
+
+#inputidreceitas{
+  top: 40%;
+  left: 45%
+}
+
+#botaofavoritos{
+  top: 60%;
+  left: 50%;
 }
