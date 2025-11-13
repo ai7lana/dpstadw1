@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../jquery-3.7.1.min.js"></script>
-    script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
     <script src="jquery.validate.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -37,17 +37,17 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
-    <h2>Avaliar</h2>
+<body class="bodyforms">
+    <p class="tituloforms">Avaliar</p>
     <form action="../salvarAvaliacao.php" method="post">
 
-        Perfil: <br><input type="text" name="perfil_idperfil" required><br>
-        Receita: <br> <input type="text" name="receita_idreceita" required><br>
-        Comentar? <br><input type="text" name="comentario" required><br>
-        Nota: <br> <input type="text" name="nota" required><br>
+        Perfil: <br><input type="text" name="perfil_idperfil" required placeholder="Perfil" class="inputforms" id="inputperfil"><br>
+        Receita: <br> <input type="text" name="receita_idreceita" required placeholder="Receita" class="inputforms" id="inputreceita"><br>
+        Comentar? <br><input type="text" name="comentario" required placeholder="comentário" class="inputforms" id="inputcomentario"><br>
+        Nota: <br> <input type="text" name="nota" required placeholder="avaliação" class="inputforms" id="inputavaliação"><br>
 
-        <button type="submit">Salvar</button>
-        <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
+        <button type="submit" class="botaosubmitforms" id="botaofavoritos">Salvar</button>
+        <button type="button" onclick="history.go(-1)" class="voltar" id="voltarlogin"> ↩ Voltar </button>
 
 </body>
 
