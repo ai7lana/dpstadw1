@@ -68,6 +68,11 @@ if (pesquisarReceitaId($conexao, $id)) {
             <p class="regiaoreceitadetalhada">Região:<?= htmlspecialchars($regiao) ?></p>
             
             <p class="autorreceitadetalhada">Autor: <?= htmlspecialchars($nome_perfil) ?></p>
+
+            <div class="fundovoltarreceitadetalhada">
+
+                <button type="button" onclick="history.go(-1)" class="voltar" id="voltarreceitadetalhada"> ↩ Voltar </button>
+            </div>
     </body>
     </html>
 <?php

@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body class="bodyListar">
+<body class="bodyListarparcial">
     <div class="container mt-5">
 
         <h1 class="tituu">Lista de receitas</h1>
@@ -39,7 +39,7 @@
                 echo "<td>$nome_comida</td>";
                 echo "<td><img src='foto/$foto' alt='Foto da comida' width='100'></td>";
                 $id = $receita['idreceita'];
-                echo "<td><a href='receitaDetalhada.php?id=$id'>Mais informações</a></td>";
+                echo "<td><a href='receitaDetalhada.php?id=$id' class='Excluiretabela' >Mais informações</a></td>";
                 echo "</tr>";
             }
             ?>
